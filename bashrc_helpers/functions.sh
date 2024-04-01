@@ -4,25 +4,25 @@ function SetTitle {
 
 function KeybindsNormal {
 	echo "activating normal binds"
-	doas cp ~/keyd_normal.conf /etc/keyd/default.conf
+	doas cp $HOME/dotfiles/keyd_normal.conf /etc/keyd/default.conf
 	doas systemctl restart keyd
 }
 
 function KeybindsGames {
 	echo "activating gaming binds"
-	doas cp ~/keyd_gaming.conf /etc/keyd/default.conf
+	doas cp $HOME/dotfiles/keyd_gaming.conf /etc/keyd/default.conf
 	doas systemctl restart keyd
 }
 
 function TLPPerf {
 	echo "activating performance TLP"
-	doas cp ~/tlp_perf.conf /etc/tlp.conf
+	doas cp $HOME/dotfiles/tlp_perf.conf /etc/tlp.conf
 	doas systemctl restart tlp.service
 }
 
 function TLPBalanced {
 	echo "activating balanced TLP"
-	doas cp ~/tlp_balanced.conf /etc/tlp.conf
+	doas cp $HOME/dotfiles/tlp_balanced.conf /etc/tlp.conf
 	doas systemctl restart tlp.service
 }
 
