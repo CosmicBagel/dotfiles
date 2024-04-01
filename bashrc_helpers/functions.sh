@@ -34,7 +34,7 @@ function SwitchNormalConfigs {
 	KeybindsNormal && TLPBalanced && doas prime-switcher --set power-saving
 }
 
-function print_colors {
+function PrintColors {
 	printf "|039| \033[39mDefault \033[m  |049| \033[49mDefault \033[m  |037| \033[37mLight gray \033[m     |047| \033[47mLight gray \033[m\n"
 	printf "|030| \033[30mBlack \033[m    |040| \033[40mBlack \033[m    |090| \033[90mDark gray \033[m      |100| \033[100mDark gray \033[m\n"
 	printf "|031| \033[31mRed \033[m      |041| \033[41mRed \033[m      |091| \033[91mLight red \033[m      |101| \033[101mLight red \033[m\n"
@@ -46,7 +46,7 @@ function print_colors {
 }
 
 # call as height=20 print_true_color
-function print_true_color {
+function PrintTrueColors {
     # Based on: https://gist.github.com/XVilka/8346728 and https://unix.stackexchange.com/a/404415/395213
     awk -v term_cols="${width:-$(tput cols || echo 80)}" -v term_lines="${height:-1}" 'BEGIN{
         s="/\\";
@@ -65,28 +65,3 @@ function print_true_color {
     }'
 }
 
-function update_all_the_things {
-    echo "Checking for arch news"
-    yay -Pw
-    read -p "Press enter to continue (or ctrl+c to bail)"
-
-    if [[ $? -eq 0 ]]; then
-        echo "Running yay"
-        yay -Syu
-    fi
-
-    if [[ $? -eq 0 ]]; then
-        echo "Flatpak upgrade"
-        flatpak upgrade
-    fi
-}
-alias uatt='update_all_the_things'
-
-function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}

@@ -12,5 +12,6 @@ esac
 . $__helpers/aliases.sh
 . $__helpers/config.sh
 . $__helpers/completion.sh
+. $__helpers/interactive_functions.sh
 
 eval "$(zoxide init --cmd cd bash)"
