@@ -1,0 +1,7 @@
+#alias dcu="docker compose up"
+#alias dcd="docker compose down"
+alias sudo="doas"
+#alias sudoedit="doas nvim"
+alias lg="lazygit"
+alias vim="nvim"
+alias vi="nvim"
