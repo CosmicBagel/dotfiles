@@ -3,8 +3,9 @@
 # key target, value symlink
 # symlinks_dic[TARGET]=SYMLINK
 declare -A symlinks_dic
-symlinks_dic["$HOME/dotfiles/.profile"]="$HOME/.profile"
-symlinks_dic["$HOME/dotfiles/.bashrc"]="$HOME/.bashrc"
+symlinks_dic["$HOME/dotfiles/profile"]="$HOME/.profile"
+symlinks_dic["$HOME/dotfiles/bashrc"]="$HOME/.bashrc"
+symlinks_dic["$HOME/dotfiles/gitconfig"]="$HOME/.gitconfig"
 
 #usage: make_symlink /path/to/new_file /path/to/symlink
 #checks if a file at symlink location already exists and asks 
