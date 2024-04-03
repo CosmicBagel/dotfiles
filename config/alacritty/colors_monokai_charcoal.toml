@@ -1,0 +1,42 @@
+# Colours (Monokai Charcoal)
+
+# Default Colours
+[colors.primary]
+background = '#000000'
+foreground = '#FFFFFF'
+
+# Normal Colours
+[colors.normal]
+black   = '#1a1a1a'
+#red     = '#f4005f'
+red     = '#f00016'
+green   = '#98e024'
+yellow  = '#fa8419'
+#blue    = '#9d65ff'
+blue    = '#2179ff'
+#magenta = '#f4005f'
+#magenta = '#fd1e6e'
+#magenta = '#ee00d1'
+#magenta = '#ff26e5'
+#magenta = '#e738ff'
+magenta = '#e745ff'
+cyan    = '#58d1eb'
+white   = '#c4c5b5'
+
+# Bright Colours
+[colors.bright]
+black   = '#625e4c'
+#red     = '#f4005f'
+red     = '#f00016'
+green   = '#98e024'
+yellow  = '#e0d561'
+#blue    = '#9d65ff'
+blue    = '#2179ff'
+#magenta = '#f4005f'
+#magenta = '#fd1e6e'
+#magenta = '#ee00d1'
+#magenta = '#ff26e5'
+#magenta = '#e738ff'
+magenta = '#e745ff'
+cyan    = '#58d1eb'
+white   = '#f6f6ef'

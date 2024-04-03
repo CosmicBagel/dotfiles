@@ -1,0 +1,60 @@
+[manager]
+show_hidden = true
+show_symlink = true
+
+[log]
+enabled = false
+
+[opener]
+edit = [
+	{ run = '${EDITOR:=nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+	{ run = 'code "%*"',    orphan = true, desc = "code",         for = "windows" },
+	{ run = 'code -w "%*"', block = true,  desc = "code (block)", for = "windows" },
+]
+sudo_edit = [
+	{ run = 'sudo ${EDITOR:=nvim} "$@"', desc = "sudo $EDITOR", block = true, for = "unix" },
+]
+open = [
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open", for = "linux" },
+	{ run = 'open "$@"',                    desc = "Open", for = "macos" },
+	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+]
+reveal = [
+	{ run = 'open -R "$1"',                          desc = "Reveal", for = "macos" },
+	{ run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
+	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+]
+extract = [
+	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
+	{ run = 'unar "%1"', desc = "Extract here", for = "windows" },
+]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+	{ run = 'mpv "%1"', orphan = true, for = "windows" },
+	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+]
+
+[open]
+rules = [
+	{ name = "*/", use = [ "edit", "sudo_edit", "open", "reveal" ] },
+
+	{ mime = "text/*",  use = [ "edit", "sudo_edit", "reveal" ] },
+	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "video/*", use = [ "play", "reveal" ] },
+	{ mime = "audio/*", use = [ "play", "reveal" ] },
+	{ mime = "inode/x-empty", use = [ "edit", "sudo_edit", "reveal" ] },
+
+	{ mime = "application/json", use = [ "edit", "sudo_edit", "reveal" ] },
+	{ mime = "*/javascript",     use = [ "edit", "sudo_edit", "reveal" ] },
+
+	{ mime = "application/zip",             use = [ "extract", "reveal" ] },
+	{ mime = "application/gzip",            use = [ "extract", "reveal" ] },
+	{ mime = "application/x-tar",           use = [ "extract", "reveal" ] },
+	{ mime = "application/x-bzip",          use = [ "extract", "reveal" ] },
+	{ mime = "application/x-bzip2",         use = [ "extract", "reveal" ] },
+	{ mime = "application/x-7z-compressed", use = [ "extract", "reveal" ] },
+	{ mime = "application/x-rar",           use = [ "extract", "reveal" ] },
+	{ mime = "application/xz",              use = [ "extract", "reveal" ] },
+
+	{ mime = "*", use = [ "open", "reveal" ] },
+]

@@ -7,9 +7,32 @@ symlinks_dic["$HOME/dotfiles/profile"]="$HOME/.profile"
 symlinks_dic["$HOME/dotfiles/bashrc"]="$HOME/.bashrc"
 symlinks_dic["$HOME/dotfiles/gitconfig"]="$HOME/.gitconfig"
 
+symlinks_dic["$HOME/dotfiles/config/chromium-flags.conf"]="$HOME/.config/chromium-flags.conf"
+symlinks_dic["$HOME/dotfiles/config/kcminputrc"]="$HOME/.config/kcminputrc"
+symlinks_dic["$HOME/dotfiles/config/kglobalshortcutsrc"]="$HOME/.config/kglobalshortcutsrc"
+symlinks_dic["$HOME/dotfiles/config/kwinrc"]="$HOME/.config/kwinrc"
+symlinks_dic["$HOME/dotfiles/config/kwinrulesrc"]="$HOME/.config/kwinrulesrc"
+symlinks_dic["$HOME/dotfiles/config/plasmarc"]="$HOME/.config/plasmarc"
+symlinks_dic["$HOME/dotfiles/config/plasmaparc"]="$HOME/.config/plasmaparc"
+symlinks_dic["$HOME/dotfiles/config/powerdevilrc"]="$HOME/.config/powerdevilrc"
+symlinks_dic["$HOME/dotfiles/config/user-dirs.dirs"]="$HOME/.config/user-dirs.dirs"
+
+
+symlinks_dic["$HOME/dotfiles/config/alacritty"]="$HOME/.config/alacritty"
+symlinks_dic["$HOME/dotfiles/config/neovide"]="$HOME/.config/neovide"
+symlinks_dic["$HOME/dotfiles/config/kitty"]="$HOME/.config/kitty"
+symlinks_dic["$HOME/dotfiles/config/wezterm"]="$HOME/.config/wezterm"
+symlinks_dic["$HOME/dotfiles/config/sway"]="$HOME/.config/sway"
+
+symlinks_dic["$HOME/dotfiles/config/fd"]="$HOME/.config/fd"
+symlinks_dic["$HOME/dotfiles/config/lazygit"]="$HOME/.config/lazygit"
+symlinks_dic["$HOME/dotfiles/config/mpv"]="$HOME/.config/mpv"
+symlinks_dic["$HOME/dotfiles/config/nvim"]="$HOME/.config/nvim"
+symlinks_dic["$HOME/dotfiles/config/tmux"]="$HOME/.config/tmux"
+symlinks_dic["$HOME/dotfiles/config/yazi"]="$HOME/.config/yazi"
+
 #usage: make_symlink /path/to/new_file /path/to/symlink
-#checks if a file at symlink location already exists and asks 
-#if you want to overwrite (assumes being run interactively)
+#checks if a file at symlink location already exists, skips if it does
 function make_symlink {
     if [[ $# -ne 2 ]]; then
         echo "make_symlink must be called with 2 parameters"
@@ -17,17 +40,19 @@ function make_symlink {
     fi
 
     if [[ -e "$2" ]]; then
-        read -p "$2 exists, do you want to overwrite it? y/[n] " response
-        if [[ $response == 'y' ]]; then
-            echo 'Overwriting'
-        else 
-            echo 'Not overwriting'
-            return
-        fi
+        echo "$2 exists, skipping"
+        return
+        #read -p "$2 exists, do you want to overwrite it? y/[n] " response
+        #if [[ $response == 'y' ]]; then
+        #    echo 'Overwriting'
+        #else 
+        #    echo 'Not overwriting'
+        #    return
+        #fi
     fi
 
     echo "Making symlink $2 -> $1"
-    ln -sf $1 $2
+    ln -s $1 $2
 }
 
 # usage: make_symlink_batch

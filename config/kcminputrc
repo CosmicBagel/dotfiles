@@ -1,0 +1,16 @@
+[Keyboard]
+RepeatDelay=400
+RepeatRate=50
+
+[Libinput][1133][16500][Logitech G305]
+Enabled=true
+PointerAccelerationProfile=1
+
+[Libinput][2][7][SynPS/2 Synaptics TouchPad]
+Enabled=true
+NaturalScroll=true
+TapToClick=false
+
+[Libinput][4012][6878][keyd virtual pointer]
+Enabled=true
+PointerAccelerationProfile=1

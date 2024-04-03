@@ -1,0 +1,115 @@
+#import = [
+#    "~/.config/alacritty/keys.toml",
+#]
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular"}
+bold = { family = "Hack Nerd Font", style = "Bold"}
+italic = { family = "Hack Nerd Font", style = "Italic"}
+bold_italic = { family = "Hack Nerd Font", style = "Bold Italic"}
+
+size = 13
+builtin_box_drawing = true
+# glyph_offset = {x = 0, y = 0}
+# offset = { x = 0, y = 0 }
+
+[window]
+dimensions = { columns = 110, lines = 35}
+title = "Terminal"
+opacity = 0.80
+decorations = "None"
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+thickness = 0.20
+
+[scrolling]
+history = 100000
+
+[bell]
+duration = 100
+# color = "#383838"
+color = "#0b0e14"
+#command = ""
+
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" },
+
+# https://www.leonerd.org.uk/hacks/fixterms/
+# CSI (control sequence initiator) is 'ESC [' (ESC is \u001b)
+# https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_(Control_Sequence_Introducer)_sequences
+# a control sequence ends with u
+# see also https://sw.kovidgoyal.net/kitty/keyboard-protocol
+
+# Ctrl + I we use the lower case ascii number here (105), with control modifier
+#{ key = "i", mods = "Control", chars = "\u001b[105;5u" }, 
+# Ctrl + Shift + I upper case ascii code (73) , and only control modifier
+#{ key = "i", mods = "Control|Shift", chars = "\u001b[73;5u" }, 
+# Ctrl + Alt + I
+#{ key = "i", mods = "Control|Alt", chars = "\u001b[105;7u" }, 
+# Ctrl +Shift + Alt + I
+#{ key = "i", mods = "Control|Shift|Alt", chars = "\u001b[105;8u" }, 
+
+#{ key = "Backspace", mods = "Control", chars = "\u001b[127;5u" },
+#{ key = "Backspace", mods = "Control|Shift", chars = "\u001b[127;6u" },
+
+#{ key = "Space", mods = "Control", chars = "\u001b[32;5u" },
+#{ key = "Space", mods = "Control|Shift", chars = "\u001b[32;6u" },
+
+#{ key = "Tab", mods = "Control", chars = "\u001b[9;5u" },
+#{ key = "Tab", mods = "Control|Shift", chars = "\u001b[1;5u" },
+#{ key = "g", mods = "Control", chars = "\u001b>1u" },
+
+]
+
+[mouse]
+hide_when_typing = true
+
+[colors]
+# transparent_background_colors = true
+
+# Colours (Monokai Charcoal) - tweaked
+
+# Default Colours
+[colors.primary]
+background = '#000000'
+foreground = '#FFFFFF'
+
+# Normal Colours
+[colors.normal]
+black   = '#1a1a1a'
+#red     = '#f4005f'
+#red     = '#f00016'
+red     = '#df0008'
+green   = '#98e024'
+yellow  = '#fa8419'
+#blue    = '#9d65ff'
+blue    = '#2179ff'
+#magenta = '#f4005f'
+#magenta = '#fd1e6e'
+#magenta = '#ee00d1'
+#magenta = '#ff26e5'
+#magenta = '#e738ff'
+magenta = '#e745ff'
+cyan    = '#58d1eb'
+white   = '#c4c5b5'
+
+# Bright Colours
+[colors.bright]
+black   = '#625e4c'
+#red     = '#f4005f'
+#red     = '#f00016'
+red     = '#df0008'
+green   = '#98e024'
+yellow  = '#e0d561'
+#blue    = '#9d65ff'
+blue    = '#2179ff'
+#magenta = '#f4005f'
+#magenta = '#fd1e6e'
+#magenta = '#ee00d1'
+#magenta = '#ff26e5'
+#magenta = '#e738ff'
+magenta = '#e745ff'
+cyan    = '#58d1eb'
+white   = '#f6f6ef'

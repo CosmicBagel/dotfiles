@@ -8,6 +8,8 @@ case $- in
     *) return;;
 esac
 
+# OhMyBash may play around with configuration I want, so we run it first
+# then run my personal stuff
 . $__helpers/ohmybash.sh
 . $__helpers/aliases.sh
 . $__helpers/config.sh
