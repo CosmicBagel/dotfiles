@@ -109,7 +109,6 @@ CopyFile /etc/clamav/freshclam.conf
 CopyFile /etc/cron.d/timeshift-hourly
 CopyFile /etc/intel-undervolt.conf
 CopyFile /etc/keyd/default.conf
-CopyFile /etc/ld.so.cache
 CopyFile /etc/ld.so.conf.d/nvidia-lib32.conf
 CopyFile /etc/ld.so.conf.d/nvidia-lib64.conf
 CopyFile /etc/pacman.conf
