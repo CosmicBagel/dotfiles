@@ -4,4 +4,7 @@
 alias lg="lazygit"
 alias vim="nvim"
 alias vi="nvim"
+alias ls="eza"
+alias la="eza -a"
+alias ll="eza -lag"
 alias doas="sudo"
