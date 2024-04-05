@@ -4,34 +4,34 @@ function SetTitle {
 
 function KeybindsNormal {
 	echo "activating normal binds"
-	doas cp $HOME/dotfiles/keyd_normal.conf /etc/keyd/default.conf
-	doas systemctl restart keyd
+	sudo cp $HOME/dotfiles/keyd_normal.conf /etc/keyd/default.conf
+	sudo systemctl restart keyd
 }
 
 function KeybindsGames {
 	echo "activating gaming binds"
-	doas cp $HOME/dotfiles/keyd_gaming.conf /etc/keyd/default.conf
-	doas systemctl restart keyd
+	sudo cp $HOME/dotfiles/keyd_gaming.conf /etc/keyd/default.conf
+	sudo systemctl restart keyd
 }
 
 function TLPPerf {
 	echo "activating performance TLP"
-	doas cp $HOME/dotfiles/tlp_perf.conf /etc/tlp.conf
-	doas systemctl restart tlp.service
+	sudo cp $HOME/dotfiles/tlp_perf.conf /etc/tlp.conf
+	sudo systemctl restart tlp.service
 }
 
 function TLPBalanced {
 	echo "activating balanced TLP"
-	doas cp $HOME/dotfiles/tlp_balanced.conf /etc/tlp.conf
-	doas systemctl restart tlp.service
+	sudo cp $HOME/dotfiles/tlp_balanced.conf /etc/tlp.conf
+	sudo systemctl restart tlp.service
 }
 
 function SwitchGameConfigs {
-	KeybindsGames && TLPPerf && doas prime-switcher --set performance
+	KeybindsGames && TLPPerf && sudo prime-switcher --set performance
 }
 
 function SwitchNormalConfigs {
-	KeybindsNormal && TLPBalanced && doas prime-switcher --set power-saving
+	KeybindsNormal && TLPBalanced && sudo prime-switcher --set power-saving
 }
 
 function PrintColors {
