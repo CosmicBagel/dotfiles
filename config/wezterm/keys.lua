@@ -44,6 +44,10 @@ local M = {
     { key = "8", mods = "LEADER",          action=act.ActivateTab(7)},
     { key = "9", mods = "LEADER",          action=act.ActivateTab(8)},
     { key = "0", mods = "LEADER",          action=act.ActivateTab(9)},
+
+    { key = "=", mods = "CTRL",            action=act.IncreaseFontSize},
+    { key = "-", mods = "CTRL",            action=act.DecreaseFontSize},
+    { key = "0", mods = "CTRL",            action=act.ResetFontSize},
 }
 
 return M
