@@ -34,8 +34,8 @@ CopyFile /etc/mkinitcpio.d/linux-zen.preset
 CopyFile /etc/mkinitcpio.d/linux.preset
 
 # firewall
-CopyFile /etc/firewalld/lockdown-whitelist.xml
 CopyFile /etc/firewalld/lockdown-whitelist.xml.old
+
 CopyFile /etc/firewalld/policies/allow-host-ipv6.xml
 CopyFile /etc/firewalld/policies/allow-host-ipv6.xml.old
 CopyFile /etc/firewalld/zones/block.xml
