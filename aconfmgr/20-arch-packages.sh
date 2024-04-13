@@ -86,7 +86,6 @@ AddPackage systemd-resolvconf # systemd resolvconf replacement (for use with sys
 AddPackage terminus-font # Monospace bitmap font (for X11 and console)
 AddPackage timeshift # A system restore utility for Linux
 AddPackage tldr # Command line client for tldr, a collection of simplified and community-driven man pages.
-AddPackage tlp # Linux Advanced Power Management
 AddPackage traceroute # Tracks the route taken by packets over an IP network
 AddPackage ttf-liberation # Font family which aims at metric compatibility with Arial, Times New Roman, and Courier New
 AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archive files
@@ -100,3 +99,12 @@ AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 AddPackage wqy-zenhei # A Hei Ti Style (sans-serif) Chinese Outline Font.
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 AddPackage zoxide # A smarter cd command for your terminal
+
+AddPackage cpupower # Linux kernel tool to examine and tune power saving related features of your processor
+AddPackage glow # Command-line markdown renderer
+AddPackage hdparm # A shell utility for manipulating Linux IDE drive/driver parameters
+AddPackage intel-ucode # Microcode update files for Intel CPUs
+AddPackage iucode-tool # Tool to manipulate Intel® IA-32/X86-64 microcode bundles
+AddPackage ntfs-3g # NTFS filesystem driver and utilities
+AddPackage sshfs # FUSE client based on the SSH File Transfer Protocol
+AddPackage tinyxxd # Standalone version of the hex dump utility that comes with ViM

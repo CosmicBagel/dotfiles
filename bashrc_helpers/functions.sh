@@ -14,24 +14,26 @@ function KeybindsGames {
 	sudo systemctl restart keyd
 }
 
-function TLPPerf {
-	echo "activating performance TLP"
-	sudo cp $HOME/dotfiles/tlp_perf.conf /etc/tlp.conf
-	sudo systemctl restart tlp.service
+function SetPowerPerf {
+	echo "activating performance power"
+    sudo sed -i 's/ENABLE_LAPTOP_MODE_ON_AC=1/ENABLE_LAPTOP_MODE_ON_AC=0/' /etc/laptop-mode/laptop-mode.conf
+    sudo sed -i 's/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=1/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=0/' /etc/laptop-mode/laptop-mode.conf
+	sudo systemctl restart laptop-mode.service
 }
 
-function TLPBalanced {
-	echo "activating balanced TLP"
-	sudo cp $HOME/dotfiles/tlp_balanced.conf /etc/tlp.conf
-	sudo systemctl restart tlp.service
+function SetPowerBalanced {
+	echo "activating balanced power"
+    sudo sed -i 's/ENABLE_LAPTOP_MODE_ON_AC=0/ENABLE_LAPTOP_MODE_ON_AC=1/' /etc/laptop-mode/laptop-mode.conf
+    sudo sed -i 's/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=0/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=1/' /etc/laptop-mode/laptop-mode.conf
+	sudo systemctl restart laptop-mode.service
 }
 
 function SwitchGameConfigs {
-	KeybindsGames && TLPPerf && sudo prime-switcher --set performance
+	KeybindsGames && SetPowerPerf && sudo prime-switcher --set performance
 }
 
 function SwitchNormalConfigs {
-	KeybindsNormal && TLPBalanced && sudo prime-switcher --set power-saving
+	KeybindsNormal && SetPowerBalanced && sudo prime-switcher --set power-saving
 }
 
 function PrintColors {

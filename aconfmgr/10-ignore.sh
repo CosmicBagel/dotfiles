@@ -37,7 +37,6 @@ IgnorePath '/etc/ld.so.cache'
 
 #I often change this based on a couple of presets I keep
 #in my dotfiles
-IgnorePath '/etc/tlp.conf' 
 
 IgnorePath '/etc/.pwd.lock'
 IgnorePath '/etc/.updated'

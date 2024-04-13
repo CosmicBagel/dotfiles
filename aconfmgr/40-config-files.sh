@@ -59,6 +59,40 @@ CopyFile /etc/firewalld/zones/trusted.xml.old
 CopyFile /etc/firewalld/zones/work.xml
 CopyFile /etc/firewalld/zones/work.xml.old
 
+# laptop mode power saving
+CopyFile /etc/laptop-mode/conf.d/ac97-powersave.conf
+CopyFile /etc/laptop-mode/conf.d/auto-hibernate.conf
+CopyFile /etc/laptop-mode/conf.d/battery-level-polling.conf
+CopyFile /etc/laptop-mode/conf.d/bluetooth.conf
+CopyFile /etc/laptop-mode/conf.d/configuration-file-control.conf
+CopyFile /etc/laptop-mode/conf.d/cpufreq.conf
+CopyFile /etc/laptop-mode/conf.d/cpuhotplug.conf
+CopyFile /etc/laptop-mode/conf.d/dpms-standby.conf
+CopyFile /etc/laptop-mode/conf.d/eee-superhe.conf
+CopyFile /etc/laptop-mode/conf.d/ethernet.conf
+CopyFile /etc/laptop-mode/conf.d/exec-commands.conf
+CopyFile /etc/laptop-mode/conf.d/hal-polling.conf
+CopyFile /etc/laptop-mode/conf.d/intel-hda-powersave.conf
+CopyFile /etc/laptop-mode/conf.d/intel-sata-powermgmt.conf
+CopyFile /etc/laptop-mode/conf.d/intel_pstate.conf
+CopyFile /etc/laptop-mode/conf.d/kbd-backlight.conf
+CopyFile /etc/laptop-mode/conf.d/lcd-brightness.conf
+CopyFile /etc/laptop-mode/conf.d/nmi-watchdog.conf
+CopyFile /etc/laptop-mode/conf.d/nouveau.conf
+CopyFile /etc/laptop-mode/conf.d/pcie-aspm.conf
+CopyFile /etc/laptop-mode/conf.d/radeon-dpm.conf
+CopyFile /etc/laptop-mode/conf.d/runtime-pm.conf
+CopyFile /etc/laptop-mode/conf.d/sched-mc-power-savings.conf
+CopyFile /etc/laptop-mode/conf.d/sched-smt-power-savings.conf
+CopyFile /etc/laptop-mode/conf.d/start-stop-programs.conf
+CopyFile /etc/laptop-mode/conf.d/terminal-blanking.conf
+CopyFile /etc/laptop-mode/conf.d/vgaswitcheroo.conf
+CopyFile /etc/laptop-mode/conf.d/video-out.conf
+CopyFile /etc/laptop-mode/conf.d/wireless-ipw-power.conf
+CopyFile /etc/laptop-mode/conf.d/wireless-iwl-power.conf
+CopyFile /etc/laptop-mode/conf.d/wireless-power.conf
+CopyFile /etc/laptop-mode/laptop-mode.conf
+
 # services
 CreateLink /etc/systemd/system/bluetooth.target.wants/bluetooth.service /usr/lib/systemd/system/bluetooth.service
 CreateLink /etc/systemd/system/dbus-org.bluez.service /usr/lib/systemd/system/bluetooth.service
@@ -102,6 +136,7 @@ CreateLink /etc/systemd/user/sockets.target.wants/p11-kit-server.socket /usr/lib
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire-pulse.socket /usr/lib/systemd/user/pipewire-pulse.socket
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 CopyFile /etc/systemd/system/timers.target.wants/fangfrisch.timer
+CreateLink /etc/systemd/system/multi-user.target.wants/laptop-mode.service /usr/lib/systemd/system/laptop-mode.service
 
 # everything else
 CopyFile /etc/acpi/handler.sh # ignore certain key events (prevent log spam)
@@ -122,3 +157,4 @@ CopyFile /etc/vconsole.conf
 
 CopyFile /etc/fangfrisch/fangfrisch.conf #see also fangfrisch.timer service
 SetFileProperty /etc/fangfrisch/fangfrisch-has-news.sh group clamav
+SetFileProperty /boot/intel-ucode.img mode 755
