@@ -41,7 +41,6 @@ require('tabbar').apply_tab_bar_config(config)
 config.colors = require("colors")
 
 -- Key bindings
-config.debug_key_events = true
 config.enable_kitty_keyboard = true -- needed for neovim keybindings
 config.disable_default_key_bindings = true
 config.leader = { key = 'b', mods = 'CMD', timeout_milliseconds = 1500 }
