@@ -1,15 +1,15 @@
 function UpdateAllTheThings {
-    echo "Checking for arch news"
+    echo "===Checking for arch news==="
     yay -Pw
     read -p "Press enter to continue (or ctrl+c to bail)"
 
     if [[ $? -eq 0 ]]; then
-        echo "Running yay"
+        echo -e "\n\n===Running yay==="
         yay -Syu
     fi
 
     if [[ $? -eq 0 ]]; then
-        echo "Flatpak upgrade"
+        echo -e "\n\n===Flatpak upgrade==="
         flatpak upgrade
     fi
 }
