@@ -15,7 +15,7 @@ config.scrollback_lines = 1000000
 -- Window
 config.initial_rows = 36
 config.initial_cols = 110
-config.window_background_opacity = 0.80
+config.window_background_opacity = 0.76
 config.window_decorations = "NONE"
 config.window_padding = { 
     left = 0,
