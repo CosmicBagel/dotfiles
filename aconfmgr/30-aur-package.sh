@@ -19,3 +19,5 @@ AddPackage --foreign discord_arch_electron # Discord (popular voice + video app)
 AddPackage --foreign heroic-games-launcher-bin # An Open source Launcher for Epic, Amazon and GOG Games
 AddPackage --foreign kdumpst # kdumpst, a tool for collecting pstore/kdump logs.
 AddPackage --foreign laptop-mode-tools # Power saving tool for Linux
+
+AddPackage --foreign brave-bin # Web browser that blocks ads and trackers by default (binary release)
