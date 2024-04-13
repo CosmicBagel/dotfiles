@@ -16,15 +16,15 @@ function KeybindsGames {
 
 function SetPowerPerf {
 	echo "activating performance power"
-    sudo sed -i 's/ENABLE_LAPTOP_MODE_ON_AC=1/ENABLE_LAPTOP_MODE_ON_AC=0/' /etc/laptop-mode/laptop-mode.conf
-    sudo sed -i 's/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=1/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=0/' /etc/laptop-mode/laptop-mode.conf
+    sudo sed -i -E 's/^(ENABLE_LAPTOP_MODE_ON_AC=)[0-1]/\10/' /etc/laptop-mode/laptop-mode.conf
+    sudo sed -i -E 's/^(ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=)[0-1]/\10/' /etc/laptop-mode/laptop-mode.conf
 	sudo systemctl restart laptop-mode.service
 }
 
 function SetPowerBalanced {
 	echo "activating balanced power"
-    sudo sed -i 's/ENABLE_LAPTOP_MODE_ON_AC=0/ENABLE_LAPTOP_MODE_ON_AC=1/' /etc/laptop-mode/laptop-mode.conf
-    sudo sed -i 's/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=0/ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=1/' /etc/laptop-mode/laptop-mode.conf
+    sudo sed -i -E 's/^(ENABLE_LAPTOP_MODE_ON_AC=)[0-1]/\11/' /etc/laptop-mode/laptop-mode.conf
+    sudo sed -i -E 's/^(ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=)[0-1]/\11/' /etc/laptop-mode/laptop-mode.conf
 	sudo systemctl restart laptop-mode.service
 }
 
