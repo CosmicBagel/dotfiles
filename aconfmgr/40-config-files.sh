@@ -154,6 +154,7 @@ CopyFile /etc/sudoers
 CopyFile /etc/sysctl.d/80-gamecompatability.conf
 CopyFile /etc/timeshift/timeshift.json
 CopyFile /etc/vconsole.conf
+CopyFile /etc/modprobe.d/uvcvideo.conf
 
 CopyFile /etc/fangfrisch/fangfrisch.conf #see also fangfrisch.timer service
 SetFileProperty /etc/fangfrisch/fangfrisch-has-news.sh group clamav
