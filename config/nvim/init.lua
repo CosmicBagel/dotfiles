@@ -93,14 +93,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
-
 -- ==== plugin shopping list ==== --
 -- lazy.nvim
--- telescope
--- cmp
+-- treesitter
+-- A COLOR SCHEME FOR THE LOVE OF GOD
+-- dressing
+-- nvim-tree/nvim-web-devicons
 -- some kind of status bar
+-- tpope/vim-sleuth -- Detect tabstop and shiftwidth automatically
+-- numToStr/Comment.nvim
 -- oil.nvim
+-- cmp
+-- telescope with fzf and telescope-ui-select
+-- nvim-lspconfig 
+--      mason, mason-lspconfig,mason-tool-installer
+-- stevearc/conform.nvim --Autoformat
+-- gitsigns
 -- jump or sneak
 -- https://codeium.com/
 -- steal things from this guy! https://youtu.be/V070Zmvx9AM
