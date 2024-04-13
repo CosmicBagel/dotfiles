@@ -2,8 +2,13 @@
 Description=Picture-in-picture
 desktops=\\0
 desktopsrule=3
-layer=osd
+layer=overlay
 layerrule=2
+title=Picture-in-picture
+titlematch=1
+types=1
+wmclass=brave brave
+wmclasscomplete=true
 wmclassmatch=1
 
 [1960c924-9ded-4b4a-98f2-8b1d6b1f3b9b]
