@@ -15,7 +15,6 @@ AddPackage --foreign ttf-ms-win11-auto-zh_cn # Microsoft Windows 11 Simplified C
 AddPackage --foreign ttf-ms-win11-auto-zh_tw # Microsoft Windows 11 Traditional Chinese TrueType fonts
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 
-AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance
 AddPackage --foreign heroic-games-launcher-bin # An Open source Launcher for Epic, Amazon and GOG Games
 AddPackage --foreign kdumpst # kdumpst, a tool for collecting pstore/kdump logs.
 AddPackage --foreign laptop-mode-tools # Power saving tool for Linux

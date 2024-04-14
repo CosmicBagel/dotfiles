@@ -106,3 +106,5 @@ AddPackage iucode-tool # Tool to manipulate Intel® IA-32/X86-64 microcode bundl
 AddPackage ntfs-3g # NTFS filesystem driver and utilities
 AddPackage sshfs # FUSE client based on the SSH File Transfer Protocol
 AddPackage tinyxxd # Standalone version of the hex dump utility that comes with ViM
+
+AddPackage discord # All-in-one voice and text chat for gamers
