@@ -5,13 +5,10 @@ CreateLink /etc/localtime /usr/share/zoneinfo/Canada/Mountain
 
 # nvidia card + switching 
 CreateLink /etc/X11/xorg.conf /etc/nvidia-prime/xorg.intel.conf
-CopyFile /etc/X11/xorg.conf.d/90-prime-switcher.conf
 CopyFile /etc/X11/xorg.conf.prime.bak
 CopyFile /etc/modprobe.d/1915.conf
 CopyFile /etc/modprobe.d/blacklist-nouveau.conf
 CopyFile /etc/modprobe.d/nvidia-pm.conf
-CreateLink /etc/modprobe.d/prime-switcher.conf /etc/prime-switcher/nvidia/intel-modprobe.conf
-CreateLink /etc/modules-load.d/prime-switcher.conf /etc/prime-switcher/nvidia/intel-modules.conf
 CopyFile /etc/prime-switcher/current-driver
 CopyFile /etc/prime-switcher/nvidia/intel-modprobe.conf
 CopyFile /etc/prime-switcher/nvidia/intel-modules.conf
