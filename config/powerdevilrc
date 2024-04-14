@@ -16,7 +16,6 @@ PowerProfile=power-saver
 PowerButtonAction=1
 
 [BatteryManagement]
-BatteryCriticalAction=0
 BatteryCriticalLevel=3
 
 [LowBattery][Performance]
@@ -24,3 +23,4 @@ PowerProfile=power-saver
 
 [LowBattery][SuspendAndShutdown]
 PowerButtonAction=1
+SleepMode=3
