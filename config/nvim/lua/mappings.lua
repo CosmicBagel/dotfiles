@@ -16,6 +16,7 @@ vim.keymap.set('n', '<esc>', ':nohl<cr>:echo<cr>', {noremap = true, silent = tru
 
 -- single character delete goes to void register
 vim.keymap.set('n', 'x', [["_x]], {noremap = true, silent = true})
+vim.keymap.set('n', 'X', [["_X]], {noremap = true, silent = true})
 
 -- in visual mode, move selected lines up or down with J and K
 -- also auto indents as they move
