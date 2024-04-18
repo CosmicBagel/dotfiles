@@ -2,7 +2,11 @@
 return {
     "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
     "tpope/vim-surround", -- suround motion
-    "norcalli/nvim-colorizer.lua", -- hex codes show their color
+    {
+        -- hex codes show their color #ff0000 #00ff00 #0000ff
+        "norcalli/nvim-colorizer.lua",
+        opts = { "*"; } -- highlight all files by default (may want to restrict this)
+    },
     {
         -- highlights todos and gives you nice lists
         "folke/todo-comments.nvim",
