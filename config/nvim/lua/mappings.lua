@@ -27,9 +27,9 @@ vim.keymap.set("n", "q", "<nop>")
 
 -- toggle comments
 -- (remap = true because gcc isn't built in, but comes from vim/_defaults.lua)
-vim.keymap.set("i", "<C-/>", "<esc>mzgcc`za", {remap = true, silent=true})
-vim.keymap.set("n", "<C-/>", "gcc", {remap = true, silent=true})
-vim.keymap.set("v", "<C-/>", "gc", {remap = true, silent=true})
+vim.keymap.set("i", "<C-/>", "<esc>mzgcc`za", {remap = true, silent=true, desc="Toggle comment"})
+vim.keymap.set("n", "<C-/>", "gcc", {remap = true, silent=true, desc="Toggle comment line"})
+vim.keymap.set("v", "<C-/>", "gc", {remap = true, silent=true, desc="Toggle comment"})
 
 -- paste over visual selection, without changing main register
 -- normally pasting over a visual selection swaps the contents
