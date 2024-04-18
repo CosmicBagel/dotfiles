@@ -2,6 +2,7 @@
 #alias dcd="docker compose down"
 #alias sudoedit="sudo nvim"
 alias lg="lazygit"
+alias n="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias ls="eza"
