@@ -22,23 +22,15 @@ vim.keymap.set('n', 'x', [["_x]], {noremap = true, silent = true})
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {noremap = true, silent = true})
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv", {noremap = true, silent = true})
 
--- nice when reading help docs
--- keep the cursor centered (should rewrite as lua)
-vim.api.nvim_create_user_command('CenterCursorEnable',
-[[let &scrolloff=(winheight(win_getid())/2)+1 |
-execute 'normal zz' |
-augroup VCenterCursor |
-  au! |
-  au BufEnter,WinEnter,WinNew,VimResized,WinResized *
-    let &scrolloff=(winheight(win_getid())/2)+1 |
-augroup END
-]],
-{})
+-- the macro recording key is annoying
+vim.keymap.set("n", "q", "<nop>")
 
-vim.api.nvim_create_user_command('CenterCursorDisable',
-function()
-    vim.api.nvim_clear_autocmds({group = "VCenterCursor"})
-    vim.opt.scrolloff=10
-end, {})
+-- toggle comments
+-- (remap = true because gcc isn't built in, but comes from vim/_defaults.lua)
+vim.keymap.set("i", "<C-/>", "<esc>mzgcc`za", {remap = true, silent=true})
+vim.keymap.set("n", "<C-/>", "gcc", {remap = true, silent=true})
+vim.keymap.set("v", "<C-/>", "gc", {remap = true, silent=true})
 
--- vim.cmd.CenterCursorEnable()
+-- paste over visual selection, without changing main register
+-- normally pasting over a visual selection swaps the contents
+vim.keymap.set("x", "<leader>p", [["_dP]])

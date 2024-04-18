@@ -1,11 +1,17 @@
 require('options')
 require('mappings')
+require('user_commands')
+require('lazy_init')
+require('autocommands')
 
--- ==== config todo ==== --
+vim.cmd[[colorscheme gruvbox]]
+
+
+-- -- -- config todo -- -- --
 -- lazy.nvim
 -- treesitter
 -- A COLOR SCHEME FOR THE LOVE OF GOD
--- nvim-lspconfig 
+-- nvim-lspconfig
 --      mason, mason-lspconfig,mason-tool-installer
 --      note: use autocommand OnAttach for lsp specific keybinds, so when lsp is absent
 --      normal vim keybinds will still work
@@ -21,7 +27,7 @@ require('mappings')
 -- 'nvim-lua/plenary.nvim',
 -- dressing
 -- nvim-tree/nvim-web-devicons
--- todo-comments.nvim -- highlight todo notes 
+-- todo-comments.nvim -- highlight todo notes
 -- mini.nvim -- look into the mini plugins
 --
 
@@ -39,18 +45,3 @@ require('mappings')
 --      lots of little tricks in here
 --  more text objects (https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
 -- https://github.com/epwalsh/obsidian.nvim
-
--- TODO move this into color scheme config once I have that
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-    desc = 'Highlight when yanking (copying) text',
-    group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-})
