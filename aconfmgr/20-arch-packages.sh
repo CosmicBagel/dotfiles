@@ -107,4 +107,6 @@ AddPackage sshfs # FUSE client based on the SSH File Transfer Protocol
 AddPackage tinyxxd # Standalone version of the hex dump utility that comes with ViM
 
 AddPackage discord # All-in-one voice and text chat for gamers
+
 AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
+AddPackage python-pynvim # Python client for Neovim
