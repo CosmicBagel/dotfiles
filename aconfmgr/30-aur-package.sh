@@ -20,3 +20,4 @@ AddPackage --foreign kdumpst # kdumpst, a tool for collecting pstore/kdump logs.
 AddPackage --foreign laptop-mode-tools # Power saving tool for Linux
 
 AddPackage --foreign brave-bin # Web browser that blocks ads and trackers by default (binary release)
+AddPackage --foreign neovim-nightly-bin # Fork of Vim aiming to improve user experience, plugins, and GUIs (nightly build)

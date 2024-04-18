@@ -55,7 +55,6 @@ AddPackage man-db # A utility for reading man pages
 AddPackage man-pages # Linux man pages
 AddPackage mpv # a free, open source, and cross-platform media player
 AddPackage mtr # Combines the functionality of traceroute and ping into one tool (CLI version)
-AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
 AddPackage networkmanager # Network connection manager and user applications
 AddPackage nftables # Netfilter tables userspace tools
 AddPackage nmap # Utility for network discovery and security auditing
