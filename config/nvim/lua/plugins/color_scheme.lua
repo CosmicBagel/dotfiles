@@ -13,7 +13,7 @@ local function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#000000" })
 
     -- dark cursor line
-    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#222222" })
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1e1e1e" })
 
     -- red color column
     vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#441111" })
