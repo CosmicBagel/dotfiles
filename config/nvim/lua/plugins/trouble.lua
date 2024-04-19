@@ -8,7 +8,7 @@ return {
             desc = "Diagnostics (Trouble)",
         },
         {
-            "<leader>xX",
+            "<leader>xb",
             "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
             desc = "Buffer Diagnostics (Trouble)",
         },
@@ -23,12 +23,12 @@ return {
             desc = "LSP Definitions / references / ... (Trouble)",
         },
         {
-            "<leader>xL",
+            "<leader>xl",
             "<cmd>Trouble loclist toggle<cr>",
             desc = "Location List (Trouble)",
         },
         {
-            "<leader>xQ",
+            "<leader>xq",
             "<cmd>Trouble qflist toggle<cr>",
             desc = "Quickfix List (Trouble)",
         },

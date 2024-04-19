@@ -16,6 +16,16 @@ return {
         { 'folke/neodev.nvim', opts = {} },
     },
     config = function()
+        -- make diagnostic popup nice (doesn't depend on lsp, but just fits here)
+        vim.diagnostic.config {
+            float = { border = "rounded" },
+        }
+
+        -- keymaps for diagnostics (not dependent on LSP, but fits here)
+        vim.keymap.set('n', '<leader>k', vim.diagnostic.open_float, { desc = 'Hover Diagnostic' })
+        vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Next Diagnostic' })
+        vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Prev Diagnostic' })
+
         -- If you're wondering about lsp vs treesitter, you can check out the wonderfully
         -- and elegantly composed help section, `:help lsp-vs-treesitter`
 
@@ -155,7 +165,7 @@ return {
                 -- capabilities = {},
                 settings = {
                     Lua = {
-                    filetypes = { "lua" },
+                        filetypes = { "lua" },
                         completion = {
                             callSnippet = 'Replace',
                         },
