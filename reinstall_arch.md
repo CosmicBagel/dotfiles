@@ -1,4 +1,4 @@
-## reinstalling arch 
+## reinstalling arch
 - need to update fstab
     should look like this, but with UUIDs updated
     make sure boot has at least 1gb so I can install lots of kernels =D
@@ -18,7 +18,7 @@
 
 - update mirror list with reflector --country Canada,US --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 - make user for yourself, add to group `wheel` (won't do anything yet)
-- as non-root git clone dotfiles 
+- as non-root git clone dotfiles
 - download and unzip https://github.com/CyberShadow/aconfmgr/archive/refs/heads/master.zip
 - run `aconfmgr apply -c /home/user/dotfiles/aconfmgr` (probably have to run it as root)
 
@@ -36,21 +36,16 @@
 in case I need to redo the boot partition
 my refind.conf (/boot/EFI/refind/refind.conf)
 updated the UUIDs as needed
-using refind-theme-regular 
+using refind-theme-regular
 ```
 menuentry "Arch Linux" {
     icon     /EFI/refind/icons/os_arch.png
-    loader   /EFI/Arch/vmlinuz-linux
-    initrd   /EFI/Arch/initramfs-linux.img
-    options  "rw root=UUID=b3335272-fcfd-4675-8b66-af7a739900a2 pcie_aspm=off sysrq_always_enabled=1"
-    ### Linux Vanilla
-    submenuentry "Vanilla - Standard Options (Default)" {
-    }
-    submenuentry "Vanilla - Single-User Mode" {
-		add_options  "single"
-    }
+    loader   /EFI/Arch/vmlinuz-linux-zen
+    initrd   /EFI/Arch/initramfs-linux-zen.img
+    options  "rw root=UUID=b3335272-fcfd-4675-8b66-af7a739900a2 pci_aspm=force pci=noaer"
+
     ### Zen
-    submenuentry "Zen - Standard Options" {
+    submenuentry "Zen - Standard Options (Default)" {
 		loader   /EFI/Arch/vmlinuz-linux-zen
 		initrd   /EFI/Arch/initramfs-linux-zen.img
     }
@@ -58,6 +53,16 @@ menuentry "Arch Linux" {
 		loader   /EFI/Arch/vmlinuz-linux-zen
 		initrd   /EFI/Arch/initramfs-linux-zen.img
 		add_options  "single"
+    }
+    ### Linux Vanilla
+    submenuentry "Vanilla - Standard Options" {
+	    loader   /EFI/Arch/vmlinuz-linux
+	    initrd   /EFI/Arch/initramfs-linux.img
+    }
+    submenuentry "Vanilla - Single-User Mode" {
+	    loader   /EFI/Arch/vmlinuz-linux
+	    initrd   /EFI/Arch/initramfs-linux.img
+	    add_options  "single"
     }
     ### LTS
     submenuentry "LTS - Standard Options" {
@@ -77,4 +82,5 @@ menuentry "Windows" {
 
 # Load rEFInd theme Regular
 include themes/refind-theme-regular/theme.conf
+
 ```
