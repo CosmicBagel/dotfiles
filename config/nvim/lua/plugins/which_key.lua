@@ -12,6 +12,7 @@ return {
             ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
             ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
             ['<leader>q'] = { name = '[Q]uack', _ = 'which_key_ignore' },
+            ['<leader>x'] = { name = 'Trouble', _ = 'which_key_ignore' },
         }
     end,
 }
