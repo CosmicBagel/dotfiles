@@ -8,6 +8,4 @@ require('autocommands')
 -- dadbod - allows running sql queries from neovim
 -- rest.nvim - do http calls right from nvim and get the results
 
--- https://codeium.com/
-
---  more text objects (https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
+-- more text objects (https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
