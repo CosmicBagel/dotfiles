@@ -2,7 +2,6 @@ return {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     -- See `:help gitsigns` to understand what the configuration keys do
     'lewis6991/gitsigns.nvim',
-    opts = {
     config = function()
         require('gitsigns').setup {
             signs = {
@@ -11,6 +10,10 @@ return {
                 delete = { text = '_' },
                 topdelete = { text = '‾' },
                 changedelete = { text = '~' },
+            },
+            current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
+            current_line_blame_opts = {
+                delay = 0, -- always show blame
             },
             on_attach = function(bufnr)
                 local gitsigns = require('gitsigns')
@@ -41,8 +44,10 @@ return {
                 -- Actions
                 map('n', '<leader>gs', gitsigns.stage_hunk, { desc = '[S]tage Hunk' })
                 map('n', '<leader>gr', gitsigns.reset_hunk, { desc = '[R]eset Hunk' })
-                map('v', '<leader>gs', function() gitsigns.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end, { desc = '[S]tage Hunk' })
-                map('v', '<leader>gr', function() gitsigns.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end, { desc = '[R]eset Hunk' })
+                map('v', '<leader>gs', function() gitsigns.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end,
+                    { desc = '[S]tage Hunk' })
+                map('v', '<leader>gr', function() gitsigns.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end,
+                    { desc = '[R]eset Hunk' })
                 map('n', '<leader>gS', gitsigns.stage_buffer, { desc = '[S]tage Buffer' })
                 map('n', '<leader>gu', gitsigns.undo_stage_hunk, { desc = '[U]ndo Stage Hunk' })
                 map('n', '<leader>gR', gitsigns.reset_buffer, { desc = '[R]eset Buffer' })
