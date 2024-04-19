@@ -7,10 +7,15 @@ vim.opt.autowriteall = false -- kind of like auto-save, but I only want it in ce
 
 vim.opt.swapfile = false -- I find the swap file thing to be annoying
 -- how often swapfile is written to disk when no keys are pressed
--- swapfile is disabled, but apparently some plugins look at this value to 
+-- swapfile is disabled, but apparently some plugins look at this value to
 -- decide how frequently to update
-vim.opt.updatetime = 50 
+vim.opt.updatetime = 50
 vim.opt.undofile = true -- preserve undo state, needed for undotree
+
+-- Decrease mapped sequence wait time
+-- Displays which-key popup sooner
+vim.opt.timeout = true
+vim.opt.timeoutlen = 300
 
 vim.opt.number = true -- show line numbers
 vim.cmd("set linebreak") -- don't spilt words when line wrapping
@@ -28,7 +33,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.breakindent = true -- preserve indentation when a line is wrapped
 
--- show the gutter 
+-- show the gutter
 vim.opt.signcolumn = 'yes'
 
 -- Configure how new splits should be opened
@@ -38,7 +43,7 @@ vim.opt.splitbelow = true
 -- show offscreen substitions (:s :%s) in a preview pane
 vim.opt.inccommand = 'split'
 
--- display undesireable characters (trailing space, tabs not converted to 
+-- display undesireable characters (trailing space, tabs not converted to
 -- spaces, and weird non-breaking spaces)
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
