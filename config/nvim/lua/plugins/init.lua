@@ -2,6 +2,7 @@
 return {
     "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
     "tpope/vim-surround", -- suround motion
+    "HiPhish/rainbow-delimiters.nvim", -- rainbow brackets
     {
         -- hex codes show their color #ff0000 #00ff00 #0000ff
         "norcalli/nvim-colorizer.lua",
