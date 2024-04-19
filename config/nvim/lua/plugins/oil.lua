@@ -19,10 +19,10 @@ return {
     config = function(_, opts)
         require("oil").setup(opts)
         vim.keymap.set(
-            "n", "<leader>-", "<CMD>Oil --float<CR>",
+            "n", "<leader>-", "<CMD>Oil<CR>",
             { desc = "Open parent directory" }
         )
         -- alias for Ex to oil cuz habits
-        vim.api.nvim_create_user_command('Ex', 'Oil --float', {})
+        vim.api.nvim_create_user_command('Ex', 'Oil', {})
     end,
 }
