@@ -11,6 +11,9 @@ local function ColorMyPencils(color)
     -- custom colors for cmp menu
     vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = "none" })
     vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#000000", blend = 30 })
+
+    -- dark cursor line
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#000000", blend = 30 })
 end
 
 return {
