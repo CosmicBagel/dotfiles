@@ -4,9 +4,6 @@ require('user_commands')
 require('lazy_init')
 require('autocommands')
 
-vim.cmd[[colorscheme gruvbox]]
-
-
 -- -- -- config todo -- -- --
 -- lazy.nvim
 -- treesitter
