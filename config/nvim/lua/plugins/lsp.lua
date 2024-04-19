@@ -124,10 +124,22 @@ return {
         --  - settings (table): Override the default settings passed when initializing the server.
         --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
         local servers = {
-            -- clangd = {},
-            -- gopls = {},
+            clangd = {
+                filetypes = { "c", "h", "hpp", "cpp", "objc", "objcpp", "cuda", "proto" },
+                root_dir = require("lspconfig").util.root_pattern(
+                    ".clangd",
+                    ".clang-tidy",
+                    ".clang-format",
+                    "compile_commands.json",
+                    "compile_flags.txt",
+                    "configure.ac",
+                    ".git"
+                ),
+                single_file_support = true,
+            },
+            gopls = {},
             -- pyright = {},
-            -- rust_analyzer = {},
+            rust_analyzer = {},
             -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
             --
             -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -143,6 +155,7 @@ return {
                 -- capabilities = {},
                 settings = {
                     Lua = {
+                    filetypes = { "lua" },
                         completion = {
                             callSnippet = 'Replace',
                         },
