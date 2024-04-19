@@ -10,9 +10,9 @@ return {
             topdelete = { text = '‾' },
             changedelete = { text = '~' },
         },
-        current_line_blame = true,     -- Toggle with `:Gitsigns toggle_current_line_blame`
+        current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
         current_line_blame_opts = {
-            delay = 0,                 -- always show blame
+            delay = 0,             -- always show blame
         },
         on_attach = function(bufnr)
             local gitsigns = require('gitsigns')
@@ -58,7 +58,7 @@ return {
             map('n', '<leader>gx', gitsigns.toggle_deleted, { desc = 'Toggle Deleted' })
 
             -- Text object
-            map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+            map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'Git [H]unk' })
         end
     }
 }

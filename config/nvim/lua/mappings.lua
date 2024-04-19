@@ -15,8 +15,8 @@ vim.keymap.set('i', '<c-bs>', '<c-w>', { noremap = true, silent = true })
 vim.keymap.set('n', '<esc>', ':nohl<cr>:echo<cr>', { noremap = true, silent = true })
 
 -- single character delete goes to void register
-vim.keymap.set('n', 'x', [["_x]], { noremap = true, silent = true })
-vim.keymap.set('n', 'X', [["_X]], { noremap = true, silent = true })
+vim.keymap.set('n', 'x', [["_x]], { noremap = true, silent = true, desc = "Delete character" })
+vim.keymap.set('n', 'X', [["_X]], { noremap = true, silent = true, desc = "Delete character backwards" })
 
 -- in visual mode, move selected lines up or down with J and K
 -- also auto indents as they move
@@ -34,4 +34,4 @@ vim.keymap.set("v", "<C-/>", "gc", { remap = true, silent = true, desc = "Toggle
 
 -- paste over visual selection, without changing main register
 -- normally pasting over a visual selection swaps the contents
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Put w/o changing reg" })
