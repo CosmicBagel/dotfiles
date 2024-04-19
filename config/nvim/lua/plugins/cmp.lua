@@ -60,6 +60,7 @@ return { -- Autocompletion
                     border = nil,
                     scrollbar = true,
                     winhighlight = "Normal:CmpNormal",
+                    winblend = 10,
                 },
             },
             formatting = {
