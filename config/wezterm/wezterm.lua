@@ -17,11 +17,11 @@ config.initial_rows = 36
 config.initial_cols = 110
 config.window_background_opacity = 0.76
 config.window_decorations = "NONE"
-config.window_padding = { 
+config.window_padding = {
     left = 0,
     right = 0,
     top = 0,
-    bottom = 0 
+    bottom = 0
 }
 
 config.hide_mouse_cursor_when_typing = true
@@ -43,7 +43,7 @@ config.colors = require("colors")
 -- Key bindings
 config.enable_kitty_keyboard = true -- needed for neovim keybindings
 config.disable_default_key_bindings = true
-config.leader = { key = 'b', mods = 'CMD', timeout_milliseconds = 1500 }
+config.leader = { key = 'a', mods = 'CMD', timeout_milliseconds = 1500 }
 config.keys = require("keys")
 
 return config
