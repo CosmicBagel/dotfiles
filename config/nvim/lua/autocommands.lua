@@ -20,5 +20,9 @@ autocmd('TextYankPost', {
 autocmd({"BufWritePre"}, {
     group = CosmicBagelGroup,
     pattern = "*",
-    command = [[%s/\s\+$//e]],
+    callback = function()
+        vim.api.nvim_command("normal! mz")
+        vim.api.nvim_command([[%s/\s\+$//e]])
+        vim.api.nvim_command("normal! `z")
+    end,
 })
