@@ -110,3 +110,5 @@ AddPackage discord # All-in-one voice and text chat for gamers
 
 AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 AddPackage python-pynvim # Python client for Neovim
+AddPackage linux-zen # The Linux ZEN kernel and modules
+AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
