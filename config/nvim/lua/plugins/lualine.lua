@@ -8,7 +8,8 @@ return {
             component_separators = { left = '', right = '' }
         },
         extensions = {
-            'lazy', 'mason', 'nvim-dap-ui', 'oil', 'quickfix', 'trouble'
+            'lazy', 'mason', 'nvim-dap-ui', 'oil', 'quickfix', 'trouble',
+            'toggleterm',
         }
     }
 }

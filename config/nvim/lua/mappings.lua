@@ -35,3 +35,6 @@ vim.keymap.set("v", "<C-/>", "gc", { remap = true, silent = true, desc = "Toggle
 -- paste over visual selection, without changing main register
 -- normally pasting over a visual selection swaps the contents
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Put w/o changing reg" })
+
+-- Easier way to exit terminal mode
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
