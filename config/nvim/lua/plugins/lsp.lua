@@ -21,6 +21,10 @@ return {
             float = { border = "rounded" },
         }
 
+        -- give LspInfo window nicer border
+        local win = require('lspconfig.ui.windows')
+        win.default_options.border = 'rounded'
+
         -- keymaps for diagnostics (not dependent on LSP, but fits here)
         vim.keymap.set('n', '<leader>k', vim.diagnostic.open_float, { desc = 'Hover Diagnostic' })
         vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Next Diagnostic' })
