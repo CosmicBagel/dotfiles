@@ -38,3 +38,21 @@ vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Put w/o changing reg" })
 
 -- Easier way to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- Navigate panes more easily
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Navigate pane left' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Navigate pane down' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Navigate pane up' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Navigate pane right' })
+
+-- Move panes more easily
+vim.keymap.set('n', '<C-S-h>', '<C-w>H', { desc = 'Move pane left' })
+vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move pane down' })
+vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move pane up' })
+vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move pane right' })
+
+-- Resize panes more easily
+vim.keymap.set('n', '<C-Left>', '<C-w><', { desc = 'Decrease pane width' })
+vim.keymap.set('n', '<C-Right>', '<C-w>>', { desc = 'Increase pane width' })
+vim.keymap.set('n', '<C-Up>', '<C-w>+', { desc = 'Increase pane height' })
+vim.keymap.set('n', '<C-Down>', '<C-w>-', { desc = 'Decrease pane height' })
