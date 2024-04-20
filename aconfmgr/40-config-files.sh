@@ -3,7 +3,7 @@ CopyFile /etc/locale.conf
 CopyFile /etc/locale.gen
 CreateLink /etc/localtime /usr/share/zoneinfo/Canada/Mountain
 
-# nvidia card + switching 
+# nvidia card + switching
 CreateLink /etc/X11/xorg.conf /etc/nvidia-prime/xorg.intel.conf
 CopyFile /etc/X11/xorg.conf.prime.bak
 CopyFile /etc/modprobe.d/1915.conf
@@ -133,6 +133,7 @@ CreateLink /etc/systemd/user/sockets.target.wants/pipewire-pulse.socket /usr/lib
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 CopyFile /etc/systemd/system/timers.target.wants/fangfrisch.timer
 CreateLink /etc/systemd/system/multi-user.target.wants/laptop-mode.service /usr/lib/systemd/system/laptop-mode.service
+CreateLink /etc/systemd/system/basic.target.wants/kdumpst-init.service /usr/lib/systemd/system/kdumpst-init.service
 
 # everything else
 CopyFile /etc/acpi/handler.sh # ignore certain key events (prevent log spam)
@@ -155,3 +156,4 @@ CopyFile /etc/modprobe.d/uvcvideo.conf
 CopyFile /etc/fangfrisch/fangfrisch.conf #see also fangfrisch.timer service
 SetFileProperty /etc/fangfrisch/fangfrisch-has-news.sh group clamav
 SetFileProperty /boot/intel-ucode.img mode 755
+CopyFile /etc/kdumpst.d/00-default

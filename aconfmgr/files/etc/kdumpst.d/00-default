@@ -1,0 +1,70 @@
+#!/bin/sh
+#
+#  SPDX-License-Identifier: LGPL-2.1-or-later
+#
+#  Copyright (c) 2021 Valve
+#  Maintainer: Guilherme G. Piccoli <gpiccoli@igalia.com>
+#
+#  Configuration settings for kdump/pstore. After _any_ change in this
+#  file, it's required to re-create the kdump minimal initramfs by running:
+#  /usr/lib/kdumpst/kdumpst-load.sh create-initrd
+#
+#
+#  Pstore-RAM settings
+#  If USE_PSTORE_RAM is set to 1, Kdump won't be loaded. Instead, the Pstore
+#  RAM backend will be configured. In order to have success, this operation
+#  relies in having an available RAM buffer on /proc/iomem with at least
+#  PSTORE_MEM_AMOUNT (decimal, in MB) in size. Also, kernel must be able to
+#  allocate a contiguous memory amount of PSTORE_RECORD_SZ (decimal, MB).
+#  If there is no such RAM buffer, there is a possibility to make use of
+#  the crash kernel area for that. There are risks: such memory area could
+#  have its address mapped differently across kernel updates; also if both
+#  pstore and the kdump kernel are loaded, that memory region will be for
+#  sure corrupted by the kexec panic load - so, kind of a last resource.
+USE_PSTORE_RAM=1
+PSTORE_MEM_AMOUNT=4194304
+PSTORE_RECORD_SZ=1048576
+PSTORE_RAM_USE_CRASH_MEM=0
+#
+#
+#  Mount-related options
+#  since the link is not present so early in the system boot. MOUNT_FOLDER
+#  MOUNT_FOLDER is the the place in which both pstore and kdump logs will
+#  be stored, as well as the kdump initrd and some ancillary data. This
+#  directory should be in an accessible filesystem (read/write) and if such
+#  folder doesn't exist, it'll be created.
+MOUNT_FOLDER="/var/crash/kdumpst"
+#
+#
+#  Kdump controlling settings
+#  Currently we only do local storage log collection (no network/iscsi dumps).
+#  If FULL_COREDUMP is !=0, we collect a full compressed vmcore, which might
+#  require a lot of disk space. The MAKEDUMPFILE_*_CMD settings refer to
+#  tunings on makedumpfile - we rely on zstd compression and maximum page
+#  exclusion for the full vmcore, mimic'ing Debian/Ubuntu kdump. We also
+#  base on Debian/Ubuntu for the KDUMP_CMDLINE_APPEND option - this contains
+#  the kernel parameters we append in the /proc/cmdline for the kdump kernel;
+#  the most important parameters are nr_cpus=1 (to save RAM memory usage and
+#  avoid some potential issues with SMP) and reset_devices (some drivers
+#  rely on that for proper kdump).
+FULL_COREDUMP=1
+MAKEDUMPFILE_COREDUMP_CMD="-z -d 31"
+MAKEDUMPFILE_DMESG_CMD="--dump-dmesg"
+KDUMP_APPEND_CMDLINE="panic=-1 oops=panic fsck.mode=force fsck.repair=yes nr_cpus=1 reset_devices"
+#
+#
+#  GRUB-related settings
+#  GRUB_AUTOSET determines if the kdumpst loader tool should try to
+#  automatically set grub.cfg in order to reserve memory for kdump (if
+#  needed, i.e., when pstore is not in use) - keep it as '1' for enabling
+#  the mechanism (this is the default). GRUB_BOOT_FILE is the full path of
+#  grub.cfg file - this is used in the config update step plus for syncing
+#  purposes. GRUB_CFG_FILE is the config file we edit in order to add/remove
+#  the crashkernel parameter. Finally, GRUB_CMDLINE holds the change to be
+#  made in the grub config file, specially the crashkernel memory reservation
+#  (notice that a trailing space is required in this line, so we avoid
+#  messing with other kernel parameters).
+GRUB_AUTOSET=0
+GRUB_BOOT_FILE="/boot/grub/grub.cfg"
+GRUB_CFG_FILE="/etc/default/grub"
+GRUB_CMDLINE="crashkernel=256M "
