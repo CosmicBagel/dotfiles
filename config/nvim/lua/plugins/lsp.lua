@@ -29,6 +29,8 @@ return {
         vim.keymap.set('n', '<leader>k', vim.diagnostic.open_float, { desc = 'Hover Diagnostic' })
         vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Next Diagnostic' })
         vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Prev Diagnostic' })
+        vim.keymap.set('n', '<leader>xh', vim.diagnostic.hide, { desc = 'Hide Diagnostics' })
+        vim.keymap.set('n', '<leader>xs', vim.diagnostic.show, { desc = 'Show Diagnostics' })
 
         -- If you're wondering about lsp vs treesitter, you can check out the wonderfully
         -- and elegantly composed help section, `:help lsp-vs-treesitter`
