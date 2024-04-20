@@ -20,8 +20,16 @@ vim.keymap.set('n', 'X', [["_X]], { noremap = true, silent = true, desc = "Delet
 
 -- in visual mode, move selected lines up or down with J and K
 -- also auto indents as they move
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<a-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move line down" })
+vim.keymap.set("v", "<a-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move line up" })
+
+-- move lines in insert mode
+vim.keymap.set("i", "<a-j>", "<Esc>:m .+1<CR>==gi", { noremap = true, silent = true, desc = "Move line down" })
+vim.keymap.set("i", "<a-k>", "<Esc>:m .-2<CR>==gi", { noremap = true, silent = true, desc = "Move line up" })
+
+-- move lines in normal mode
+vim.keymap.set("n", "<a-j>", ":m .+1<CR>==", { noremap = true, silent = true, desc = "Move line down" })
+vim.keymap.set("n", "<a-k>", ":m .-2<CR>==", { noremap = true, silent = true, desc = "Move line up" })
 
 -- the macro recording key is annoying
 vim.keymap.set("n", "q", "<nop>")
