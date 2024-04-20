@@ -23,3 +23,5 @@ AddPackage --foreign brave-bin # Web browser that blocks ads and trackers by def
 
 AddPackage --foreign fswatch # A cross-platform file change monitor with multiple backends: Apple OS X File System Events API, *BSD kqueue, Linux inotify, Microsoft Windows and a stat-based backend
 AddPackage --foreign neovim-nightly-bin # Fork of Vim aiming to improve user experience, plugins, and GUIs (nightly build)
+
+AddPackage --foreign unityhub # The Unity Hub is a standalone application that streamlines the way you find, download, and manage your Unity Projects and installations.
