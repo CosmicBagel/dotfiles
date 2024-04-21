@@ -3,6 +3,7 @@
 #alias sudoedit="sudo nvim"
 alias lg="lazygit"
 alias n="nvim"
+alias nl="nvr -s" # neovim listen (will open socket at /tmp/nvimsocket)
 alias vim="nvim"
 alias vi="nvim"
 alias ls="eza"

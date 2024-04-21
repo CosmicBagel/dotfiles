@@ -12,7 +12,7 @@ ue() {
   # combine clean and build in one command
 	elif [[ "$1" == "rebuild" ]]; then
 		$ue4cli clean
-		$ue4cli build 
+		$ue4cli build
 		if [[ "$2" == "run" ]]; then
 			$ue4cli run
 		fi
@@ -45,3 +45,17 @@ print(json.dumps(j, indent=2))' >| compile_commands.json
 
 alias ue4='echo Please use ue instead.'
 alias ue5='echo Please use ue instead.'
+
+unity() {
+	# start unity as a detached process, with proper video card and
+	# gamdemode perf tunings
+	nohup prime-run gamemoderun $HOME/Unity/Hub/Editor/2023.2.19f1/Editor/Unity -projectpath $(pwd)
+}
+
+unitylog() {
+	bat $HOME/.config/unity3d/Editor.log
+}
+
+unitylogf() {
+	tail -f $HOME/.config/unity3d/Editor.log
+}
