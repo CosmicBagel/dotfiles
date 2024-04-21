@@ -54,3 +54,6 @@ vim.opt.cursorline = true
 -- Once a proper status line is installed, might want to remove this
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
