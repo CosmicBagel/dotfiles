@@ -37,6 +37,7 @@ symlinks_dic["$HOME/dotfiles/config/nvim"]="$HOME/.config/nvim"
 symlinks_dic["$HOME/dotfiles/config/tmux"]="$HOME/.config/tmux"
 symlinks_dic["$HOME/dotfiles/config/yazi"]="$HOME/.config/yazi"
 
+symlinks_dic["$HOME/dotfiles/config/omnisharp"]="$HOME/.omnisharp"
 #usage: make_symlink /path/to/new_file /path/to/symlink
 #checks if a file at symlink location already exists, skips if it does
 function make_symlink {

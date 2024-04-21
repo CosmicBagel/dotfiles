@@ -14,6 +14,8 @@ return {
         -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
         -- used for completion, annotations and signatures of Neovim apis
         { 'folke/neodev.nvim', opts = {} },
+
+        "Hoffs/omnisharp-extended-lsp.nvim",
     },
     config = function()
         -- make diagnostic popup nice (doesn't depend on lsp, but just fits here)
@@ -120,6 +122,14 @@ return {
                         callback = vim.lsp.buf.clear_references,
                     })
                 end
+
+                if client and (client.name == 'omnisharp' or client.name == 'omnisharp_mono') then
+                    -- omnisahrp has special stuff, so we want to override the keymaps
+                    map('gd', require('omnisharp_extended').telescope_lsp_definitions, '[G]oto [D]efinition')
+                    map('gr', require('omnisharp_extended').telescope_lsp_references, '[G]oto [R]eferences')
+                    map('gI', require('omnisharp_extended').telescope_lsp_implementation, '[G]oto [I]mplementation')
+                    map('<leader>D', require('omnisharp_extended').telescope_lsp_type_definition, 'Type [D]efinition')
+                end
             end,
         })
 
@@ -164,6 +174,29 @@ return {
             -- But for many setups, the LSP (`tsserver`) will work just fine
             -- tsserver = {},
             --
+            omnisharp = {
+
+                -- cmd = { "dotnet", vim.fn.stdpath("data") .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+                filetypes = { "cs" },
+                root_dir = require("lspconfig").util.root_pattern("*.sln", "*.csproj", "*.fsproj", ".git"),
+                settings = {
+                    FormattingOptions = {
+                        EnableEditorConfigSupport = false,
+                        OrganizeImports = true
+                    },
+                    MsBuild = {
+                        LoadProjectsOnDemand = true
+                    },
+                    RoslynExtensionsOptions = {
+                        EnableAnalyzersSupport = true,
+                        EnableImportCompletion = true,
+                        AnalyzeOpenDocumentsOnly = nil
+                    },
+                    Sdk = {
+                        IncludePrereleases = true
+                    }
+                }
+            },
 
             lua_ls = {
                 -- cmd = {...},
