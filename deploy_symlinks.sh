@@ -38,6 +38,8 @@ symlinks_dic["$HOME/dotfiles/config/tmux"]="$HOME/.config/tmux"
 symlinks_dic["$HOME/dotfiles/config/yazi"]="$HOME/.config/yazi"
 
 symlinks_dic["$HOME/dotfiles/config/omnisharp"]="$HOME/.omnisharp"
+symlinks_dic["$HOME/dotfiles/config/unity3d_prefs"]="$HOME/.local/share/unity3d/prefs"
+
 #usage: make_symlink /path/to/new_file /path/to/symlink
 #checks if a file at symlink location already exists, skips if it does
 function make_symlink {
@@ -52,7 +54,7 @@ function make_symlink {
         #read -p "$2 exists, do you want to overwrite it? y/[n] " response
         #if [[ $response == 'y' ]]; then
         #    echo 'Overwriting'
-        #else 
+        #else
         #    echo 'Not overwriting'
         #    return
         #fi
