@@ -116,3 +116,9 @@ AddPackage linux-zen # The Linux ZEN kernel and modules
 AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
 AddPackage nodejs # Evented I/O for V8 javascript
 AddPackage npm # A package manager for JavaScript
+
+AddPackage dotnet-sdk # The .NET Core SDK
+AddPackage mono # Free implementation of the .NET platform including runtime and compiler
+AddPackage mono-msbuild # Xamarin implementation of the Microsoft build system
+AddPackage prettier # An opinionated code formatter
+AddPackage speedcrunch # Simple but powerful calculator using Qt
