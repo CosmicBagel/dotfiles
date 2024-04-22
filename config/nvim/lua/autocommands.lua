@@ -26,3 +26,15 @@ autocmd({"BufWritePre"}, {
         vim.api.nvim_command("normal! `z")
     end,
 })
+
+-- my translation of
+-- autocmd FileType dap-float nnoremap <buffer><silent> q <cmd>close!<CR>
+-- makes q and esc close popup/floats
+autocmd({"FileType"}, {
+    group = CosmicBagelGroup,
+    pattern = "dap-float",
+    callback = function()
+        vim.keymap.set("n", "q", "<cmd>close!<CR>", { noremap = true, silent = true, buffer = true })
+        vim.keymap.set("n", "<esc>", "<cmd>close!<CR>", { noremap = true, silent = true, buffer = true })
+    end,
+})
