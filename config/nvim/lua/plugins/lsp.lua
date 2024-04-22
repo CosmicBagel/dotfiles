@@ -187,8 +187,8 @@ return {
                     },
                     RoslynExtensionsOptions = {
                         EnableAnalyzersSupport = true,
-                        -- EnableImportCompletion = true, -- INCURSE HUGE PERFORMANCE PENALTY
-                        AnalyzeOpenDocumentsOnly = nil
+                        EnableImportCompletion = true,
+                        AnalyzeOpenDocumentsOnly = false
                     },
                     Sdk = {
                         IncludePrereleases = true
