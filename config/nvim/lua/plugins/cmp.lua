@@ -39,6 +39,7 @@ return { -- Autocompletion
         "hrsh7th/cmp-nvim-lsp-signature-help",
         "hrsh7th/cmp-nvim-lsp-document-symbol",
         "zjp-CN/nvim-cmp-lsp-rs",
+        "f3fora/cmp-spell",
 
         -- nicer icons
         "onsails/lspkind.nvim",
@@ -87,6 +88,8 @@ return { -- Autocompletion
                 expandable_indicator = true
             },
             view = {
+                -- entries always appear nearest cursor as opposed to top of
+                -- the list
                 entries = { name = 'custom', selection_order = 'near_cursor' }
             },
             snippet = {
@@ -152,6 +155,12 @@ return { -- Autocompletion
                 { name = 'nvim_lsp_document_symbol' },
                 { name = 'nvim-cmp-lsp-rs' },
                 { name = 'buffer' },
+                { name = 'spell', option = {
+                    keep_all_entries = true,
+                    enable_in_context = function()
+                        return true
+                    end,
+                }, },
             },
         }
     end,

@@ -38,3 +38,12 @@ autocmd({"FileType"}, {
         vim.keymap.set("n", "<esc>", "<cmd>close!<CR>", { noremap = true, silent = true, buffer = true })
     end,
 })
+
+-- enable spell checking for text files
+autocmd({"FileType"}, {
+    group = CosmicBagelGroup,
+    pattern = {"*"},
+    callback = function()
+        vim.opt_local.spell = true
+    end
+})

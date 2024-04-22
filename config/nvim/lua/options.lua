@@ -55,5 +55,12 @@ vim.opt.cursorline = true
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- sensible search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- sensible spelling
+-- vim.opt.spell = true <- set by autocommand for specific file types
+vim.opt.spelllang = { 'en_ca' }
+vim.opt.spellfile = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
+
