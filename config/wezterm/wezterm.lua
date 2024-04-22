@@ -43,7 +43,7 @@ config.colors = require("colors")
 -- Key bindings
 config.enable_kitty_keyboard = true -- needed for neovim keybindings
 config.disable_default_key_bindings = true
-config.leader = { key = 'a', mods = 'CMD', timeout_milliseconds = 1500 }
+config.leader = { key = 'a', mods = 'ALT', timeout_milliseconds = 1500 }
 config.keys = require("keys")
 
 return config
