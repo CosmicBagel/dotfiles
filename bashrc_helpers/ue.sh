@@ -49,7 +49,7 @@ alias ue5='echo Please use ue instead.'
 unity() {
 	# start unity as a detached process, with proper video card and
 	# gamdemode perf tunings
-	nohup prime-run gamemoderun $HOME/Unity/Hub/Editor/2023.2.19f1/Editor/Unity -projectpath $(pwd)
+	nohup prime-run gamemoderun $HOME/Unity/Hub/Editor/2022.3.25f1/Editor/Unity -projectpath $(pwd) >/dev/null 2>&1 &
 }
 
 unitylog() {
