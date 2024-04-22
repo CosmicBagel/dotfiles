@@ -119,6 +119,7 @@ return {
             dap.continue()
         end, { desc = 'Start/[C]ontinue' })
         vim.keymap.set('n', '<leader>bq', dap.terminate, { desc = '[Q]uit debug session' })
+        vim.keymap.set('n', '<leader>br', dap.repl.toggle, { desc = 'Toggle [R]EPL' })
         vim.keymap.set('n', '<leader>bs', dap.step_into, { desc = '[S]tep Into' })
         vim.keymap.set('n', '<leader>bo', dap.step_out, { desc = 'Step [O]ut' })
         vim.keymap.set('n', '<leader>bv', dap.step_over, { desc = 'Step O[v]er' })
@@ -184,10 +185,15 @@ return {
         vim.keymap.set('n', '<leader>bu', dapui.toggle, { desc = 'Toggle Debug [U]I' })
         vim.keymap.set('n', '<leader>bf', dapui.float_element, { desc = 'Open [F]loating UI' })
 
-        dap.listeners.after.event_initialized['dapui_config'] = dapui.open
-        dap.listeners.before.event_terminated['dapui_config'] = dapui.close
-        dap.listeners.before.event_exited['dapui_config'] = dapui.close
+        -- dap.listeners.after.event_initialized['dapui_config'] = dapui.open
+        -- dap.listeners.before.event_terminated['dapui_config'] = dapui.close
+        -- dap.listeners.before.event_exited['dapui_config'] = dapui.close
         -- dap.listeners.before.disconnect['dapui_config'] = dapui.close
+
+        -- normally these functions take session and body arguments
+        dap.listeners.after.event_initialized['daprepl_config'] = function(_, _) dap.repl.open() end
+        dap.listeners.before.event_terminated['daprepl_config'] = function(_, _) dap.repl.close() end
+        dap.listeners.before.event_exited['daprepl_config'] = function(_, _) dap.repl.close() end
 
 
         -- Install golang specific config
