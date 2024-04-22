@@ -6,7 +6,7 @@
 if [ -e "/tmp/nvimsocket" ]; then
     nvr --remote $@
     # will only work with plasma 6 and WezTerm
-    kdotool search --class "org.wezfurlong.wezterm" windowraise
+    kdotool search --class "org.wezfurlong.wezterm" windowactivate
 else
     wezterm -e nvr -s $@
 fi
