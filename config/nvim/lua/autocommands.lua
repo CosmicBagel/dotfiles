@@ -17,7 +17,7 @@ autocmd('TextYankPost', {
 
 -- strip trailing spaces on each line
 -- (will not report an error on no match)
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = CosmicBagelGroup,
     pattern = "*",
     callback = function()
@@ -30,7 +30,7 @@ autocmd({"BufWritePre"}, {
 -- my translation of
 -- autocmd FileType dap-float nnoremap <buffer><silent> q <cmd>close!<CR>
 -- makes q and esc close popup/floats
-autocmd({"FileType"}, {
+autocmd({ "FileType" }, {
     group = CosmicBagelGroup,
     pattern = "dap-float",
     callback = function()
@@ -40,10 +40,18 @@ autocmd({"FileType"}, {
 })
 
 -- enable spell checking for text files
-autocmd({"FileType"}, {
+local spell_ignore_list = {
+    "TelescopePrompt", "TelescopeResults", "fidget", "help", "lazy", "mason",
+    "lspinfo", "undotree", "oil"
+}
+autocmd({ "FileType" }, {
     group = CosmicBagelGroup,
-    pattern = {"*"},
-    callback = function()
+    pattern = { "*" },
+    callback = function(event)
+        -- vim.print(event) -- use this to check what odd fileTypes are used
+        if spell_ignore_list[event.match] == nil then
+            return
+        end
         vim.opt_local.spell = true
     end
 })
