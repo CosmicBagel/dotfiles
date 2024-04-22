@@ -174,10 +174,8 @@ return {
             -- But for many setups, the LSP (`tsserver`) will work just fine
             -- tsserver = {},
             --
-            omnisharp = {
 
-                -- cmd = { "dotnet", vim.fn.stdpath("data") .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
-                filetypes = { "cs" },
+            omnisharp = {
                 root_dir = require("lspconfig").util.root_pattern("*.sln", "*.csproj", "*.fsproj", ".git"),
                 settings = {
                     FormattingOptions = {
@@ -189,7 +187,7 @@ return {
                     },
                     RoslynExtensionsOptions = {
                         EnableAnalyzersSupport = true,
-                        EnableImportCompletion = true,
+                        -- EnableImportCompletion = true, -- INCURSE HUGE PERFORMANCE PENALTY
                         AnalyzeOpenDocumentsOnly = nil
                     },
                     Sdk = {
