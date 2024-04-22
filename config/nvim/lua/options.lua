@@ -17,7 +17,7 @@ vim.opt.undofile = true -- preserve undo state, needed for undotree
 vim.opt.timeout = true
 vim.opt.timeoutlen = 300
 
-vim.opt.number = true -- show line numbers
+vim.opt.relativenumber = true -- show line numbers
 vim.cmd("set linebreak") -- don't spilt words when line wrapping
 vim.opt.colorcolumn = "80"  -- displays guideline at 80 characters
 
