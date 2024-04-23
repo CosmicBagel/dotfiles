@@ -50,8 +50,9 @@ autocmd({ "FileType" }, {
     callback = function(event)
         -- vim.print(event) -- use this to check what odd fileTypes are used
         if spell_ignore_list[event.match] == nil then
-            return
+            vim.opt_local.spell = true
+        else
+            vim.opt_local.spell = false
         end
-        vim.opt_local.spell = true
     end
 })
