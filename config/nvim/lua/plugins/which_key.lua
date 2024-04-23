@@ -16,6 +16,7 @@ return {
             ['<leader>q'] = { name = '[Q]uack', _ = 'which_key_ignore' },
             ['<leader>x'] = { name = 'Diagnostics (Trouble)', _ = 'which_key_ignore' },
             ['<leader>j'] = { name = 'Split/[j]oin (treesj)', _ = 'which_key_ignore' },
+            ['<leader>p'] = { name = 'Buffers', _ = 'which_key_ignore' },
         }
     end,
 }
