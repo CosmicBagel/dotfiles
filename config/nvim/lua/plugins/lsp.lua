@@ -149,6 +149,7 @@ return {
         --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
         --  - settings (table): Override the default settings passed when initializing the server.
         --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+        local omnisharp_path = vim.fn.stdpath("data") .. "/mason/packages/omnisharp/libexec"
         local servers = {
             clangd = {
                 filetypes = { "c", "h", "hpp", "cpp", "objc", "objcpp", "cuda", "proto" },
@@ -178,21 +179,21 @@ return {
             omnisharp = {
                 root_dir = require("lspconfig").util.root_pattern("*.sln", "*.csproj", "*.fsproj", ".git"),
                 settings = {
-                    FormattingOptions = {
-                        EnableEditorConfigSupport = false,
-                        OrganizeImports = true
-                    },
-                    MsBuild = {
-                        LoadProjectsOnDemand = true
-                    },
-                    RoslynExtensionsOptions = {
-                        EnableAnalyzersSupport = true,
-                        EnableImportCompletion = true,
-                        AnalyzeOpenDocumentsOnly = false
-                    },
-                    Sdk = {
-                        IncludePrereleases = true
-                    }
+                    -- FormattingOptions = {
+                    --     EnableEditorConfigSupport = false,
+                    --     OrganizeImports = true
+                    -- },
+                    -- MsBuild = {
+                    --     LoadProjectsOnDemand = true
+                    -- },
+                    -- RoslynExtensionsOptions = {
+                    --     EnableAnalyzersSupport = true,
+                    --     EnableImportCompletion = false,
+                    --     AnalyzeOpenDocumentsOnly = true
+                    -- },
+                    -- Sdk = {
+                    --     -- IncludePrereleases = true
+                    -- }
                 }
             },
 
