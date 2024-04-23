@@ -31,3 +31,5 @@ AddPackage --foreign neovim-remote # Support --remote and friends for Neovim
 AddPackage --foreign visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
 AddPackage --foreign wlrctl # Utility for miscellaneous wlroots extensions
 
+AddPackage --foreign webcord # A Discord and SpaceBar Electron-based client implemented without Discord API
+
