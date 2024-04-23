@@ -179,20 +179,32 @@ return {
             omnisharp = {
                 root_dir = require("lspconfig").util.root_pattern("*.sln", "*.csproj", "*.fsproj", ".git"),
                 settings = {
-                    -- FormattingOptions = {
-                    --     EnableEditorConfigSupport = false,
-                    --     OrganizeImports = true
-                    -- },
-                    -- MsBuild = {
-                    --     LoadProjectsOnDemand = true
-                    -- },
-                    -- RoslynExtensionsOptions = {
-                    --     EnableAnalyzersSupport = true,
-                    --     EnableImportCompletion = false,
-                    --     AnalyzeOpenDocumentsOnly = true
-                    -- },
+                    MsBuild = {
+                        enabled = true,
+                        loadProjectsOnDemand = true,
+                    },
+                    RoslynExtensionsOptions = {
+                        enableImportCompletion = true,
+                        analyzeOpenDocumentsOnly = false,
+                        enableAnalyzersSupport = true,
+                        diagnosticWorkersThreadCount = 12,
+                    },
+                    inlayHintsOptions = {
+                        enableForParameters = true,
+                        forLiteralParameters = true,
+                        forIndexerParameters = true,
+                        forObjectCreationParameters = true,
+                        forOtherParameters = true,
+                        suppressForParametersThatDifferOnlyBySuffix = false,
+                        suppressForParametersThatMatchMethodIntent = false,
+                        suppressForParametersThatMatchArgumentName = false,
+                        enableForTypes = true,
+                        forImplicitVariableTypes = true,
+                        forLambdaParameterTypes = true,
+                        forImplicitObjectCreation = true,
+                    },
                     -- Sdk = {
-                    --     -- IncludePrereleases = true
+                    -- IncludePrereleases = true
                     -- }
                 }
             },
