@@ -23,3 +23,6 @@ function()
     local path = vim.fn.stdpath('config') .. '/spell'
     vim.cmd('mkspell! ' .. path .. '/en.utf-8.add.spl ' .. path .. '/en.utf-8.add')
 end, {})
+
+vim.api.nvim_create_user_command('Q', 'wqa', {})
+vim.api.nvim_create_user_command('W', 'wa', {})
