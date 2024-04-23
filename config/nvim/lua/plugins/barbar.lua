@@ -42,8 +42,9 @@ return {
         map('<A-9>', '<Cmd>BufferGoto 9<CR>', "Goto Buffer 9")
         map('<A-0>', '<Cmd>BufferLast<CR>', "Goto Last Buffer")
 
-        -- Pin/unpin buffer
+        -- Buffer keys behind leader key
         map('<Leader>pp', '<Cmd>BufferPin<CR>', "Pin/Unpin Buffer")
         map('<Leader>pd', '<Cmd>BufferCloseAllButPinned<CR>', "Close all but pinned buffers")
+        map('<Leader>px', '<Cmd>BufferClose<CR>', "Close current buffer (leave window open)")
     end
 }
