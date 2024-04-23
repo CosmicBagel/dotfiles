@@ -155,12 +155,12 @@ return { -- Autocompletion
                 { name = 'nvim_lsp_document_symbol' },
                 { name = 'nvim-cmp-lsp-rs' },
                 { name = 'buffer' },
-                { name = 'spell', option = {
-                    keep_all_entries = true,
-                    enable_in_context = function()
-                        return true
-                    end,
-                }, },
+                -- { name = 'spell', option = {
+                --     keep_all_entries = true,
+                --     enable_in_context = function()
+                --         return true
+                --     end,
+                -- }, },
             },
         }
     end,
