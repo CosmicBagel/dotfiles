@@ -32,7 +32,9 @@
 	<pref name="EnterSafeModeDialog" type="int">1</pref>
 	<pref name="GICacheCompressionLevel" type="int">1</pref>
 	<pref name="GICacheEnableCustomPath" type="int">0</pref>
+	<pref name="GICacheFolder" type="string"></pref>
 	<pref name="GICacheMaximumSizeGB" type="int">10</pref>
+	<pref name="GpuDeviceName" type="string"></pref>
 	<pref name="GraphSnapping" type="int">1</pref>
 	<pref name="GridBrushPickLastIndex" type="int">-1</pref>
 	<pref name="GridBrushPickLastSavedCount" type="int">0</pref>
@@ -54,10 +56,27 @@
 	<pref name="ProjectBrowserAssets" type="int">1</pref>
 	<pref name="ProjectBrowserFavorites" type="int">1</pref>
 	<pref name="ProjectBrowserPackages" type="int">1</pref>
+	<pref name="RecentlyUsedImageApp0" type="string"></pref>
+	<pref name="RecentlyUsedImageApp1" type="string"></pref>
+	<pref name="RecentlyUsedImageApp2" type="string"></pref>
+	<pref name="RecentlyUsedImageApp3" type="string"></pref>
+	<pref name="RecentlyUsedImageApp4" type="string"></pref>
+	<pref name="RecentlyUsedImageApp5" type="string"></pref>
+	<pref name="RecentlyUsedImageApp6" type="string"></pref>
+	<pref name="RecentlyUsedImageApp7" type="string"></pref>
+	<pref name="RecentlyUsedImageApp8" type="string"></pref>
+	<pref name="RecentlyUsedImageApp9" type="string"></pref>
 	<pref name="RecentlyUsedProjectPaths-0" type="string">L2hvbWUvc2FtL3Byb2ovbWFuYS1zaG9jaw==</pref>
-	<pref name="RecentlyUsedScriptApp0" type="string">L2hvbWUvc2FtL2RvdGZpbGVzL2NvbmZpZy9udmltL3NjcmlwdHMvb3Blbl9pbl9udmltLnNo</pref>
-	<pref name="RecentlyUsedScriptApp1" type="string">L3Vzci9iaW4vY29kZQ==</pref>
-	<pref name="RecentlyUsedScriptApp2" type="string">L2Jpbi9jb2Rl</pref>
+	<pref name="RecentlyUsedScriptApp0" type="string">L3Vzci9iaW4vY29kZQ==</pref>
+	<pref name="RecentlyUsedScriptApp1" type="string">L2Jpbi9jb2Rl</pref>
+	<pref name="RecentlyUsedScriptApp2" type="string">L2hvbWUvc2FtL2RvdGZpbGVzL2NvbmZpZy9udmltL3NjcmlwdHMvb3Blbl9pbl9udmltLnNo</pref>
+	<pref name="RecentlyUsedScriptApp3" type="string">L2hvbWUvc2FtL2RvdGZpbGVzL2NvbmZpZy9udmltL3NjcmlwdHMvY29kZQ==</pref>
+	<pref name="RecentlyUsedScriptApp4" type="string"></pref>
+	<pref name="RecentlyUsedScriptApp5" type="string"></pref>
+	<pref name="RecentlyUsedScriptApp6" type="string"></pref>
+	<pref name="RecentlyUsedScriptApp7" type="string"></pref>
+	<pref name="RecentlyUsedScriptApp8" type="string"></pref>
+	<pref name="RecentlyUsedScriptApp9" type="string"></pref>
 	<pref name="ReopenLastUsedProjectOnStartup" type="int">0</pref>
 	<pref name="RestoredMainWindowSizeH" type="float">796</pref>
 	<pref name="RestoredMainWindowSizeW" type="float">1525</pref>
@@ -97,8 +116,8 @@
 	<pref name="ScriptCompilationDuringPlay" type="int">1</pref>
 	<pref name="ScriptDebugInfoEnabled" type="int">0</pref>
 	<pref name="Search.ItemIconSize" type="float">32</pref>
-	<pref name="SettingsWindow_Preferences_current_provider" type="string">UHJlZmVyZW5jZXMvX0dlbmVyYWw=</pref>
-	<pref name="SettingsWindow_Project Settings_current_provider" type="string">UHJvamVjdC9QbGF5ZXI=</pref>
+	<pref name="SettingsWindow_Preferences_current_provider" type="string">UHJlZmVyZW5jZXMvRXh0ZXJuYWwgVG9vbHM=</pref>
+	<pref name="SettingsWindow_Project Settings_current_provider" type="string">UHJvamVjdC9JbnB1dCBNYW5hZ2Vy</pref>
 	<pref name="SettingsWindow_m_Splitter" type="float">0.2</pref>
 	<pref name="ShortcutManager_ProfileMigrated" type="int">1</pref>
 	<pref name="TerrainFillAddressMode" type="int">0</pref>
@@ -168,17 +187,22 @@
 	<pref name="UnityEditor.TooltipViewz" type="int">0</pref>
 	<pref name="UseInspectorExpandedState" type="int">0</pref>
 	<pref name="VerifySavingAssets" type="int">0</pref>
+	<pref name="customDiffToolPath" type="string"></pref>
 	<pref name="kAutoRefreshMode" type="int">2</pref>
 	<pref name="kDiffsDefaultApp" type="string">Q3VzdG9tIFRvb2w=</pref>
-	<pref name="kMonoEditorConsoleFlagsV2" type="int">8067</pref>
+	<pref name="kImagesDefaultApp" type="string"></pref>
+	<pref name="kMonoEditorConsoleFlagsV2" type="int">8066</pref>
 	<pref name="kProjectBasePath" type="string">L2hvbWUvc2FtL3Byb2ovbWFuYS1zaG9jaw==</pref>
 	<pref name="kScriptEditorArgs/home/sam/dotfiles/config/nvim/scripts/open_in_nvim.sh" type="string">KyQoTGluZSkgJChGaWxlKQ==</pref>
-	<pref name="kScriptsDefaultApp" type="string">L2hvbWUvc2FtL2RvdGZpbGVzL2NvbmZpZy9udmltL3NjcmlwdHMvb3Blbl9pbl9udmltLnNo</pref>
+	<pref name="kScriptsDefaultApp" type="string">L3Vzci9iaW4vY29kZQ==</pref>
 	<pref name="kWorkspacePath" type="string">L2hvbWUvc2FtL3Byb2ovbWFuYS1zaG9jaw==</pref>
+	<pref name="mergeArguments" type="string"></pref>
 	<pref name="overlay-show-orientation-background" type="int">0</pref>
-	<pref name="unity.editor_session_count" type="string">NDM=</pref>
-	<pref name="unity.editor_sessionid" type="string">NTA4MzU5MjIyODkzMDUyNTcwNQ==</pref>
-	<pref name="unity_project_generation_flag" type="int">191</pref>
+	<pref name="threeWayDiffArguments" type="string"></pref>
+	<pref name="twoWayDiffArguments" type="string"></pref>
+	<pref name="unity.editor_session_count" type="string">NTA=</pref>
+	<pref name="unity.editor_sessionid" type="string">NzM0MzMyODM0OTk3MzQ4MjM1OA==</pref>
+	<pref name="unity_project_generation_flag" type="int">159</pref>
 	<pref name="vscode_arguments" type="string">IiQoUHJvamVjdFBhdGgpIiAtZyAiJChGaWxlKSI6JChMaW5lKTokKENvbHVtbik=</pref>
 	<pref name="vscode_userExtensions" type="string">Y3M7dXhtbDt1c3M7c2hhZGVyO2NvbXB1dGU7Y2dpbmM7aGxzbDtnbHNsaW5jO3RlbXBsYXRlO3JheXRyYWNlO3R4dDt4bWw7Zm50O2NkO2FzbWRlZjthc21yZWY7cnNwO2phdmE7Y3BwO2M7bW07bTtoO2pzb247bG9n</pref>
 </unity_prefs>
