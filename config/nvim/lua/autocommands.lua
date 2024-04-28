@@ -57,6 +57,13 @@ autocmd({ "FileType" }, {
     end
 })
 
+-- godot config files
+autocmd({ "BufNewFile", "BufRead" }, {
+    group = CosmicBagelGroup,
+    pattern = {"*.import", "*.godot"},
+    command = "setfiletype gdresource"
+})
+
 -- relative line numbers in normal mode, but not insert mode
 autocmd({ "InsertEnter" }, {
     group = CosmicBagelGroup,
