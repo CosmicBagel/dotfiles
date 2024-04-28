@@ -42,7 +42,7 @@ autocmd({ "FileType" }, {
 -- enable spell checking for text files
 local spell_ignore_list = {
     "TelescopePrompt", "TelescopeResults", "fidget", "help", "lazy", "mason",
-    "lspinfo", "undotree"
+    "lspinfo", "undotree", "terminal"
 }
 autocmd({ "FileType" }, {
     group = CosmicBagelGroup,
