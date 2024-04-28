@@ -47,6 +47,27 @@ local M = {
 	{ key = "=",          mods = "CTRL",              action = act.IncreaseFontSize },
 	{ key = "-",          mods = "CTRL",              action = act.DecreaseFontSize },
 	{ key = "0",          mods = "CTRL",              action = act.ResetFontSize },
+
+	{ key = "p",          mods = "LEADER",        action = act.ActivateCommandPalette },
+
+	-- when leader key is annoying
+	{ key = "Tab",        mods = "CTRL",              action = act.ActivateTabRelative(1) },
+	{ key = "Tab",        mods = "CTRL|SHIFT",        action = act.ActivateTabRelative(-1) },
+
+	{ key = "t",          mods = "CTRL|SHIFT",        action = act.SpawnTab 'CurrentPaneDomain' },
+	{ key = "w",          mods = "CTRL|SHIFT",        action = act.CloseCurrentTab { confirm = true } },
+	{ key = "Space",      mods = "CTRL|SHIFT",        action = act.ActivateCopyMode },
+
+	{ key = "!",          mods = "CTRL|SHIFT",        action = act.ActivateTab(0) },
+	{ key = "@",          mods = "CTRL|SHIFT",        action = act.ActivateTab(1) },
+	{ key = "#",          mods = "CTRL|SHIFT",        action = act.ActivateTab(2) },
+	{ key = "$",          mods = "CTRL|SHIFT",        action = act.ActivateTab(3) },
+	{ key = "%",          mods = "CTRL|SHIFT",        action = act.ActivateTab(4) },
+	{ key = "^",          mods = "CTRL|SHIFT",        action = act.ActivateTab(5) },
+	{ key = "&",          mods = "CTRL|SHIFT",        action = act.ActivateTab(6) },
+	{ key = "*",          mods = "CTRL|SHIFT",        action = act.ActivateTab(7) },
+	{ key = "(",          mods = "CTRL|SHIFT",        action = act.ActivateTab(8) },
+	{ key = ")",          mods = "CTRL|SHIFT",        action = act.ActivateTab(9) },
 }
 
 return M
