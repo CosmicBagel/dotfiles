@@ -149,88 +149,71 @@ return {
         --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
         --  - settings (table): Override the default settings passed when initializing the server.
         --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
-        local omnisharp_path = vim.fn.stdpath("data") .. "/mason/packages/omnisharp/libexec"
-        local servers = {
-            clangd = {
-                filetypes = { "c", "h", "hpp", "cpp", "objc", "objcpp", "cuda", "proto" },
-                root_dir = require("lspconfig").util.root_pattern(
-                    ".clangd",
-                    ".clang-tidy",
-                    ".clang-format",
-                    "compile_commands.json",
-                    "compile_flags.txt",
-                    "configure.ac",
-                    ".git"
-                ),
-                single_file_support = true,
-            },
-            gopls = {},
-            -- pyright = {},
-            rust_analyzer = {},
-            -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-            --
-            -- Some languages (like typescript) have entire language plugins that can be useful:
-            --    https://github.com/pmizio/typescript-tools.nvim
-            --
-            -- But for many setups, the LSP (`tsserver`) will work just fine
-            -- tsserver = {},
-            --
 
-            omnisharp = {
-                root_dir = require("lspconfig").util.root_pattern("*.sln", "*.csproj", "*.fsproj", ".git"),
-                settings = {
-                    MsBuild = {
-                        enabled = true,
-                        loadProjectsOnDemand = true,
-                    },
-                    RoslynExtensionsOptions = {
-                        enableImportCompletion = true,
-                        analyzeOpenDocumentsOnly = false,
-                        enableAnalyzersSupport = true,
-                        diagnosticWorkersThreadCount = 12,
-                    },
-                    inlayHintsOptions = {
-                        enableForParameters = true,
-                        forLiteralParameters = true,
-                        forIndexerParameters = true,
-                        forObjectCreationParameters = true,
-                        forOtherParameters = true,
-                        suppressForParametersThatDifferOnlyBySuffix = false,
-                        suppressForParametersThatMatchMethodIntent = false,
-                        suppressForParametersThatMatchArgumentName = false,
-                        enableForTypes = true,
-                        forImplicitVariableTypes = true,
-                        forLambdaParameterTypes = true,
-                        forImplicitObjectCreation = true,
-                    },
-                    -- Sdk = {
-                    -- IncludePrereleases = true
-                    -- }
-                }
-            },
+        -- godot script / shaders aren't provided by mason
+        require 'lspconfig'.gdscript.setup {}
+        require 'lspconfig'.gdshader_lsp.setup {}
 
-            lua_ls = {
-                -- cmd = {...},
-                -- filetypes = { ...},
-                -- capabilities = {},
-                settings = {
-                    Lua = {
-                        filetypes = { "lua" },
-                        completion = {
-                            callSnippet = 'Replace',
-                        },
-                        -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-                        -- diagnostics = { disable = { 'missing-fields' } },
+        local servers = {}
+        servers.clangd = {
+            filetypes = { "c", "h", "hpp", "cpp", "objc", "objcpp", "cuda", "proto" },
+            root_dir = require("lspconfig").util.root_pattern(
+                ".clangd",
+                ".clang-tidy",
+                ".clang-format",
+                "compile_commands.json",
+                "compile_flags.txt",
+                "configure.ac",
+                ".git"
+            ),
+            single_file_support = true,
+        }
+        servers.gopls = {}
+        -- pyright = {}
+        servers.rust_analyzer = {}
+        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+        --
+        -- Some languages (like typescript) have entire language plugins that can be useful:
+        --    https://github.com/pmizio/typescript-tools.nvim
+        --
+        -- But for many setups, the LSP (`tsserver`) will work just fine
+        -- tsserver = {},
+        --
+
+        local omnisharp_path = vim.fn.stdpath('data') .. '/mason/packages/omnisharp/libexec/OmniSharp.dll'
+        servers.omnisharp = {
+            root_dir = require("lspconfig").util.root_pattern("*.sln", "*.csproj", "*.fsproj", ".git"),
+            cmd = { "dotnet", omnisharp_path },
+            settings = {
+                RoslynExtensionsOptions = {
+                    enableImportCompletion = true,
+                    analyzeOpenDocumentsOnly = false,
+                    enableAnalyzersSupport = true,
+                },
+            }
+        }
+
+        servers.lua_ls = {
+            -- cmd = {...},
+            -- filetypes = { ...},
+            -- capabilities = {},
+            settings = {
+                Lua = {
+                    filetypes = { "lua" },
+                    completion = {
+                        callSnippet = 'Replace',
                     },
+                    -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+                    -- diagnostics = { disable = { 'missing-fields' } },
                 },
             },
+        }
 
-            tsserver = {
-                ---@diagnostic disable-next-line: missing-fields
-                settings = {
-                    completions = {
-                        completeFunctionCalls = true,
-                    },
+        servers.tsserver = {
+            ---@diagnostic disable-next-line: missing-fields
+            settings = {
+                completions = {
+                    completeFunctionCalls = true,
                 },
             },
         }
@@ -267,6 +250,7 @@ return {
                     -- certain features of an LSP (for example, turning off formatting for tsserver)
                     server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
                     server.inlay_hints = { enabled = true }
+                    server.single_file_support = true
                     require('lspconfig')[server_name].setup(server)
                 end,
             },
