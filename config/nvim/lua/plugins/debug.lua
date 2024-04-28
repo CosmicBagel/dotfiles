@@ -36,39 +36,76 @@ return {
             args = {
                 'UnityDebugAdapter.dll'
             },
-            options ={
+            options = {
                 cwd = vstuc_path,
             },
         }
 
-        dap.configurations.cs = {
-            {
-                name = 'Unity Debugger',
-                type = 'vstuc',
-                request = 'attach',
-                projectPath = vim.fn.getcwd(),
-                logFile = vim.env.HOME .. "/vstuc.log",
-                endPoint = function()
-                    local system_obj = vim.system(
-                        { "dotnet", vstuc_path .. "UnityAttachProbe.dll" })
-                    local probe_result = system_obj:wait(2000).stdout
+        -- dap.configurations.cs = {
+        --     {
+        --         name = 'Unity Debugger',
+        --         type = 'vstuc',
+        --         request = 'attach',
+        --         projectPath = vim.fn.getcwd(),
+        --         logFile = vim.env.HOME .. "/vstuc.log",
+        --         endPoint = function()
+        --             local system_obj = vim.system(
+        --                 { "dotnet", vstuc_path .. "UnityAttachProbe.dll" })
+        --             local probe_result = system_obj:wait(2000).stdout
+        --
+        --             if probe_result == nil or #probe_result == 0 then
+        --                 print("No endpoint found (is unity running?)")
+        --                 return ""
+        --             end
+        --             local pattern = [["debuggerPort":(%d+)]]
+        --             local port = string.match(probe_result, pattern)
+        --
+        --             if port == nil or #port == 0 then
+        --                 print("Failed to parse debugger port")
+        --                 return ""
+        --             end
+        --
+        --             return "127.0.0.1:" .. port
+        --         end,
+        --     }
+        -- }
 
-                    if probe_result == nil or #probe_result == 0 then
-                        print("No endpoint found (is unity running?)")
-                        return ""
-                    end
-                    local pattern = [["debuggerPort":(%d+)]]
-                    local port = string.match(probe_result, pattern)
+        -- dap.adapters.godot_mono = {
+        --     type = 'server',
+        --     address = 'localhost',
+        --     port = 23685,
+        -- }
 
-                    if port == nil or #port == 0 then
-                        print("Failed to parse debugger port")
-                        return ""
-                    end
+        -- dap.configurations.gdscript = {
+        --     {
+                -- type = 'godot',
+                -- request = 'launch',
+                -- name = 'Launch scene',
+                -- project = '${workspaceFolder}',
+                -- launch_scene = true,
 
-                    return "127.0.0.1:" .. port
-                end,
-            }
-        }
+                -- name =    'Play in Editor',
+                -- type =    'godot_mono',
+                -- mode =    'playInEditor',
+                -- request = 'launch',
+
+        --         name = "Attach",
+        --         type = "godot_mono",
+        --         request = "attach",
+        --         address = "localhost",
+        --         port = 23685
+        --     }
+        -- }
+
+        -- dap.configurations.cs = {
+        --     {
+        --         type = 'godot_mono',
+        --         request = 'launch',
+        --         name = 'Launch Scene',
+        --         project = '${workspaceFolder}',
+        --         launch_scene = true,
+        --     }
+        -- }
 
         require('mason-nvim-dap').setup {
             -- Makes a best effort to setup the various debuggers with
@@ -153,7 +190,7 @@ return {
                     keymap.mode,
                     keymap.lhs,
                     keymap.rhs or keymap.callback,
-                    { silent = keymap.silent == 1, buffer = keymap.buffer  }
+                    { silent = keymap.silent == 1, buffer = keymap.buffer }
                 )
             end
             keymap_restore = {}
