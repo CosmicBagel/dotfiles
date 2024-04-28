@@ -120,3 +120,12 @@ AddPackage mono # Free implementation of the .NET platform including runtime and
 AddPackage mono-msbuild # Xamarin implementation of the Microsoft build system
 AddPackage prettier # An opinionated code formatter
 AddPackage speedcrunch # Simple but powerful calculator using Qt
+
+AddPackage jdk-openjdk # OpenJDK Java 22 development kit
+
+AddPackage blender # A fully integrated 3D graphics creation suite
+AddPackage discord # All-in-one voice and text chat for gamers
+AddPackage gimp # GNU Image Manipulation Program
+AddPackage inkscape # Professional vector graphics editor
+AddPackage krita # Edit and paint images
+AddPackage scons # Extensible Python-based build utility
