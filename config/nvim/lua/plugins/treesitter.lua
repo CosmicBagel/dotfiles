@@ -5,7 +5,8 @@ return {
         ensure_installed = { "vimdoc", "vim", "lua", "luadoc", "c", "cpp",
             "rust", "c_sharp", "html", "css", "javascript", "typescript",
             "markdown", "markdown_inline", "go", "bash", "json", "gitignore",
-            "git_config", "toml", "yaml", "zig", "sql", "regex", "tsx",
+            "git_config", "toml", "yaml", "zig", "sql", "regex", "tsx", "ini",
+            "gdscript", "gdshader", "godot_resource"
         },
 
         -- Automatically install missing parsers when entering buffer
