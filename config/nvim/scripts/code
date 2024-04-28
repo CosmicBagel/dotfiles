@@ -1,3 +1,24 @@
 #!/bin/bash
 # dummy placeholder file that tricks unity into
 # generating project files
+
+#"$(ProjectPath)" -g "$(File)":$(Line):$(Column)
+
+$@ >> ~/input_log.txt
+
+file = $(echo $3 | cut -f1 -d:)
+line = $(echo $3 | cut -f2 -d:)
+
+"+$line $file" >> ~/output_log.txt
+
+# if nvim already running, open file in it
+# otherwise open it in a new terminal instance
+if [ -e "/tmp/nvimsocket" ]; then
+    nvr --remote "+$line $file"
+    # will only work with plasma 6 and WezTerm
+    kdotool search --class "org.wezfurlong.wezterm" windowactivate
+else
+    # wezterm -e nvr -s "+$line $file"
+    nvr --remote "+$line $file"
+fi
+
