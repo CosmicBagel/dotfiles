@@ -56,3 +56,16 @@ autocmd({ "FileType" }, {
         end
     end
 })
+
+-- relative line numbers in normal mode, but not insert mode
+autocmd({ "InsertEnter" }, {
+    group = CosmicBagelGroup,
+    pattern = "*",
+    command = "set norelativenumber"
+})
+
+autocmd({ "InsertLeave" }, {
+    group = CosmicBagelGroup,
+    pattern = "*",
+    command = "set relativenumber"
+})
