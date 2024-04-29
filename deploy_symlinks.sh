@@ -39,6 +39,7 @@ symlinks_dic["$HOME/dotfiles/config/yazi"]="$HOME/.config/yazi"
 
 symlinks_dic["$HOME/dotfiles/config/omnisharp"]="$HOME/.omnisharp"
 symlinks_dic["$HOME/dotfiles/config/unity3d_prefs"]="$HOME/.local/share/unity3d/prefs"
+symlinks_dic["$HOME/dotfiles/config/godot"]="$HOME/.config/godot"
 
 #usage: make_symlink /path/to/new_file /path/to/symlink
 #checks if a file at symlink location already exists, skips if it does
