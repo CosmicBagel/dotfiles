@@ -12,6 +12,9 @@ function UpdateAllTheThings {
         echo -e "\n\n===Flatpak upgrade==="
         flatpak upgrade
     fi
+
+    echo -e "\n\n===Neovim Nightly Update==="
+    yay -S neovim-git
 }
 alias uatt='UpdateAllTheThings'
 
