@@ -8,13 +8,14 @@ function UpdateAllTheThings {
         yay -Syu
     fi
 
-    if [[ $? -eq 0 ]]; then
-        echo -e "\n\n===Flatpak upgrade==="
-        flatpak upgrade
-    fi
+    echo -e "\n\n===Flatpak upgrade==="
+    flatpak upgrade
 
     echo -e "\n\n===Neovim Nightly Update==="
-    yay -S neovim-git
+    read -p "Press enter to continue (or ctrl+c to bail)"
+    if [[ $? -eq 0 ]]; then
+	yay -S neovim-git
+    fi
 }
 alias uatt='UpdateAllTheThings'
 
