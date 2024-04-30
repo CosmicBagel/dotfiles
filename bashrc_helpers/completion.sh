@@ -8,3 +8,5 @@ if ! shopt -oq posix; then
 fi
 
 complete -F _command doas
+
+. $HOME/dotfiles/bashrc_helpers/_zig.bash

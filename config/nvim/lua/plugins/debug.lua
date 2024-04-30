@@ -149,7 +149,7 @@ return {
             -- this lets us avoid typing in the path every time
             if vim.fn.filereadable(".vscode/launch.json") then
                 require("dap.ext.vscode").load_launchjs(nil, {
-                    codelldb = { "c", "cpp", "rust" },
+                    codelldb = { "c", "cpp", "rs", "zig" },
                     delve = { "go" },
                 })
             end

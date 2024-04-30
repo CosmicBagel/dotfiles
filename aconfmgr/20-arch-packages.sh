@@ -129,3 +129,5 @@ AddPackage gimp # GNU Image Manipulation Program
 AddPackage inkscape # Professional vector graphics editor
 AddPackage krita # Edit and paint images
 AddPackage scons # Extensible Python-based build utility
+
+AddPackage zig # a general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
