@@ -39,28 +39,20 @@ autocmd({ "FileType" }, {
     end,
 })
 
--- enable spell checking for text files
-local spell_ignore_list = {
-    "TelescopePrompt", "TelescopeResults", "fidget", "help", "lazy", "mason",
-    "lspinfo", "undotree", "terminal"
-}
+-- disable spell checking for windows and things
 autocmd({ "FileType" }, {
     group = CosmicBagelGroup,
-    pattern = { "*" },
-    callback = function(event)
-        -- vim.print(event) -- use this to check what odd fileTypes are used
-        if spell_ignore_list[event.match] == nil then
-            vim.opt_local.spell = true
-        else
-            vim.opt_local.spell = false
-        end
+    pattern = { "TelescopePrompt", "TelescopeResults", "fidget", "help", "lazy", "mason",
+        "lspinfo", "undotree", "terminal", "toggleterm" },
+    callback = function()
+        vim.opt_local.spell = false
     end
 })
 
 -- godot config files
 autocmd({ "BufNewFile", "BufRead" }, {
     group = CosmicBagelGroup,
-    pattern = {"*.import", "*.godot"},
+    pattern = { "*.import", "*.godot" },
     command = "setfiletype gdresource"
 })
 

@@ -62,6 +62,7 @@ vim.opt.smartcase = true
 
 -- sensible spelling
 -- vim.opt.spell = true <- set by autocommand for specific file types
+vim.opt.spell = true
 vim.opt.spelllang = { 'en_ca' }
 vim.opt.spellfile = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
 
