@@ -24,5 +24,6 @@ function()
     vim.cmd('mkspell! ' .. path .. '/en.utf-8.add.spl ' .. path .. '/en.utf-8.add')
 end, {})
 
-vim.api.nvim_create_user_command('Q', 'wqa', {})
-vim.api.nvim_create_user_command('W', 'wa', {})
+-- common typo when quitting and writing
+vim.api.nvim_create_user_command('Q', 'q', {})
+vim.api.nvim_create_user_command('W', 'w', {})
