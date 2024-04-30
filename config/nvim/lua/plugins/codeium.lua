@@ -5,6 +5,7 @@ return {
         local neocodeium = require("neocodeium")
         neocodeium.setup({
             silent = true,
+            enabled = false,
         })
 
         vim.keymap.set("i", "<A-c>", neocodeium.clear, { desc = "Codeium clear" })
