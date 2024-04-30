@@ -41,6 +41,10 @@ symlinks_dic["$HOME/dotfiles/config/omnisharp"]="$HOME/.omnisharp"
 symlinks_dic["$HOME/dotfiles/config/unity3d_prefs"]="$HOME/.local/share/unity3d/prefs"
 symlinks_dic["$HOME/dotfiles/config/godot"]="$HOME/.config/godot"
 
+symlinks_dic["$HOME/dotfiles/config/vscode/settings.json"]="$HOME/.config/Code/User/settings.json"
+symlinks_dic["$HOME/dotfiles/config/vscode/snippets"]="$HOME/.config/Code/User/snippets"
+symlinks_dic["$HOME/dotfiles/config/vscode/extensions.json"]="$HOME/.vscode/extensions/extensions.json"
+
 #usage: make_symlink /path/to/new_file /path/to/symlink
 #checks if a file at symlink location already exists, skips if it does
 function make_symlink {

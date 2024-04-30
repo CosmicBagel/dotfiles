@@ -1,0 +1,82 @@
+{
+    "editor.fontFamily": "'Hack', 'monospace', monospace",
+    "editor.fontSize": 16,
+    "vim.leader": "space",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": "K",
+            "command": "editor.action.showDefinitionPreviewHover"
+        },
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ],
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ],
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "commands": [
+                "workbench.action.focusAboveGroup"
+            ],
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        },
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "commands": [
+                "workbench.action.focusBelowGroup"
+            ],
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ],
+            "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+        },
+        {
+            "before": [
+                "alt+j"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": [
+                "alt+k"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ],
+            "when": "editorTextFocus && !editorReadonly"
+        }
+    ],
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
+    "workbench.activityBar.location": "hidden",
+    "window.menuBarVisibility": "toggle",
+    "workbench.startupEditor": "none"
+}
