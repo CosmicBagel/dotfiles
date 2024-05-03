@@ -173,7 +173,9 @@ return {
         servers.rust_analyzer = {}
 
         vim.g.zig_fmt_autosave = 0
-        servers.zls = {}
+        servers.zls = {
+            cmd = { "/usr/bin/zls" },
+        }
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
