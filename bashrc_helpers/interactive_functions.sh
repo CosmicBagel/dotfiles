@@ -13,9 +13,11 @@ function UpdateAllTheThings {
 
     echo -e "\n\n===Neovim Nightly Update==="
     read -p "Press enter to continue (or ctrl+c to bail)"
-    if [[ $? -eq 0 ]]; then
-	yay -S neovim-git
-    fi
+    yay -S neovim-git
+
+    echo -e "\n\n===Zig Nightly Update==="
+    read -p "Press enter to continue (or ctrl+c to bail)"
+    yay -S zig-dev-bin
 }
 alias uatt='UpdateAllTheThings'
 
