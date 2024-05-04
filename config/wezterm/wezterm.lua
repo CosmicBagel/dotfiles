@@ -6,7 +6,7 @@ config.term = 'wezterm'
 
 -- Font
 config.font = wezterm.font { family = "Hack" }
-config.font_size = 13
+config.font_size = 16
 config.cursor_thickness = 0.20
 
 -- Scroll history
