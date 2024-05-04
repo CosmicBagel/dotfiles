@@ -1,5 +1,5 @@
 -- -- -- basic vim options -- -- --
-vim.opt.shortmess = "I" -- disable the startup message
+table.insert(vim.opt.shortmess, "I") -- disable the startup message
 vim.opt.title = true
 vim.opt.clipboard = "unnamedplus" -- use system clipboard for default yank
 vim.opt.termguicolors = true -- enable proper colors
