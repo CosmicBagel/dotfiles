@@ -1,11 +1,11 @@
-local wezterm = require 'wezterm'
+local wezterm                  = require 'wezterm'
 
-local M = {}
+local M                        = {}
 
 --local leader_active_color = '#f38ba8'
-local leader_active_color = '#a6e3a1'
+local leader_active_color      = '#a6e3a1'
 
-local battery_icons = {}
+local battery_icons            = {}
 battery_icons['Charging10']    = '\u{f0085}'
 battery_icons['Charging9']     = '\u{f008b}'
 battery_icons['Charging8']     = '\u{f008a}'
@@ -31,9 +31,9 @@ battery_icons['Discharging0']  = '\u{f008e}'
 battery_icons['Empty']         = '\u{f008e}'
 battery_icons['Full']          = '\u{f06a5}'
 
--- "Unknown" usually happens when battery isn't charging (on AC power), but 
+-- "Unknown" usually happens when battery isn't charging (on AC power), but
 -- also isn't full. This occurs when battery is near full, but not quite full.
-battery_icons['Unknown']       = '\u{f06a5}' 
+battery_icons['Unknown']       = '\u{f06a5}'
 
 
 M.apply_tab_bar_config = function(config)
@@ -78,6 +78,20 @@ M.apply_tab_bar_config = function(config)
             { Text = cwd .. '  ' .. bat .. ' ' .. date .. ' ' },
         })
     end)
+
+    config.hide_tab_bar_if_only_one_tab = true
+
+    -- disable in fullscreen if only one bar
+    -- wezterm.on('window-resized', function(window, _)
+    --     local isFs = window:get_dimensions().is_full_screen
+    --     local overrides = window:get_config_overrides() or {}
+    --     if isFs then
+    --         overrides.hide_tab_bar_if_only_one_tab = true
+    --     else
+    --         overrides.hide_tab_bar_if_only_one_tab = false
+    --     end
+    --     window:set_config_overrides(overrides)
+    -- end)
 end
 
 return M
