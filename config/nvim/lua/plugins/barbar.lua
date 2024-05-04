@@ -46,6 +46,7 @@ return {
         -- Buffer keys behind leader key
         map('<Leader>pp', '<Cmd>BufferPin<CR>', "Pin/Unpin Buffer")
         map('<Leader>pd', '<Cmd>BufferCloseAllButPinned<CR>', "Close all but pinned buffers")
+        map('<Leader>pa', '<Cmd>BufferCloseAllButCurrent<CR>', "Close all but current buffer")
         map('<Leader>px', '<Cmd>BufferClose<CR>', "Close current buffer (leave window open)")
     end
 }
