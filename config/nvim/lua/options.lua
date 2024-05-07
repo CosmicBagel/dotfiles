@@ -27,7 +27,7 @@ vim.opt.colorcolumn = "80"  -- displays guideline at 80 characters
 -- vim.opt.backspace = "indent,eol,start" -- this is default
 
 -- keep 10 lines on screen above and below cursor
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 0
 
 -- sensible tab behaviour
 vim.opt.expandtab = true -- replace tabs with spaces
