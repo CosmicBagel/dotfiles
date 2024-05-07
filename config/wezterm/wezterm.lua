@@ -5,8 +5,8 @@ local config = wezterm.config_builder()
 config.term = 'wezterm'
 
 -- Font
-config.font = wezterm.font { family = "Hack" }
-config.font_size = 16
+config.font = wezterm.font { family = "JetBrains Mono" }
+config.font_size = 14
 config.cursor_thickness = 0.20
 
 -- Scroll history
