@@ -134,3 +134,6 @@ AddPackage exfatprogs # exFAT filesystem userspace utilities for the Linux Kerne
 AddPackage kclock # Clock app for Plasma Mobile
 AddPackage ttf-inconsolata # Monospace font for pretty code listings and for the terminal
 AddPackage udftools # Linux tools for UDF filesystems and DVD/CD-R(W) drives
+
+AddPackage jq # Command-line JSON processor
+AddPackage minisign # A dead-simple tool to sign files and verify digital signatures
