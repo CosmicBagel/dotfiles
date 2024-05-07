@@ -129,3 +129,8 @@ AddPackage gimp # GNU Image Manipulation Program
 AddPackage inkscape # Professional vector graphics editor
 AddPackage krita # Edit and paint images
 AddPackage scons # Extensible Python-based build utility
+
+AddPackage exfatprogs # exFAT filesystem userspace utilities for the Linux Kernel exfat driver
+AddPackage kclock # Clock app for Plasma Mobile
+AddPackage ttf-inconsolata # Monospace font for pretty code listings and for the terminal
+AddPackage udftools # Linux tools for UDF filesystems and DVD/CD-R(W) drives
