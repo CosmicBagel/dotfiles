@@ -51,7 +51,6 @@ return { -- Autocompletion
         luasnip.config.setup {}
 
         cmp.setup {
-
             ---@diagnostic disable-next-line: missing-fields
             performance = {
                 -- defaults --
@@ -98,7 +97,10 @@ return { -- Autocompletion
                 end,
             },
 
-            completion = { completeopt = 'menu,menuone,noinsert' },
+            completion = {
+                autocomplete = false,
+                completeopt = 'menu,menuone,noinsert',
+            },
 
             -- For an understanding of why these mappings were
             -- chosen, you will need to read `:help ins-completion`
