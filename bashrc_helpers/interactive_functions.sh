@@ -4,27 +4,37 @@ function UpdateAllTheThings {
     read -p "Press enter to continue (or ctrl+c to bail)"
 
     if [[ $? -eq 0 ]]; then
-        echo -e "\n\n===Running yay==="
-        yay -Syu
+	echo -e "\n\n===Running yay==="
+	yay -Syu
     fi
 
     echo -e "\n\n===Flatpak upgrade==="
     flatpak upgrade
 
     echo -e "\n\n===Neovim Nightly Update==="
-    read -p "Press enter to continue (or ctrl+c to bail)"
-    yay -S neovim-git
+    read -p "(y)/n: "
+    if [ "$REPLY" != "n" ]; then
+	yay -S neovim-git
+    fi
 
-    echo -e "\n\n===Zig Nightly Update==="
-    read -p "Press enter to continue (or ctrl+c to bail)"
-    yay -S zig-dev-bin
+    echo -e "\n\n===Zig Dev Update==="
+    read -p "(y)/n: "
+    if [ "$REPLY" != "n" ]; then
+	yay -S zig-dev-bin
+    fi
+
+    echo -e "\n\n===ZLS Nightly Update==="
+    read -p "(y)/n: "
+    if [ "$REPLY" != "n" ]; then
+	yay -S zls-git
+    fi
 }
 alias uatt='UpdateAllTheThings'
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
 	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+	if cwd="$(cat -- "$tmp")" && -n "$cwd" && "$cwd" != "$PWD"; then
 		cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
