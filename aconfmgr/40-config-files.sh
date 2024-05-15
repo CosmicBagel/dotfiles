@@ -155,7 +155,6 @@ CopyFile /etc/modprobe.d/uvcvideo.conf
 
 CopyFile /etc/fangfrisch/fangfrisch.conf #see also fangfrisch.timer service
 SetFileProperty /etc/fangfrisch/fangfrisch-has-news.sh group clamav
-SetFileProperty /boot/intel-ucode.img mode 755
 
 CopyFile /etc/kdumpst.d/00-default
 CopyFile /etc/mkinitcpio.d/linux-zen.preset
