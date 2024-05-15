@@ -21,7 +21,7 @@ vim.opt.relativenumber = true -- show line numbers
 vim.opt.number = true -- show line numbers
 vim.cmd("set linebreak") -- don't spilt words when line wrapping
 vim.opt.wrap = false
-vim.opt.colorcolumn = "80"  -- displays guideline at 80 characters
+-- vim.opt.colorcolumn = "80"  -- displays guideline at 80 characters
 
 -- when backspacing, delete indents, end of lines, and starts(?)
 -- vim.opt.backspace = "indent,eol,start" -- this is default
