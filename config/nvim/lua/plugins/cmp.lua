@@ -98,7 +98,7 @@ return { -- Autocompletion
             },
 
             completion = {
-                autocomplete = false,
+                -- autocomplete = false,
                 completeopt = 'menu,menuone,noinsert',
             },
 
