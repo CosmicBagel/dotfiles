@@ -1,4 +1,5 @@
 __helpers="$HOME/dotfiles/bashrc_helpers"
+. $__helpers/paths.sh
 . $__helpers/functions.sh
 . $__helpers/ue.sh
 
