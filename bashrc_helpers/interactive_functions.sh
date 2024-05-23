@@ -11,22 +11,19 @@ function UpdateAllTheThings {
     echo -e "\n\n===Flatpak upgrade==="
     flatpak upgrade
 
+    echo -e "\n\n===Zig master update==="
+    zigup master
+
     echo -e "\n\n===Neovim Nightly Update==="
     read -p "(y)/n: "
     if [ "$REPLY" != "n" ]; then
-	yay -S neovim-git
-    fi
-
-    echo -e "\n\n===Zig Dev Update==="
-    read -p "(y)/n: "
-    if [ "$REPLY" != "n" ]; then
-	yay -S zig-dev-bin
+	yay -S --noconfirm neovim-git
     fi
 
     echo -e "\n\n===ZLS Nightly Update==="
     read -p "(y)/n: "
     if [ "$REPLY" != "n" ]; then
-	yay -S zls-git
+	yay -S --noconfirm zls-git
     fi
 }
 alias uatt='UpdateAllTheThings'
