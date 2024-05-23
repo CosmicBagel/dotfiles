@@ -137,3 +137,7 @@ AddPackage udftools # Linux tools for UDF filesystems and DVD/CD-R(W) drives
 
 AddPackage jq # Command-line JSON processor
 AddPackage minisign # A dead-simple tool to sign files and verify digital signatures
+
+AddPackage grafx2 # Pixelart-oriented painting program
+AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
+AddPackage zig # a general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software

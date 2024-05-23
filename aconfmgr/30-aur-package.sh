@@ -28,5 +28,8 @@ AddPackage --foreign neovim-git # Fork of Vim aiming to improve user experience,
 
 AddPackage --foreign godot-mono-bin # Godot is an advanced, feature packed, multi-platform 2D and 3D game engine. It provides a huge set of common tools, so you can just focus on making your game without reinventing the wheel.
 
-AddPackage --foreign zig-dev-bin # A general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
 AddPackage --foreign zls-git # Zig LSP implementation + Zig Language Server
+
+AddPackage --foreign aseprite # Create animated sprites and pixel art
+AddPackage --foreign pureref # Reference Image Viewer
+AddPackage --foreign xp-pen-tablet-systemlibs # XP-Pen (Official) Linux utility (New UI driver)

@@ -161,3 +161,7 @@ CopyFile /etc/mkinitcpio.d/linux-zen.preset
 
 CreateLink /usr/lib/jvm/default java-22-openjdk
 CreateLink /usr/lib/jvm/default-runtime java-22-openjdk
+
+
+CreateLink /usr/lib/pentablet/conf/xppen/config.xml /etc/xppen/config.xml
+CopyFile /etc/xppen/config.xml
