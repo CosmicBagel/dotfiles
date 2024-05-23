@@ -13,8 +13,8 @@ config.cursor_thickness = 0.20
 config.scrollback_lines = 1000000
 
 -- Window
-config.initial_rows = 36
-config.initial_cols = 110
+config.initial_rows = 40
+config.initial_cols = 166
 config.window_background_opacity = 0.83
 config.window_decorations = "NONE"
 config.window_padding = {
