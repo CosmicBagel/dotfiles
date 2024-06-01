@@ -11,6 +11,7 @@ augroup VCenterCursor |
 augroup END
 ]],
   {})
+vim.cmd.CenterCursorEnable()
 
 vim.api.nvim_create_user_command('CenterCursorDisable',
   function()
