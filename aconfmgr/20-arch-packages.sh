@@ -141,3 +141,12 @@ AddPackage minisign # A dead-simple tool to sign files and verify digital signat
 AddPackage grafx2 # Pixelart-oriented painting program
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 AddPackage zig # a general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
+
+AddPackage hunspell-en_ca # CA English hunspell dictionaries
+AddPackage hunspell-en_gb # GB English hunspell dictionaries
+AddPackage hunspell-en_us # US English hunspell dictionaries
+AddPackage hyphen-en # English hyphenation rules
+AddPackage libmythes # a simple thesaurus
+AddPackage mythes-en # English thesaurus
+AddPackage signal-desktop # Signal Private Messenger for Linux
+AddPackage vivaldi # An advanced browser made with the power user in mind.

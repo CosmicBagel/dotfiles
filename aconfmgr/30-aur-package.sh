@@ -33,3 +33,5 @@ AddPackage --foreign zls-git # Zig LSP implementation + Zig Language Server
 AddPackage --foreign aseprite # Create animated sprites and pixel art
 AddPackage --foreign pureref # Reference Image Viewer
 AddPackage --foreign xp-pen-tablet-systemlibs # XP-Pen (Official) Linux utility (New UI driver)
+
+AddPackage --foreign ttf-aptos # The new default Microsoft 365 font, used by Microsoft
