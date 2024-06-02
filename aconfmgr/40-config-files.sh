@@ -18,7 +18,6 @@ CopyFile /etc/udev/rules.d/80-nvidia-pm.rules
 CreateFile /etc/sddm.conf > /dev/null
 CopyFile /etc/sddm.conf.d/10-wayland.conf
 CopyFile /etc/sddm.conf.d/kde_settings.conf
-CopyFile /etc/sddm.conf.d/virtualkbd.conf
 
 # networking
 CopyFile /etc/hosts

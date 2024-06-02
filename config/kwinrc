@@ -38,6 +38,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][d4cc1a24-a2fd-51a5-b1b3-e140ca6f67be]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Wayland]
+VirtualKeyboardEnabled=true
+
 [Windows]
 ElectricBorderCornerRatio=0.01
 MaximizeButtonMiddleClickCommand=Maximize (horizontal only)

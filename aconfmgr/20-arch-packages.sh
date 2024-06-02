@@ -149,4 +149,5 @@ AddPackage hyphen-en # English hyphenation rules
 AddPackage libmythes # a simple thesaurus
 AddPackage mythes-en # English thesaurus
 AddPackage signal-desktop # Signal Private Messenger for Linux
-AddPackage vivaldi # An advanced browser made with the power user in mind.
+
+AddPackage maliit-keyboard # Virtual keyboard based on Maliit framework
