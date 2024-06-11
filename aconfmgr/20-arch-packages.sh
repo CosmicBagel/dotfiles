@@ -151,3 +151,5 @@ AddPackage mythes-en # English thesaurus
 AddPackage signal-desktop # Signal Private Messenger for Linux
 
 AddPackage maliit-keyboard # Virtual keyboard based on Maliit framework
+
+AddPackage bitwarden # A secure and free password manager for all of your devices
