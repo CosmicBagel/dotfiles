@@ -137,7 +137,6 @@ CreateLink /etc/systemd/system/basic.target.wants/kdumpst-init.service /usr/lib/
 # antivirus
 CopyFile /etc/clamav/freshclam.conf
 CopyFile /etc/clamav/clamd.conf
-CreateLink /etc/systemd/system/multi-user.target.wants/clamav-clamonacc.service /usr/lib/systemd/system/clamav-clamonacc.service
 
 # everything else
 CopyFile /etc/acpi/handler.sh # ignore certain key events (prevent log spam)
