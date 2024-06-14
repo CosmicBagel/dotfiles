@@ -102,8 +102,6 @@ CreateLink /etc/systemd/system/hibernate.target.wants/intel-undervolt.service /u
 CreateLink /etc/systemd/system/hybrid-sleep.target.wants/intel-undervolt.service /usr/lib/systemd/system/intel-undervolt.service
 CreateLink /etc/systemd/system/multi-user.target.wants/NetworkManager.service /usr/lib/systemd/system/NetworkManager.service
 CreateLink /etc/systemd/system/multi-user.target.wants/acpid.service /usr/lib/systemd/system/acpid.service
-CreateLink /etc/systemd/system/multi-user.target.wants/clamav-daemon.service /usr/lib/systemd/system/clamav-daemon.service
-CreateLink /etc/systemd/system/multi-user.target.wants/clamav-freshclam.service /usr/lib/systemd/system/clamav-freshclam.service
 CreateLink /etc/systemd/system/multi-user.target.wants/cronie.service /usr/lib/systemd/system/cronie.service
 CreateLink /etc/systemd/system/multi-user.target.wants/cups.path /usr/lib/systemd/system/cups.path
 CreateLink /etc/systemd/system/multi-user.target.wants/cups.service /usr/lib/systemd/system/cups.service
@@ -115,7 +113,6 @@ CreateLink /etc/systemd/system/multi-user.target.wants/systemd-networkd.service 
 CreateLink /etc/systemd/system/multi-user.target.wants/tlp.service /usr/lib/systemd/system/tlp.service
 CreateLink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service /usr/lib/systemd/system/NetworkManager-wait-online.service
 CreateLink /etc/systemd/system/printer.target.wants/cups.service /usr/lib/systemd/system/cups.service
-CreateLink /etc/systemd/system/sockets.target.wants/clamav-daemon.socket /usr/lib/systemd/system/clamav-daemon.socket
 CreateLink /etc/systemd/system/sockets.target.wants/cups.socket /usr/lib/systemd/system/cups.socket
 CreateLink /etc/systemd/system/sockets.target.wants/systemd-networkd.socket /usr/lib/systemd/system/systemd-networkd.socket
 CreateLink /etc/systemd/system/sockets.target.wants/systemd-userdbd.socket /usr/lib/systemd/system/systemd-userdbd.socket
@@ -130,11 +127,13 @@ CreateLink /etc/systemd/user/pipewire.service.wants/wireplumber.service /usr/lib
 CreateLink /etc/systemd/user/sockets.target.wants/p11-kit-server.socket /usr/lib/systemd/user/p11-kit-server.socket
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire-pulse.socket /usr/lib/systemd/user/pipewire-pulse.socket
 CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
-CopyFile /etc/systemd/system/timers.target.wants/fangfrisch.timer
 CreateLink /etc/systemd/system/multi-user.target.wants/laptop-mode.service /usr/lib/systemd/system/laptop-mode.service
 CreateLink /etc/systemd/system/basic.target.wants/kdumpst-init.service /usr/lib/systemd/system/kdumpst-init.service
 
 # antivirus
+CreateLink /etc/systemd/system/multi-user.target.wants/clamav-daemon.service /usr/lib/systemd/system/clamav-daemon.service
+CreateLink /etc/systemd/system/multi-user.target.wants/clamav-freshclam.service /usr/lib/systemd/system/clamav-freshclam.service
+CreateLink /etc/systemd/system/sockets.target.wants/clamav-daemon.socket /usr/lib/systemd/system/clamav-daemon.socket
 CopyFile /etc/clamav/freshclam.conf
 CopyFile /etc/clamav/clamd.conf
 
@@ -157,9 +156,6 @@ CopyFile /etc/sysctl.d/80-gamecompatability.conf
 CopyFile /etc/timeshift/timeshift.json
 CopyFile /etc/vconsole.conf
 CopyFile /etc/modprobe.d/uvcvideo.conf
-
-CopyFile /etc/fangfrisch/fangfrisch.conf #see also fangfrisch.timer service
-SetFileProperty /etc/fangfrisch/fangfrisch-has-news.sh group clamav
 
 CopyFile /etc/kdumpst.d/00-default
 CopyFile /etc/mkinitcpio.d/linux-zen.preset

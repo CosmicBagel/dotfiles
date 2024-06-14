@@ -4,7 +4,6 @@ AddPackage --foreign httpdirfs # A filesystem which allows you to mount HTTP dir
 AddPackage --foreign mkinitcpio-firmware # Optional firmware for the default linux kernel to get rid of the annoying 'WARNING: Possibly missing firmware for module:' messages
 AddPackage --foreign onedrive-abraunegg # Free OneDrive client written in D - abraunegg's fork. Follows the releases on https://github.com/abraunegg/onedrive/releases
 AddPackage --foreign prime-switcher # Tool (GUI + CLI) to select used GPU for Optimus Laptop
-AddPackage --foreign python-fangfrisch # Freshclam like utility that allows downloading unofficial virus definition files
 AddPackage --foreign ttf-ms-win11-auto # Microsoft Windows 11 TrueType fonts
 AddPackage --foreign yay # Yet another yogurt. Pacman wrapper and AUR helper written in go.
 
