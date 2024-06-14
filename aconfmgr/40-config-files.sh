@@ -138,6 +138,9 @@ CreateLink /etc/systemd/system/basic.target.wants/kdumpst-init.service /usr/lib/
 CopyFile /etc/clamav/freshclam.conf
 CopyFile /etc/clamav/clamd.conf
 
+#
+CopyFile /etc/makepkg.conf
+
 # everything else
 CopyFile /etc/acpi/handler.sh # ignore certain key events (prevent log spam)
 CopyFile /etc/cron.d/timeshift-hourly
