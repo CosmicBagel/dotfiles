@@ -166,3 +166,8 @@ CreateLink /usr/lib/jvm/default-runtime java-22-openjdk
 
 CreateLink /usr/lib/pentablet/conf/xppen/config.xml /etc/xppen/config.xml
 CopyFile /etc/xppen/config.xml
+
+
+# docker
+CreateLink /etc/systemd/system/multi-user.target.wants/docker.service /usr/lib/systemd/system/docker.service
+CopyFile /etc/firewalld/zones/docker.xml

@@ -34,3 +34,5 @@ AddPackage --foreign pureref # Reference Image Viewer
 AddPackage --foreign xp-pen-tablet-systemlibs # XP-Pen (Official) Linux utility (New UI driver)
 
 AddPackage --foreign ttf-aptos # The new default Microsoft 365 font, used by Microsoft
+
+AddPackage --foreign docker-desktop # Docker Desktop is an easy-to-install application that enables you to locally build and share containerized applications and microservices.
