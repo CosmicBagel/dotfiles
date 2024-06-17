@@ -6,6 +6,8 @@
   <service name="mdns"/>
   <service name="samba-client"/>
   <service name="dhcpv6-client"/>
+  <service name="ipp-client"/>
+  <service name="ipp"/>
   <protocol value="ipv6-icmp"/>
   <forward/>
 </zone>
