@@ -36,3 +36,4 @@ AddPackage --foreign xp-pen-tablet-systemlibs # XP-Pen (Official) Linux utility 
 AddPackage --foreign ttf-aptos # The new default Microsoft 365 font, used by Microsoft
 
 AddPackage --foreign docker-desktop # Docker Desktop is an easy-to-install application that enables you to locally build and share containerized applications and microservices.
+AddPackage --foreign epson-inkjet-printer-escpr2 # Epson Inkjet Printer Driver 2 (ESC/P-R) for Linux
