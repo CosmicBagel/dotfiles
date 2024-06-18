@@ -136,7 +136,6 @@ CopyFile /etc/vconsole.conf
 CopyFile /etc/modprobe.d/uvcvideo.conf
 
 CopyFile /etc/kdumpst.d/00-default
-CopyFile /etc/mkinitcpio.d/linux-zen.preset
 
 CreateLink /usr/lib/jvm/default java-22-openjdk
 CreateLink /usr/lib/jvm/default-runtime java-22-openjdk

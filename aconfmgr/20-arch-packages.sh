@@ -110,8 +110,6 @@ AddPackage obsidian # A powerful knowledge base that works on top of a local fol
 AddPackage python-pynvim # Python client for Neovim
 
 AddPackage cmake # A cross-platform open-source make system
-AddPackage linux-zen # The Linux ZEN kernel and modules
-AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
 AddPackage nodejs # Evented I/O for V8 javascript
 AddPackage npm # A package manager for JavaScript
 
