@@ -8,3 +8,4 @@
 /usr/bin/bash
 /usr/bin/rbash
 /usr/bin/git-shell
+/usr/bin/systemd-home-fallback-shell
