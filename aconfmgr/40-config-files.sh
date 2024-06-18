@@ -126,6 +126,10 @@ CopyFile /etc/pacman.d/hooks/refind.hook
 CopyFile /etc/pipewire/pipewire.conf
 CopyFile /etc/shells
 CopyFile /etc/sudoers
+CopyFile /etc/group
+CopyFile /etc/passwd
+CopyFile /etc/subgid
+CopyFile /etc/subuid
 CopyFile /etc/sysctl.d/80-gamecompatability.conf
 CopyFile /etc/timeshift/timeshift.json
 CopyFile /etc/vconsole.conf
