@@ -6,6 +6,9 @@ RepeatRate=50
 Enabled=true
 PointerAccelerationProfile=1
 
+[Libinput][1133][50495][Logitech USB Receiver Mouse]
+PointerAccelerationProfile=1
+
 [Libinput][2][7][SynPS/2 Synaptics TouchPad]
 Enabled=true
 NaturalScroll=true
