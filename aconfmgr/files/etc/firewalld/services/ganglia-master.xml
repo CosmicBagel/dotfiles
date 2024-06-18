@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>ganglia-master</short>
+  <description>Ganglia collector</description>
+  <port port="8651" protocol="tcp"/>
+</service>

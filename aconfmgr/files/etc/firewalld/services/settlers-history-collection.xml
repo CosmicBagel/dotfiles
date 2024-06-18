@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>The Settlers History Collection</short>
+  <description>The Settlers History Collection includes History Editions of all seven previous Settlers games, which includes gold versions of each game with all expansions.</description>
+  <port port="1005" protocol="udp"/>
+  <port port="1100" protocol="udp"/>
+  <port port="3074" protocol="udp"/>
+  <port port="6200" protocol="udp"/>
+  <port port="6300" protocol="udp"/>
+</service>

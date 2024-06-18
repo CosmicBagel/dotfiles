@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Red Hat High Availability</short>
+  <description>This allows you to use the Red Hat High Availability (previously named Red Hat Cluster Suite). Ports are opened for corosync, pcsd, pacemaker_remote, dlm and corosync-qnetd.</description>
+  <port port="2224" protocol="tcp"/>
+  <port port="3121" protocol="tcp"/>
+  <port port="5403" protocol="tcp"/>
+  <port port="5404" protocol="udp"/>
+  <port port="5405-5412" protocol="udp"/>
+  <port port="9929" protocol="tcp"/>
+  <port port="9929" protocol="udp"/>
+  <port port="21064" protocol="tcp"/>
+</service>

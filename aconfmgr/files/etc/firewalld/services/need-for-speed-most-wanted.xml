@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Need for Speed: Most Wanted</short>
+  <description>     Need for Speed: Most Wanted is a 2005 open-world racing video game, and     the ninth installment in the Need for Speed series.   </description>
+  <port port="13505" protocol="tcp"/>
+  <port port="30900-30999" protocol="tcp"/>
+  <port port="3658" protocol="udp"/>
+</service>

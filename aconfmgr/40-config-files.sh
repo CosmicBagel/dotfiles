@@ -28,32 +28,6 @@ CopyFile /etc/mkinitcpio.conf
 CopyFile /etc/mkinitcpio.d/linux-lts.preset
 CopyFile /etc/mkinitcpio.d/linux.preset
 
-# firewall
-CopyFile /etc/firewalld/lockdown-whitelist.xml.old
-
-CopyFile /etc/firewalld/policies/allow-host-ipv6.xml
-CopyFile /etc/firewalld/policies/allow-host-ipv6.xml.old
-CopyFile /etc/firewalld/zones/block.xml
-CopyFile /etc/firewalld/zones/block.xml.old
-CopyFile /etc/firewalld/zones/dmz.xml
-CopyFile /etc/firewalld/zones/dmz.xml.old
-CopyFile /etc/firewalld/zones/drop.xml
-CopyFile /etc/firewalld/zones/drop.xml.old
-CopyFile /etc/firewalld/zones/external.xml
-CopyFile /etc/firewalld/zones/external.xml.old
-CopyFile /etc/firewalld/zones/home.xml
-CopyFile /etc/firewalld/zones/home.xml.old
-CopyFile /etc/firewalld/zones/internal.xml
-CopyFile /etc/firewalld/zones/internal.xml.old
-CopyFile /etc/firewalld/zones/nm-shared.xml
-CopyFile /etc/firewalld/zones/nm-shared.xml.old
-CopyFile /etc/firewalld/zones/public.xml
-CopyFile /etc/firewalld/zones/public.xml.old
-CopyFile /etc/firewalld/zones/trusted.xml
-CopyFile /etc/firewalld/zones/trusted.xml.old
-CopyFile /etc/firewalld/zones/work.xml
-CopyFile /etc/firewalld/zones/work.xml.old
-
 # laptop mode power saving
 CopyFile /etc/laptop-mode/conf.d/ac97-powersave.conf
 CopyFile /etc/laptop-mode/conf.d/auto-hibernate.conf
@@ -170,4 +144,3 @@ CopyFile /etc/xppen/config.xml
 
 # docker
 CreateLink /etc/systemd/system/multi-user.target.wants/docker.service /usr/lib/systemd/system/docker.service
-CopyFile /etc/firewalld/zones/docker.xml

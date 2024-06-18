@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>WWW (HTTP/3)</short>
+  <description>HTTP/3 is a protocol used to serve Web pages that uses QUIC as the transport protocol. If you plan to make your HTTP/3 compatible Web server publicly available, enable this option.</description>
+  <port port="443" protocol="udp"/>
+</service>

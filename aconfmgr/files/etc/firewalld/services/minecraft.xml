@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Minecraft</short>
+  <description>     Minecraft is a sandbox game developed by Mojang Studios.   </description>
+  <port port="25565" protocol="tcp"/>
+  <port port="25565" protocol="udp"/>
+</service>

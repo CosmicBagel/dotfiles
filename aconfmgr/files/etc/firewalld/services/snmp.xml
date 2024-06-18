@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>SNMP</short>
+  <description>Simple Network Management Protocol is an "Internet-standard protocol for managing devices on IP networks". Enable this service if you run SNMP agent (server).</description>
+  <port port="161" protocol="tcp"/>
+  <port port="161" protocol="udp"/>
+</service>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>foreman-proxy</short>
+  <description>The Smart Proxy is a project which provides a restful API to various sub-systems.</description>
+  <port port="8443" protocol="tcp"/>
+</service>

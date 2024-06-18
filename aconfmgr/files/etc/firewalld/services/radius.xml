@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>RADIUS</short>
+  <description>The Remote Authentication Dial In User Service (RADIUS) is a protocol for user authentication over networks. It is mostly used for modem, DSL or wireless user authentication. If you plan to provide a RADIUS service (e.g. with freeradius), enable this option.</description>
+  <port port="1812" protocol="tcp"/>
+  <port port="1812" protocol="udp"/>
+  <port port="1813" protocol="tcp"/>
+  <port port="1813" protocol="udp"/>
+</service>

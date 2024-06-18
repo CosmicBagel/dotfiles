@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>rpc-bind</short>
+  <description>Remote Procedure Call Bind</description>
+  <port port="111" protocol="tcp"/>
+  <port port="111" protocol="udp"/>
+</service>

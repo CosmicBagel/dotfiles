@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>rquotad</short>
+  <description>Remote Quota Server Daemon</description>
+  <port port="875" protocol="tcp"/>
+  <port port="875" protocol="udp"/>
+</service>

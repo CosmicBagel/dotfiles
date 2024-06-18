@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Samba DC</short>
+  <description>This option allows you to use this computer as a Samba Active Directory Domain Controller. You need the samba-dc package installed for this option to be useful.</description>
+  <port port="135" protocol="tcp"/>
+  <port port="389" protocol="udp"/>
+  <port port="49152-65535" protocol="tcp"/>
+  <port port="3268" protocol="tcp"/>
+  <port port="3269" protocol="tcp"/>
+</service>

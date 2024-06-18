@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>OMG DDS</short>
+  <description>Open Management Group (OMG) Data Distribution Service (DDS) is protocol supporting various applications. It is usally found in control systems. This is the unicast service for domains with ID 0 ito 10 and maximal possible applications (120). Please see https://community.rti.com/content/forum-topic/statically-configure-firewall-let-omg-dds-traffic-through for details.</description>
+  <port port="7402-7649" protocol="udp"/>
+  <port port="7652-7899" protocol="udp"/>
+  <port port="7902-8149" protocol="udp"/>
+  <port port="8152-8339" protocol="udp"/>
+  <port port="8402-8649" protocol="udp"/>
+  <port port="8652-8899" protocol="udp"/>
+  <port port="8902-9149" protocol="udp"/>
+  <port port="9152-9339" protocol="udp"/>
+  <port port="9402-9649" protocol="udp"/>
+  <port port="9652-9899" protocol="udp"/>
+  <port port="9902-10149" protocol="udp"/>
+</service>

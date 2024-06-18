@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>ps2link</short>
+  <description>ps2link is a protocol used for interacting with a PlayStation 2 system.</description>
+  <port port="18194" protocol="udp"/>
+  <port port="18193" protocol="tcp"/>
+</service>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>syscomlan</short>
+  <description>Local system communication</description>
+  <port port="1065" protocol="tcp"/>
+  <port port="1065" protocol="udp"/>
+</service>

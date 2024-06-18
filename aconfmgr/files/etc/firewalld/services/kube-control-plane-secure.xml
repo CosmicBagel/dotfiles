@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Kubernetes Control-plane Node - secure</short>
+  <description>The Kubernetes Control-plane Node runs all the services of the Kubernetes Control Plane.  This includes kube-apiserver, etcd, kube-schedule, kube-controller-manager, cloud-controller-manager, and others</description>
+</service>

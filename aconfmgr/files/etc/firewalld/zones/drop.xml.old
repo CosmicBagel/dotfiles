@@ -7,6 +7,5 @@
   <port port="0-49151" protocol="sctp"/>
   <port port="0-49151" protocol="dccp"/>
   <protocol value="ipv6-icmp"/>
-  <protocol value="icmp"/>
   <forward/>
 </zone>
