@@ -146,4 +146,3 @@ CopyFile /etc/xppen/config.xml
 
 
 # docker
-CreateLink /etc/systemd/system/multi-user.target.wants/docker.service /usr/lib/systemd/system/docker.service
