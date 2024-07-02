@@ -18,6 +18,7 @@ symlinks_dic["$HOME/dotfiles/config/kwinrc"]="$HOME/.config/kwinrc"
 symlinks_dic["$HOME/dotfiles/config/kwinrulesrc"]="$HOME/.config/kwinrulesrc"
 symlinks_dic["$HOME/dotfiles/config/plasmaparc"]="$HOME/.config/plasmaparc"
 symlinks_dic["$HOME/dotfiles/config/plasmarc"]="$HOME/.config/plasmarc"
+symlinks_dic["$HOME/dotfiles/config/plasma-localerc"]="$HOME/.config/plasma-localerc"
 symlinks_dic["$HOME/dotfiles/config/powerdevilrc"]="$HOME/.config/powerdevilrc"
 symlinks_dic["$HOME/dotfiles/config/user-dirs.dirs"]="$HOME/.config/user-dirs.dirs"
 
