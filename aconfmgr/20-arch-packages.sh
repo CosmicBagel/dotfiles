@@ -158,3 +158,5 @@ AddPackage docker-compose # Fast, isolated development environments using Docker
 AddPackage sane # Scanner Access Now Easy
 AddPackage sane-airscan # SANE - SANE backend for AirScan (eSCL) and WSD document scanners
 AddPackage skanlite # Image Scanning Application
+
+AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
