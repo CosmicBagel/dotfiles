@@ -3,3 +3,5 @@
     name = "CosmicBagel"
 [core]
 	autocrlf = input
+[color]
+	ui = auto
