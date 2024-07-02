@@ -1,7 +1,10 @@
 __helpers="$HOME/dotfiles/bashrc_helpers"
+__systemhelpers="$HOME/system-config/bashrc_helpers"
+
 . $__helpers/paths.sh
 . $__helpers/functions.sh
 . $__helpers/ue.sh
+. $__systemhelpers/functions.sh
 
 # Only proceed if running interactively
 case $- in
@@ -16,5 +19,6 @@ esac
 . $__helpers/config.sh
 . $__helpers/completion.sh
 . $__helpers/interactive_functions.sh
+. $__systemhelpers/interactive_functions.sh
 
 eval "$(zoxide init --cmd cd bash)"

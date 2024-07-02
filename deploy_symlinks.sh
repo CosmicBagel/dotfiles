@@ -7,8 +7,6 @@ symlinks_dic["$HOME/dotfiles/profile"]="$HOME/.profile"
 symlinks_dic["$HOME/dotfiles/bashrc"]="$HOME/.bashrc"
 symlinks_dic["$HOME/dotfiles/gitconfig"]="$HOME/.gitconfig"
 
-symlinks_dic["$HOME/dotfiles/aconfmgr"]="$HOME/.config/aconfmgr"
-
 symlinks_dic["$HOME/dotfiles/config/chromium-flags.conf"]="$HOME/.config/chromium-flags.conf"
 symlinks_dic["$HOME/dotfiles/config/chromium-flags.conf"]="$HOME/.config/brave-flags.conf"
 symlinks_dic["$HOME/dotfiles/config/chromium-flags.conf"]="$HOME/.config/electron-flags.conf"

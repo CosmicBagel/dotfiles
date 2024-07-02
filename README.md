@@ -19,5 +19,7 @@ it working will require the vscode unity plugin, which means you'll have to
 install vscode (the Microsoft version, as its not accessible in the open source
 version).
 
+# game saves
+
 You'll need to create symlinks from the game saves in onedrive to their appropriate
 locations on disk, see save_locations.md in 'Game Saves'
