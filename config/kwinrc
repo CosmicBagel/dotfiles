@@ -29,6 +29,9 @@ TextOnly=true
 [Tiling]
 padding=4
 
+[Tiling][37c4c9e6-1e2f-5024-b784-0fc3a6c2c094]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][4becf20c-5e30-554a-b0c9-827fcaa9253c]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
