@@ -21,6 +21,8 @@ symlinks_dic["$HOME/dotfiles/config/plasmarc"]="$HOME/.config/plasmarc"
 symlinks_dic["$HOME/dotfiles/config/plasma-localerc"]="$HOME/.config/plasma-localerc"
 symlinks_dic["$HOME/dotfiles/config/powerdevilrc"]="$HOME/.config/powerdevilrc"
 symlinks_dic["$HOME/dotfiles/config/user-dirs.dirs"]="$HOME/.config/user-dirs.dirs"
+symlinks_dic["$HOME/dotfiles/config/kwriterc"]="$HOME/.config/kwriterc"
+symlinks_dic["$HOME/dotfiles/config/mimeapps.list"]="$HOME/.config/mimeapps.list"
 
 
 symlinks_dic["$HOME/dotfiles/config/alacritty"]="$HOME/.config/alacritty"
