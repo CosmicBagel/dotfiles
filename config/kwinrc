@@ -13,8 +13,7 @@ SlideBackground=false
 
 [NightColor]
 Active=true
-EveningBeginFixed=2200
-Mode=Times
+EveningBeginFixed=2100
 MorningBeginFixed=0730
 NightTemperature=2700
 TransitionTime=15
