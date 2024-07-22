@@ -19,8 +19,11 @@ autocmd('TextYankPost', {
 -- (will not report an error on no match)
 autocmd({ "BufWritePre" }, {
     group = CosmicBagelGroup,
-    pattern = "!oil",
+    pattern = "*",
     callback = function()
+        if vim.bo.filetype == "oil" then
+            return
+        end
         vim.api.nvim_command("normal! mz")
         vim.api.nvim_command([[%s/\s\+$//e]])
         vim.api.nvim_command("normal! `z")
