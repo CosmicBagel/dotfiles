@@ -19,7 +19,7 @@ autocmd('TextYankPost', {
 -- (will not report an error on no match)
 autocmd({ "BufWritePre" }, {
     group = CosmicBagelGroup,
-    pattern = "*",
+    pattern = "!oil",
     callback = function()
         vim.api.nvim_command("normal! mz")
         vim.api.nvim_command([[%s/\s\+$//e]])
