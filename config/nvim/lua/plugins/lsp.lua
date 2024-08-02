@@ -184,6 +184,34 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        servers.tsserver = {
+            settings = {
+                typescript = {
+                    inlayHints = {
+                        includeInlayParameterNameHints = "all",
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayEnumMemberValueHints = true,
+                    },
+                },
+                javascript = {
+                    inlayHints = {
+                        includeInlayParameterNameHints = "all",
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayEnumMemberValueHints = true,
+                    },
+                },
+            }
+        }
 
         local omnisharp_path = vim.fn.stdpath('data') .. '/mason/packages/omnisharp/libexec/OmniSharp.dll'
         servers.omnisharp = {
