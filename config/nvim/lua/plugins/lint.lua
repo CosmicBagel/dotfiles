@@ -7,7 +7,7 @@ return {
         "rshkarin/mason-nvim-lint",
     },
     config = function()
-        -- auto install linters
+       -- auto install linters
         require("mason-nvim-lint").setup()
 
         local lint = require 'lint'
@@ -16,7 +16,7 @@ return {
             go = { 'golangcilint' },
             json = { "jsonlint" },
             shell = { "shellcheck" },
-            javascript = { "eslint_d" },
+            --javascript = { "eslint_d" },
             yaml = { "yamllint" },
         }
 
