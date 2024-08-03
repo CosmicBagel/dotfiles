@@ -1,6 +1,9 @@
 New-Item -ItemType Directory -Path ~\.config -Force
 New-Item -ItemType SymbolicLink -Path ~\.config\wezterm -Target "$HOME\dotfiles\config\wezterm\"
 
+New-Item -ItemType Directory -Path ~\AppData\Roaming -Force
+New-Item -ItemType SymbolicLink -Path ~\AppData\Roaming\alacritty -Target "$HOME\dotfiles\config\alacritty\"
+
 New-Item -ItemType Directory -Path ~\AppData\Local -Force
 New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim -Target "$HOME\dotfiles\config\nvim\"
 
