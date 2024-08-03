@@ -17,4 +17,4 @@ function yy {
 ## zoxide
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
-#oh-my-posh init pwsh | Invoke-Expression
+oh-my-posh init pwsh | Invoke-Expression
