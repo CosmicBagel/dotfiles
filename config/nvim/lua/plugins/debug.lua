@@ -28,7 +28,8 @@ return {
         local dap = require 'dap'
         local dapui = require 'dapui'
 
-        local vstuc_path = os.getenv("HOME") ..
+        local home = os.getenv("HOME") or os.getenv("USERPROFILE")
+        local vstuc_path = home ..
             "/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.1/bin/"
         dap.adapters.vstuc = {
             type = 'executable',
