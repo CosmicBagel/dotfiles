@@ -2,7 +2,8 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- Env
-config.term = 'wezterm'
+-- config.term = 'wezterm'
+config.term = 'xterm-256color'
 
 -- Font
 config.font = wezterm.font { family = "JetBrains Mono" }
