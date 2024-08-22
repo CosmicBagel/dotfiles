@@ -70,6 +70,35 @@ autocmd({ "InsertLeave" }, {
     group = CosmicBagelGroup,
     pattern = "*",
     command = "set relativenumber"
+-- basic auto-save
+autocmd({ "BufDelete", "BufLeave" }, {
+	group = CosmicBagelGroup,
+	pattern = "*",
+	callback = function(args)
+		local buf = args.buf
+		-- ignore non-modifiable files
+		if vim.fn.getbufvar(buf, "&modifiable") == 0 then
+			return
+		end
+
+		-- don't auto-save oil buffer
+		if vim.bo.filetype == "oil" then
+			return
+		end
+
+		-- don't auto-save if not modified
+		if not vim.api.nvim_buf_get_option(buf, "modified") then
+			return
+		end
+
+		-- don't auto-save if buffer has no name
+		local name = vim.api.nvim_buf_get_name(buf)
+		if name == nil or string.len(name) == 0 then
+			return
+		end
+
+		vim.api.nvim_command("silent! write")
+	end,
 })
 
 -- temporary hack to not stay in insert mode after enter a file with telescope
