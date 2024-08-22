@@ -3,7 +3,8 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
         options = {
-            theme = "codedark",
+            -- theme = "codedark",
+            theme = "monokai-pro",
             section_separators = { left = '', right = '' },
             component_separators = { left = '', right = '' }
         },
