@@ -169,13 +169,14 @@ return {
             single_file_support = true,
         }
         servers.gopls = {}
-        -- pyright = {}
         servers.rust_analyzer = {}
 
-        vim.g.zig_fmt_autosave = 0
+        -- vim.g.zig_fmt_autosave = 0
         servers.zls = {
             cmd = { "/usr/bin/zls" },
         }
+
+        -- pyright = {}
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -183,9 +184,13 @@ return {
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        --
+
         servers.tsserver = {
+            ---@diagnostic disable-next-line: missing-fields
             settings = {
+                completions = {
+                    completeFunctionCalls = true,
+                },
                 typescript = {
                     inlayHints = {
                         includeInlayParameterNameHints = "all",
@@ -242,15 +247,6 @@ return {
             },
         }
 
-        servers.tsserver = {
-            ---@diagnostic disable-next-line: missing-fields
-            settings = {
-                completions = {
-                    completeFunctionCalls = true,
-                },
-            },
-        }
-
         -- Ensure the servers and tools above are installed
         --  To check the current status of installed tools and/or manually install
         --  other tools, you can run
@@ -273,7 +269,8 @@ return {
             'prettier', -- JS and web shit
             'gopls',
             'tsserver',
-            'tailwindcss'
+            'tailwindcss',
+            'black',
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -284,6 +281,7 @@ return {
                     -- This handles overriding only values explicitly passed
                     -- by the server configuration above. Useful when disabling
                     -- certain features of an LSP (for example, turning off formatting for tsserver)
+                    server.autostart = false
                     server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
                     server.inlay_hints = { enabled = true }
                     server.single_file_support = true
