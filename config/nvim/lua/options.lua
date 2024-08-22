@@ -1,5 +1,5 @@
 -- -- -- basic vim options -- -- --
-vim.opt.shortmess:append({I = true}) -- disable the startup message
+vim.opt.shortmess:append({ I = true }) -- disable the startup message
 vim.opt.title = true
 vim.opt.clipboard = "unnamedplus" -- use system clipboard for default yank
 vim.opt.termguicolors = true -- enable proper colors
@@ -36,14 +36,14 @@ vim.opt.shiftwidth = 4
 vim.opt.breakindent = true -- preserve indentation when a line is wrapped
 
 -- show the gutter
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- show offscreen substitions (:s :%s) in a preview pane
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- display undesireable characters (trailing space, tabs not converted to
 -- spaces, and weird non-breaking spaces)
@@ -65,8 +65,8 @@ vim.opt.smartcase = true
 -- sensible spelling
 -- vim.opt.spell = false <- set by autocommand for specific file types (eg terminal)
 vim.opt.spell = true
-vim.opt.spelllang = { 'en_ca' }
-vim.opt.spellfile = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
+vim.opt.spelllang = { "en_ca" }
+vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 
 -- hide command line
 vim.opt.cmdheight = 0
