@@ -69,3 +69,6 @@ vim.opt.spellfile = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
 
 -- hide command line
 vim.opt.cmdheight = 0
+
+-- recommended for autosessions
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
