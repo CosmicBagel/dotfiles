@@ -79,7 +79,7 @@ M.apply_tab_bar_config = function(config)
         })
     end)
 
-    config.hide_tab_bar_if_only_one_tab = true
+    config.hide_tab_bar_if_only_one_tab = false
 
     -- disable in fullscreen if only one bar
     -- wezterm.on('window-resized', function(window, _)
