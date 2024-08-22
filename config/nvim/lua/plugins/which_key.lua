@@ -1,26 +1,27 @@
 return {
-    "folke/which-key.nvim",
-    event = "VimEnter",
-    config = function() -- This is the function that runs, AFTER loading
-        require('which-key').setup({
-            window = {
-                border = 'single'
-            }
-        })
+	"folke/which-key.nvim",
+	event = "VimEnter",
+	config = function() -- This is the function that runs, AFTER loading
+		require("which-key").setup({
+			preset = "modern",
+			win = {
+				border = "rounded",
+			},
+		})
 
-        -- Document existing key chains
-        require('which-key').register {
-            ['<leader>b'] = { name = 'De[b]ug', _ = 'which_key_ignore' },
-            ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-            ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-            ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-            ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-            ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-            ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-            ['<leader>q'] = { name = '[Q]uack', _ = 'which_key_ignore' },
-            ['<leader>x'] = { name = 'Diagnostics (Trouble)', _ = 'which_key_ignore' },
-            ['<leader>j'] = { name = 'Split/[j]oin (treesj)', _ = 'which_key_ignore' },
-            ['<leader>p'] = { name = 'Buffers', _ = 'which_key_ignore' },
-        }
-    end,
+		-- Document existing key chains
+		require("which-key").add({
+			{ "<leader>b", group = "De[b]ug" },
+			{ "<leader>c", group = "[C]ode" },
+			{ "<leader>d", group = "[D]ocument" },
+			{ "<leader>g", group = "[G]it" },
+			{ "<leader>j", group = "Split/[j]oin (treesj)" },
+			{ "<leader>p", group = "Buffers" },
+			{ "<leader>q", group = "[Q]uack" },
+			{ "<leader>r", group = "[R]ename" },
+			{ "<leader>s", group = "[S]earch" },
+			{ "<leader>w", group = "[W]orkspace" },
+			{ "<leader>x", group = "Diagnostics (Trouble)" },
+		})
+	end
 }
