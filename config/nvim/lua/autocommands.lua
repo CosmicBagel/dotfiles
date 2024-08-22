@@ -44,12 +44,34 @@ autocmd({ "FileType" }, {
 
 -- disable spell checking for windows and things
 autocmd({ "FileType" }, {
-    group = CosmicBagelGroup,
-    pattern = { "TelescopePrompt", "TelescopeResults", "fidget", "help", "lazy", "mason",
-        "lspinfo", "undotree", "terminal", "toggleterm" },
-    callback = function()
-        vim.opt_local.spell = false
-    end
+	group = CosmicBagelGroup,
+	pattern = {
+		"TelescopePrompt",
+		"TelescopeResults",
+		"fidget",
+		"help",
+		"lazy",
+		"mason",
+		"lspinfo",
+		"undotree",
+		"terminal",
+		"toggleterm",
+		"checkhealth",
+	},
+	callback = function()
+		vim.opt_local.spell = false
+	end,
+})
+
+-- disable spell check for non-modifiable files
+autocmd({ "BufEnter", "BufNew" }, {
+	group = CosmicBagelGroup,
+	callback = function(args)
+		if vim.fn.getbufvar(args.buf, "&modifiable") == 1 then
+			return
+		end
+		vim.opt_local.spell = false
+	end,
 })
 
 -- godot config files
