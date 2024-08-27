@@ -5,3 +5,8 @@
 	autocrlf = input
 [color]
 	ui = auto
+[merge]
+  tool = nvimdiff
+[mergetool]
+  prompt = false
+  keepBackup = false
