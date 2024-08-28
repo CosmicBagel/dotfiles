@@ -6,7 +6,6 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = false
 
 -- Env
--- config.term = 'wezterm'
 config.term = "xterm-256color"
 
 -- Font
