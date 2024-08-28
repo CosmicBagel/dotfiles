@@ -5,6 +5,10 @@ local config = wezterm.config_builder()
 -- especially since I usually edit inside the terminal lol
 config.automatically_reload_config = false
 
+-- Almost never want the window size to change when increasing or decreasing
+-- font size (aka zooming in and out with ctrl + and ctrl -)
+config.adjust_window_size_when_changing_font_size = false
+
 -- Env
 config.term = "xterm-256color"
 
