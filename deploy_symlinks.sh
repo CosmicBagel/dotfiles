@@ -46,6 +46,9 @@ symlinks_dic["$HOME/dotfiles/config/vscode/settings.json"]="$HOME/.config/Code/U
 symlinks_dic["$HOME/dotfiles/config/vscode/snippets"]="$HOME/.config/Code/User/snippets"
 symlinks_dic["$HOME/dotfiles/config/vscode/extensions.json"]="$HOME/.vscode/extensions/extensions.json"
 
+symlinks_dic["$HOME/dotfiles/config/zed/keymap.json"]="$HOME/.config/zed/keymap.json"
+symlinks_dic["$HOME/dotfiles/config/zed/settings.json"]="$HOME/.config/zed/settings.json"
+
 symlinks_dic["$HOME/dotfiles/config/.eslintrc.json"]="$HOME/.eslintrc.json"
 
 #usage: make_symlink /path/to/new_file /path/to/symlink
