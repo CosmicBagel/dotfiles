@@ -7,3 +7,8 @@
 	ui = auto
 [pull]
 	rebase = false
+[merge]
+  tool = nvimdiff
+[mergetool]
+  prompt = false
+  keepBackup = false
