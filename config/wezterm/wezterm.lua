@@ -1,8 +1,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+-- In practice I found hot reloading to be really annoying
+-- especially since I usually edit inside the terminal lol
+config.automatically_reload_config = false
+
 -- Env
--- config.term = 'wezterm'
 config.term = "xterm-256color"
 
 -- Font
