@@ -12,7 +12,7 @@ function UpdateAllTheThings {
     flatpak upgrade
 
     echo -e "\n\n===Zig master update==="
-    zigup master
+    zigup master && zigup clean
 
     echo -e "\n\n===Neovim Nightly Update==="
     read -p "(y)/n: "
