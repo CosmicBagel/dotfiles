@@ -70,6 +70,9 @@ M.apply_tab_bar_config = function(config)
 
 		local date = wezterm.strftime("%H:%M")
 
+		local meta = pane:get_metadata() or {}
+		local tardy = meta.is_tardy and "TTY Tardy" or ""
+
 		local pane_cwd = pane:get_current_working_dir()
 		if pane_cwd ~= nil then
 			local cwd = pane_cwd.path
@@ -77,7 +80,11 @@ M.apply_tab_bar_config = function(config)
 				cwd = "???"
 			end
 			window:set_right_status(wezterm.format({
-				{ Text = cwd .. "  " .. bat .. " " .. date .. " " },
+				{ Text = tardy .. " " .. cwd .. "  " .. bat .. " " .. date .. " " },
+			}))
+		else
+			window:set_right_status(wezterm.format({
+				{ Text = tardy .. " " .. bat .. " " .. date .. " " },
 			}))
 		end
 	end)
