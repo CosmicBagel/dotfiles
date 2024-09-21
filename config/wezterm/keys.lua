@@ -68,6 +68,9 @@ local M = {
 	{ key = "*", mods = "CTRL|SHIFT", action = act.ActivateTab(7) },
 	{ key = "(", mods = "CTRL|SHIFT", action = act.ActivateTab(8) },
 	{ key = ")", mods = "CTRL|SHIFT", action = act.ActivateTab(9) },
+
+	-- multiplexing stuff
+	{ key = "d", mods = "LEADER", action = act.DetachDomain("CurrentPaneDomain") },
 }
 
 return M

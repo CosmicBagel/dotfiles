@@ -54,4 +54,16 @@ config.disable_default_key_bindings = true
 config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 1500 }
 config.keys = require("keys")
 
+config.ssh_domains = {
+	{
+		-- This name identifies the domain
+		name = "msiarch",
+		-- The hostname or address to connect to. Will be used to match settings
+		-- from your ssh config file
+		remote_address = "192.168.1.133",
+		-- The username to use on the remote host
+		username = "sam",
+	},
+}
+
 return config
