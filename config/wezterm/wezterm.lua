@@ -64,6 +64,9 @@ config.ssh_domains = {
 		remote_address = "192.168.1.106",
 		-- The username to use on the remote host
 		username = "sam",
+
+		-- the wezterm multiplexer causes issues for me in nvim
+		multiplexing = 'None'
 	},
 	{
 		-- This name identifies the domain
@@ -73,6 +76,9 @@ config.ssh_domains = {
 		remote_address = "10.57.63.42",
 		-- The username to use on the remote host
 		username = "sam",
+
+		-- the wezterm multiplexer causes issues for me in nvim
+		multiplexing = 'None'
 	},
 	{
 		-- This name identifies the domain
@@ -82,7 +88,11 @@ config.ssh_domains = {
 		remote_address = "10.39.191.34",
 		-- The username to use on the remote host
 		username = "sam",
+
+		-- the wezterm multiplexer causes issues for me in nvim
+		multiplexing = 'None'
 	},
+
 }
 
 return config
