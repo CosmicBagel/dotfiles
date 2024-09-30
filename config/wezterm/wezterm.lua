@@ -23,9 +23,9 @@ config.scrollback_lines = 1000000
 -- Window
 config.initial_rows = 52
 config.initial_cols = 171
-config.window_background_opacity = 0.996
 
 config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.94
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -70,7 +70,16 @@ config.ssh_domains = {
 		name = "msiarch_home_wifi",
 		-- The hostname or address to connect to. Will be used to match settings
 		-- from your ssh config file
-		remote_address = "192.168.1.133",
+		remote_address = "10.57.63.42",
+		-- The username to use on the remote host
+		username = "sam",
+	},
+	{
+		-- This name identifies the domain
+		name = "msiarch_work_wired",
+		-- The hostname or address to connect to. Will be used to match settings
+		-- from your ssh config file
+		remote_address = "10.39.191.34",
 		-- The username to use on the remote host
 		username = "sam",
 	},
