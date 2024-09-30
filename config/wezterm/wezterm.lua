@@ -24,7 +24,8 @@ config.scrollback_lines = 1000000
 config.initial_rows = 52
 config.initial_cols = 171
 config.window_background_opacity = 0.996
-config.window_decorations = "NONE"
+
+config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -57,7 +58,16 @@ config.keys = require("keys")
 config.ssh_domains = {
 	{
 		-- This name identifies the domain
-		name = "msiarch",
+		name = "msiarch_home_wired",
+		-- The hostname or address to connect to. Will be used to match settings
+		-- from your ssh config file
+		remote_address = "192.168.1.106",
+		-- The username to use on the remote host
+		username = "sam",
+	},
+	{
+		-- This name identifies the domain
+		name = "msiarch_home_wifi",
 		-- The hostname or address to connect to. Will be used to match settings
 		-- from your ssh config file
 		remote_address = "192.168.1.133",
