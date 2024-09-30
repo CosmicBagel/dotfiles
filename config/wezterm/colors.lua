@@ -56,12 +56,14 @@ local me_colors = { -- The default text color foreground = '#ffffff', The defaul
 local M = {}
 
 M.apply_colors = function(config)
-	local schemename = "MonokaiPro (Gogh)"
+	-- local schemename = "MonokaiPro (Gogh)"
+	local schemename = "Catppuccin Latte"
 	local scheme = wezterm.get_builtin_color_schemes()[schemename]
 	-- use monokai pro as base, but set background color to black
-	scheme.background = me_colors.background
-	scheme.visual_bell = me_colors.visual_bell
-	scheme.compose_cursor = me_colors.compose_cursor
+
+	-- scheme.background = me_colors.background
+	-- scheme.visual_bell = me_colors.visual_bell
+	-- scheme.compose_cursor = me_colors.compose_cursor
 
 	config.color_schemes = {
 		[schemename] = scheme,

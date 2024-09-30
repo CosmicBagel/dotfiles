@@ -47,6 +47,7 @@ return {
 			-- ColorMyPencils("kanagawa")
 		end,
 	},
+	-- https://github.com/catppuccin/nvim
 	{
 		"loctvl842/monokai-pro.nvim",
 		priority = 1000,
@@ -55,7 +56,18 @@ return {
 				transparent_background = true,
 			})
 
-			ColorMyPencils("monokai-pro")
+			-- ColorMyPencils("monokai-pro")
+		end,
+	},
+	{
+		"catppuccin/nvim",
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				-- transparent_background = true,
+			})
+
+			vim.cmd.colorscheme("catppuccin-latte")
 		end,
 	},
 }
