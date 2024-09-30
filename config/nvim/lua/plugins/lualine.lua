@@ -4,8 +4,8 @@ return {
 	opts = {
 		options = {
 			-- theme = "codedark",
-			-- theme = "monokai-pro",
-			theme = "catppuccin-latte",
+			theme = "monokai-pro",
+			-- theme = "catppuccin-latte",
 			section_separators = { left = "", right = "" },
 			component_separators = { left = "", right = "" },
 		},

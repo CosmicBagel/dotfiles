@@ -57,6 +57,7 @@ return {
 			})
 
 			-- ColorMyPencils("monokai-pro")
+			vim.cmd.colorscheme("monokai-pro")
 		end,
 	},
 	{
@@ -67,7 +68,7 @@ return {
 				-- transparent_background = true,
 			})
 
-			vim.cmd.colorscheme("catppuccin-latte")
+			-- vim.cmd.colorscheme("catppuccin-latte")
 		end,
 	},
 }
