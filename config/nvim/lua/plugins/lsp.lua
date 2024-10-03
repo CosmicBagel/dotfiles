@@ -177,10 +177,10 @@ return {
 		-- Some languages (like typescript) have entire language plugins that can be useful:
 		--    https://github.com/pmizio/typescript-tools.nvim
 		--
-		-- But for many setups, the LSP (`tsserver`) will work just fine
-		-- tsserver = {},
+		-- But for many setups, the LSP (`ts_ls`) will work just fine
+		-- ts_ls = {},
 
-		servers.tsserver = {
+		servers.ts_ls = {
 			---@diagnostic disable-next-line: missing-fields
 			settings = {
 				completions = {
@@ -240,6 +240,13 @@ return {
 					-- diagnostics = { disable = { 'missing-fields' } },
 				},
 			},
+		}
+
+		servers.tailwindcss = {
+			-- default tailwindcss is very aggressive and attaches to a shit
+			-- load of filetypes, restricting it to just css for now, may add
+			-- some html and template files back later
+			filetypes = { "css", "less", "postcss", "sass", "scss", "stylus", "sugarss" },
 		}
 
 		-- Ensure the servers and tools above are installed
