@@ -14,7 +14,7 @@ function yy {
     Remove-Item -Path $tmp
 }
 
+oh-my-posh init pwsh | Invoke-Expression
+
 ## zoxide
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
-
-oh-my-posh init pwsh | Invoke-Expression
