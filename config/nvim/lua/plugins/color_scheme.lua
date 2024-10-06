@@ -58,6 +58,9 @@ return {
 
 			-- ColorMyPencils("monokai-pro")
 			vim.cmd.colorscheme("monokai-pro")
+			-- brighten comments a bit, easier to read
+			vim.api.nvim_set_hl(0, "Comment", { fg = "#a09da0" })
+			vim.api.nvim_set_hl(0, "TSComment", { fg = "#a09da0" })
 		end,
 	},
 	{
