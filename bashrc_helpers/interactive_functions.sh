@@ -14,12 +14,6 @@ function UpdateAllTheThings {
     echo -e "\n\n===Zig master update==="
     zigup master && zigup clean
 
-    echo -e "\n\n===Neovim Nightly Update==="
-    read -p "(y)/n: "
-    if [ "$REPLY" != "n" ]; then
-	yay -S --noconfirm neovim-git
-    fi
-
     echo -e "\n\n===ZLS Nightly Update==="
     read -p "(y)/n: "
     if [ "$REPLY" != "n" ]; then
