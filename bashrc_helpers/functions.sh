@@ -67,3 +67,6 @@ function PrintTrueColors {
     }'
 }
 
+function YtDlpMp4 {
+	yt-dlp -f "bv*+ba/b" --merge-output-format mp4 $1
+}
