@@ -167,9 +167,10 @@ return {
 		servers.rust_analyzer = {}
 
 		-- vim.g.zig_fmt_autosave = 0
-		servers.zls = {
-			cmd = { "/usr/bin/zls" },
-		}
+		-- had this set when I was using master versions of zig and zls
+		-- servers.zls = {
+		-- 	cmd = { "/usr/bin/zls" },
+		-- }
 
 		-- pyright = {}
 		-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -270,6 +271,7 @@ return {
 			"stylua", -- Used to format Lua code
 			"prettier", -- JS and web shit
 			"gopls",
+			"zls",
 			"typescript-language-server",
 			"tailwindcss",
 			"black",

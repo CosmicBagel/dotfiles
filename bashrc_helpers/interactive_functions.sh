@@ -10,15 +10,6 @@ function UpdateAllTheThings {
 
     echo -e "\n\n===Flatpak upgrade==="
     flatpak upgrade
-
-    echo -e "\n\n===Zig master update==="
-    zigup master && zigup clean
-
-    echo -e "\n\n===ZLS Nightly Update==="
-    read -p "(y)/n: "
-    if [ "$REPLY" != "n" ]; then
-	yay -S --noconfirm zls-git
-    fi
 }
 alias uatt='UpdateAllTheThings'
 
