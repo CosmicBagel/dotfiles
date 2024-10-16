@@ -20,3 +20,4 @@ New-Item -ItemType Directory -Path ~\Documents\PowerShell\ -Force
 New-Item -ItemType SymbolicLink -Path ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -Target "$HOME\dotfiles\config\Microsoft.PowerShell_profile.ps1"
 
 New-Item -ItemType SymbolicLink -Path ~\.eslintrc.json -Target "$HOME\dotfiles\config\.eslintrc.json"
+New-Item -ItemType SymbolicLink -Path ~\.gitconfig -Target "$HOME\dotfiles\gitconfig"
