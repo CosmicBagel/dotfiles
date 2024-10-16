@@ -71,7 +71,7 @@ config.ssh_domains = {
 		username = "sam",
 
 		-- the wezterm multiplexer causes issues for me in nvim
-		multiplexing = 'None'
+		multiplexing = "None",
 	},
 	{
 		-- This name identifies the domain
@@ -83,7 +83,7 @@ config.ssh_domains = {
 		username = "sam",
 
 		-- the wezterm multiplexer causes issues for me in nvim
-		multiplexing = 'None'
+		multiplexing = "None",
 	},
 	{
 		-- This name identifies the domain
@@ -95,7 +95,7 @@ config.ssh_domains = {
 		username = "sam",
 
 		-- the wezterm multiplexer causes issues for me in nvim
-		multiplexing = 'None'
+		multiplexing = "None",
 	},
 
 }
