@@ -3,6 +3,7 @@
     name = "CosmicBagel"
 [core]
 	autocrlf = input
+	editor = nvim
 [color]
 	ui = auto
 [pull]
