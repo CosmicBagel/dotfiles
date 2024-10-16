@@ -51,7 +51,7 @@ return {
 			["handlebars"] = { "prettier" },
 			["lua"] = { "stylua" },
 			["python"] = { "black" },
-			["zig"] = { "zigfmt" },
+			-- ["zig"] = { "zigfmt" },
 		},
 	},
 }
