@@ -13,7 +13,7 @@ return {
 		},
 	},
 	opts = {
-		notify_on_error = true,
+		notify_on_error = false,
 		format_on_save = true,
 		-- function(bufnr)
 		--     -- Disable "format_on_save lsp_fallback" for languages that don't
