@@ -9,6 +9,11 @@ config.automatically_reload_config = false
 -- font size (aka zooming in and out with ctrl + and ctrl -)
 config.adjust_window_size_when_changing_font_size = false
 
+-- Shell
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	config.default_prog = { "pwsh.exe", "-NoLogo" }
+end
+
 -- Env
 config.term = "xterm-256color"
 
