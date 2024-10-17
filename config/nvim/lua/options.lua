@@ -73,3 +73,15 @@ vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 
 -- recommended for autosessions
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- use pwsh and powershell as fallback on windows
+if vim.fn.has("win32") == 1 then
+	if vim.fn.executable("pwsh.exe") == 1 then
+		vim.o.shell = "pwsh.exe -NoLogo"
+	else
+		vim.o.shell = "powershell.exe -NoLogo"
+	end
+	vim.o.shellcmdflag = "-command"
+	vim.o.shellquote = '"' -- Adjust quoting if necessary
+	vim.o.shellxquote = "" -- Adjust for command execution
+end
