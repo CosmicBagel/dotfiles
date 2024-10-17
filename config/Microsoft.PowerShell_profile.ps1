@@ -14,6 +14,14 @@ function yy {
     Remove-Item -Path $tmp
 }
 
+## zig aliases
+function zb {
+    zig build $args
+}
+function zbr {
+    zig build run $args
+}
+
 oh-my-posh init pwsh | Invoke-Expression
 
 ## zoxide
