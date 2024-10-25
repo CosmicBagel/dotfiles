@@ -2,6 +2,22 @@
 vim.opt.shortmess:append({ I = true }) -- disable the startup message
 vim.opt.title = true
 vim.opt.clipboard = "unnamedplus" -- use system clipboard for default yank
+
+-- force OSC 52 when ssh'd in (this lets copy paste to work in nvim over ssh)
+if os.getenv("SSH_TTY") ~= nil then
+	vim.g.clipboard = {
+		name = "OSC 52",
+		copy = {
+			["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+			["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+		},
+		paste = {
+			["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+			["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+		},
+	}
+end
+
 vim.opt.termguicolors = true -- enable proper colors
 vim.opt.autowriteall = false -- kind of like auto-save, but I only want it in certain situations
 
