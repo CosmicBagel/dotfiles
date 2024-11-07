@@ -16,6 +16,7 @@ end
 
 -- Env
 config.term = "xterm-256color"
+-- config.term = "wezterm"
 
 -- Font
 config.font = wezterm.font({ family = "JetBrains Mono" })
@@ -26,11 +27,11 @@ config.cursor_thickness = 0.20
 config.scrollback_lines = 1000000
 
 -- Window
-config.initial_rows = 52
+config.initial_rows = 50
 config.initial_cols = 171
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.94
+config.window_background_opacity = 0.75
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -97,7 +98,6 @@ config.ssh_domains = {
 		-- the wezterm multiplexer causes issues for me in nvim
 		multiplexing = "None",
 	},
-
 }
 
 return config

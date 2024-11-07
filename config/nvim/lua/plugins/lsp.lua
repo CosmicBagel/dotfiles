@@ -166,8 +166,8 @@ return {
 		servers.gopls = {}
 		servers.rust_analyzer = {}
 
-		-- vim.g.zig_fmt_autosave = 0
 		-- had this set when I was using master versions of zig and zls
+		-- vim.g.zig_fmt_autosave = 0
 		-- servers.zls = {
 		-- 	cmd = { "/usr/bin/zls" },
 		-- }
