@@ -5,15 +5,22 @@ vim.opt.clipboard = "unnamedplus" -- use system clipboard for default yank
 
 -- force OSC 52 when ssh'd in (this lets copy paste to work in nvim over ssh)
 if os.getenv("SSH_TTY") ~= nil then
+	local function regular_paste(_)
+		return function(_)
+			local content = vim.fn.getreg('"')
+			return vim.split(content, "\n")
+		end
+	end
 	vim.g.clipboard = {
 		name = "OSC 52",
 		copy = {
 			["+"] = require("vim.ui.clipboard.osc52").copy("+"),
 			["*"] = require("vim.ui.clipboard.osc52").copy("*"),
 		},
+		-- paste doesn't work with wezterm :`(
 		paste = {
-			["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-			["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+			["+"] = regular_paste("+"),
+			["*"] = regular_paste("*"),
 		},
 	}
 end
