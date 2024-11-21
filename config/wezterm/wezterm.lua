@@ -91,7 +91,7 @@ config.ssh_domains = {
 		name = "msiarch_work_wired",
 		-- The hostname or address to connect to. Will be used to match settings
 		-- from your ssh config file
-		remote_address = "10.39.191.34",
+		remote_address = "10.51.98.209",
 		-- The username to use on the remote host
 		username = "sam",
 
