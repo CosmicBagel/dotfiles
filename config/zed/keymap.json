@@ -9,9 +9,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
       "ctrl-`": "workspace::ToggleBottomDock",
-      "space -": "collab::ToggleProjectMenu"
+      "space -": "workspace::ToggleRightDock"
     }
   },
   {
@@ -33,6 +32,10 @@
     "bindings": {
       "tab": "editor::Tab"
     }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {}
   },
   {
     // ctrl+y selects completion, not enter
