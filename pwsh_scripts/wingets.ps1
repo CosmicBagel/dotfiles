@@ -23,6 +23,7 @@ $installItems =  @(
     "Python.Python.3.13",
     "Microsoft.WindowsTerminal",
     "JanDeDobbeleer.OhMyPosh"
+    "SublimeHQ.SublimeText.4"
 )
 
 foreach ($item in $installItems) {
