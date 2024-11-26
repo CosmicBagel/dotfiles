@@ -1,50 +1,43 @@
 # 24 hour time format
-$internationalPath = "HKCU:\Control Panel\International"
-Set-ItemProperty -Path $internationalPath -Name "sTimeFormat" -Value "HH:mm:ss"
-Set-ItemProperty -Path $internationalPath -Name "sShortTime" -Value "HH:mm"
+$internationalRegPath = "HKCU:\Control Panel\International"
+Set-ItemProperty -Path $internationalRegPath -Name "sTimeFormat" -Value "HH:mm:ss"
+Set-ItemProperty -Path $internationalRegPath -Name "sShortTime" -Value "HH:mm"
 
-$explorerPath = "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
 # Don't group tasks in alt+tab
-Set-ItemProperty -Path $explorerPath -Name "EnableTaskGroups" -Value 0
+$explorerRegPath = "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+Set-ItemProperty -Path $explorerRegPath -Name "EnableTaskGroups" -Value 0
 
 # show hidden files and file extensions
-Set-ItemProperty -Path $explorerPath -Name "HideFileExt" -Value 0
-Set-ItemProperty -Path $explorerPath -Name "Hidden" -Value 1
+Set-ItemProperty -Path $explorerRegPath -Name "HideFileExt" -Value 0
+Set-ItemProperty -Path $explorerRegPath -Name "Hidden" -Value 1
 
 # hide taskbar buttons
-Set-ItemProperty -Path $explorerPath -Name "ShowTaskViewButton" -Value 0
-Set-ItemProperty -Path $explorerPath -Name "ShowCopilotButton" -Value 0
-Set-ItemProperty -Path $explorerPath -Name "ShowCortanaButton" -Value 0
+Set-ItemProperty -Path $explorerRegPath -Name "ShowTaskViewButton" -Value 0
+Set-ItemProperty -Path $explorerRegPath -Name "ShowCopilotButton" -Value 0
+Set-ItemProperty -Path $explorerRegPath -Name "ShowCortanaButton" -Value 0
 
 # more icons, less recommendations in start menu
-Set-ItemProperty -Path $explorerPath -Name "Start_Layout" -Value 1
-# Start_Layout REG_DWORD 1
-
+Set-ItemProperty -Path $explorerRegPath -Name "Start_Layout" -Value 1
 
 # left aligned task bar
-# TaskbarAl REG_DWORD 0
+Set-ItemProperty -Path $explorerRegPath -Name "TaskbarAl" -Value 0
 
 #don't show recommendations
-# Start_TrackDocs REG_DWORD 0
-# Start_IrisRecommendations REG_DWORD 0
+Set-ItemProperty -Path $explorerRegPath -Name "Start_TrackDocs" -Value 0
+Set-ItemProperty -Path $explorerRegPath -Name "Start_IrisRecommendations" -Value 0
 
-# HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Search
-# SearchboxTaskbarMode REG_DWORD 0
+$searchRegPath = "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Search"
+Set-ItemProperty -Path $searchRegPath -Name "SearchboxTaskbarMode " -Value 0
 
-# HKCU:Software\Microsoft\Windows\CurrentVersion\Start
-# ShowRecentList REG_DWORD 0
-
-# VisiblePlaces REG_BINARY (zero-length binary value)
+$startRegPath = "HKCU:Software\Microsoft\Windows\CurrentVersion\Start"
+# don't show recent items
+Set-ItemProperty -Path $startRegPath -Name "ShowRecentList" -Value 0
+# no extra buttons in start menu
+Set-ItemProperty -Path $startRegPath -Name "VisiblePlaces" -Value ([byte[]]@())
 
 # Dark mode is enabling
-Set-ItemProperty `
-  -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize `
-  -Name AppsUseLightTheme `
-  -Value 0
-Set-ItemProperty `
-  -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize `
-  -Name SystemUsesLightTheme `
-  -Value 0
-
+$personalizeRegPath = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
+Set-ItemProperty -Path $personalizeRegPath -Name AppsUseLightTheme -Value 0
+Set-ItemProperty -Path $personalizeRegPath -Name SystemUsesLightTheme -Value 0
 # Restart explorer to apply settings
 Stop-Process -Name explorer
