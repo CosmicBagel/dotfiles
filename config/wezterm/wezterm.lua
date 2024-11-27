@@ -27,8 +27,8 @@ config.cursor_thickness = 0.20
 config.scrollback_lines = 1000000
 
 -- Window
-config.initial_rows = 50
-config.initial_cols = 171
+config.initial_rows = 37
+config.initial_cols = 130
 
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.75
