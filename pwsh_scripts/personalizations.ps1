@@ -27,7 +27,7 @@ Set-ItemProperty -Path $explorerRegPath -Name "Start_TrackDocs" -Value 0
 Set-ItemProperty -Path $explorerRegPath -Name "Start_IrisRecommendations" -Value 0
 
 $searchRegPath = "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Search"
-Set-ItemProperty -Path $searchRegPath -Name "SearchboxTaskbarMode " -Value 0
+Set-ItemProperty -Path $searchRegPath -Name "SearchboxTaskbarMode" -Value 0
 
 $startRegPath = "HKCU:Software\Microsoft\Windows\CurrentVersion\Start"
 # don't show recent items
