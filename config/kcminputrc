@@ -1,4 +1,5 @@
 [Keyboard]
+NumLock=0
 RepeatDelay=400
 RepeatRate=50
 
@@ -17,3 +18,10 @@ TapToClick=false
 [Libinput][4012][6878][keyd virtual pointer]
 Enabled=true
 PointerAccelerationProfile=1
+
+[Libinput][7119][5][USB Optical Mouse]
+PointerAccelerationProfile=1
+
+[Mouse]
+cursorSize=30
+cursorTheme=breeze_cursors
