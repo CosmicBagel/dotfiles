@@ -35,3 +35,6 @@ Back in unelevated prompt
 ```
 .\wingets.ps1
 ```
+
+Don't forget to startup the hotkeys
+"C:\Users\whiteleys2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\myHotkeys.ahk.lnk"
