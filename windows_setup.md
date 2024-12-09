@@ -1,6 +1,9 @@
 From home folder
 
 ```
+# enable running scripts (CurrentUser scope doesn't need admin for CurrentUser scope)
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 winget install Git.Git
 git clone https://github.com/CosmicBagel/dotfiles.git
 cd dotfiles
