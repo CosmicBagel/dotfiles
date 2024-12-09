@@ -2,7 +2,7 @@
 Description=Picture-in-picture
 desktops=\\0
 desktopsrule=3
-layer=overlay
+layer=popup
 layerrule=2
 title=Picture-in-picture
 titlematch=1
