@@ -22,6 +22,7 @@ New-Item -ItemType SymbolicLink -Path ~\Documents\PowerShell\Microsoft.PowerShel
 New-Item -ItemType SymbolicLink -Path ~\.eslintrc.json -Target "$HOME\dotfiles\config\.eslintrc.json"
 New-Item -ItemType SymbolicLink -Path ~\.gitconfig -Target "$HOME\dotfiles\gitconfig"
 
+New-Item -ItemType Directory -Path ~\AppData\Roaming\Zed\ -Force
 New-Item -ItemType SymbolicLink -Path ~\AppData\Roaming\Zed\keymap.json -Target "$HOME\dotfiles\config\zed\keymap.json"
 New-Item -ItemType SymbolicLink -Path ~\AppData\Roaming\Zed\settings.json -Target "$HOME\dotfiles\config\zed\settings.json"
 
