@@ -19,4 +19,4 @@ foreach ($pathToAdd in $desiredPaths) {
 }
 
 [Environment]::SetEnvironmentVariable("GOPATH_TWO", "$env:USERPROFILE\go", "User")
-[Environment]::SetEnvironmentVariable("YAZI_FILE_ONE_TWO", "$env:ProgramFiles\Git\usr\bin\file.exe", "User")
+[Environment]::SetEnvironmentVariable("YAZI_FILE_ONE", "$env:ProgramFiles\Git\usr\bin\file.exe", "User")

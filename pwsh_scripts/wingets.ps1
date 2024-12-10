@@ -1,5 +1,4 @@
 $installItems =  @(
-    "Git.Git",
     "Microsoft.PowerShell",
     "jqlang.jq",
     "junegunn.fzf",
@@ -13,7 +12,6 @@ $installItems =  @(
     "AutoHotkey.AutoHotkey",
     "Bitwarden.Bitwarden",
     "SpeedCrunch.SpeedCrunch",
-    "Dropbox.Dropbox",
     "Brave.Brave",
     "wez.wezterm",
     "OpenJS.NodeJS",

@@ -6,6 +6,8 @@ Set-ItemProperty -Path $internationalRegPath -Name "sShortTime" -Value "HH:mm"
 # Don't group tasks in alt+tab
 $explorerRegPath = "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
 Set-ItemProperty -Path $explorerRegPath -Name "EnableTaskGroups" -Value 0
+# only show task icons on display where window is located
+Set-ItemProperty -Path $explorerRegPath -Name "MMTaskbarMode" -Value 2
 
 # show hidden files and file extensions
 Set-ItemProperty -Path $explorerRegPath -Name "HideFileExt" -Value 0
@@ -39,5 +41,16 @@ Set-ItemProperty -Path $startRegPath -Name "VisiblePlaces" -Value ([byte[]]@())
 $personalizeRegPath = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
 Set-ItemProperty -Path $personalizeRegPath -Name AppsUseLightTheme -Value 0
 Set-ItemProperty -Path $personalizeRegPath -Name SystemUsesLightTheme -Value 0
+
+# no mouse accel
+$mouseRegPath = "HKCU:\Control Panel\Mouse"
+Set-ItemProperty -Path $mouseRegPath -Name "MouseSpeed" -Value "0"
+Set-ItemProperty -Path $mouseRegPath -Name "MouseThreshold1" -Value "0"
+Set-ItemProperty -Path $mouseRegPath -Name "MouseThreshold2" -Value "0"
+
+# recycle bin
+$iconHideRegPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel"
+New-ItemProperty -Path $iconHideRegPath -Name "{645FF040-5081-101B-9F08-00AA002F954E}" -Value 1 -PropertyType DWORD -Force
+
 # Restart explorer to apply settings
 Stop-Process -Name explorer
