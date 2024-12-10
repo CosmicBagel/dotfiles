@@ -6,7 +6,7 @@ return {
 		{
 			"<leader>f",
 			function()
-				require("conform").format({ async = true, lsp_fallback = true })
+				require("conform").format()
 			end,
 			mode = "",
 			desc = "[F]ormat buffer",
@@ -14,7 +14,15 @@ return {
 	},
 	opts = {
 		notify_on_error = false,
-		format_on_save = true,
+		notify_no_formatters = true,
+		default_format_opts = {
+			lsp_format = "fallback",
+		},
+		format_on_save = {
+			-- I recommend these options. See :help conform.format for details.
+			lsp_format = "fallback",
+			timeout_ms = 500,
+		},
 		-- function(bufnr)
 		--     -- Disable "format_on_save lsp_fallback" for languages that don't
 		--     -- have a well standardized coding style. You can add additional
@@ -33,6 +41,9 @@ return {
 			-- You can use a sub-list to tell conform to run *until* a formatter
 			-- is found.
 			-- javascript = { { "prettierd", "prettier" } },
+			["zig"] = { "zigfmt" },
+			["lua"] = { "stylua" },
+			["python"] = { "black" },
 			["javascript"] = { "prettier" },
 			["javascriptreact"] = { "prettier" },
 			["typescript"] = { "prettier" },
@@ -49,9 +60,12 @@ return {
 			["markdown.mdx"] = { "prettier" },
 			["graphql"] = { "prettier" },
 			["handlebars"] = { "prettier" },
-			["lua"] = { "stylua" },
-			["python"] = { "black" },
-			-- ["zig"] = { "zigfmt" },
 		},
 	},
+	config = function(_, opts)
+		require("conform").setup(opts)
+		-- disable the format on save from the zig.vim that's bundled with
+		-- neovim
+		vim.g.zig_fmt_autosave = 0
+	end,
 }
