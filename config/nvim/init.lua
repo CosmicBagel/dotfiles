@@ -1,8 +1,9 @@
-require('options')
-require('mappings')
-require('user_commands')
-require('lazy_init')
-require('autocommands')
+require("neovide")
+require("options")
+require("mappings")
+require("user_commands")
+require("lazy_init")
+require("autocommands")
 
 -- -- -- config todo -- -- --
 -- dadbod - allows running sql queries from neovim
