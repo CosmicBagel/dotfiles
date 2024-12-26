@@ -1,4 +1,4 @@
-# use the correct editor for ctrl+x ctrl+e 
+# use the correct editor for ctrl+x ctrl+e
 # also used by some apps to determine default editor
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -8,7 +8,7 @@ export VISUAL="nvim"
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
-shopt -s histappend
+setopt APPEND_HISTORY
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -16,7 +16,8 @@ HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+# setopt -s checkwinsize
+# not needed in ZSH
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
