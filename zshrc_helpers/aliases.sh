@@ -14,8 +14,12 @@ alias godot="godot-mono"
 alias zbr="zig build run"
 alias zb="zig build"
 alias zbt="zig build test"
-alias open="xdg-open"
 alias av="clamdscan -i -m"
 # Force xterm-color on ssh sessions, also works around machines not recognizing
 # wezterm
 alias ssh='TERM=xterm-256color ssh'
+
+# don't alias xdg-open on MacOS
+if [[ $OSTYPE != "darwin"* ]]; then
+    alias open="xdg-open"
+fi
