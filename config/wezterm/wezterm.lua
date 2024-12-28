@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
+local target = wezterm.target_triple
 
 -- In practice I found hot reloading to be really annoying
 -- especially since I usually edit inside the terminal lol
@@ -10,7 +11,7 @@ config.automatically_reload_config = false
 config.adjust_window_size_when_changing_font_size = false
 
 -- Shell
-if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+if target:find("windows") then
 	config.default_prog = { "pwsh.exe", "-NoLogo" }
 end
 
@@ -20,7 +21,7 @@ config.term = "xterm-256color"
 
 -- Font
 config.font = wezterm.font({ family = "JetBrains Mono" })
-config.font_size = 12
+config.font_size = 16
 config.cursor_thickness = 0.20
 
 -- Scroll history
@@ -30,8 +31,13 @@ config.scrollback_lines = 1000000
 config.initial_rows = 37
 config.initial_cols = 130
 
-config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.75
+if target:find("darwin") then
+	config.window_decorations = "TITLE | RESIZE"
+else
+	config.window_decorations = "RESIZE"
+end
+
+-- config.window_background_opacity = 0.75
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -40,6 +46,20 @@ config.window_padding = {
 }
 
 config.hide_mouse_cursor_when_typing = true
+
+-- Background
+if target:find("darwin") then
+	local home_path = os.getenv("HOME")
+	config.background = {
+		{
+			source = {
+				File = home_path .. "/OneDrive/Pictures/Nine Princes In Amber by Tim White, 1985.png",
+			},
+			-- opacity = 0.25, -- Adjust the opacity (0.0 to 1.0)
+			hsb = { brightness = 0.08 },
+		},
+	}
+end
 
 -- Visual bell
 config.visual_bell = {
