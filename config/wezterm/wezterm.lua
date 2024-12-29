@@ -21,7 +21,7 @@ config.term = "xterm-256color"
 
 -- Font
 config.font = wezterm.font({ family = "JetBrains Mono" })
-config.font_size = 16
+config.font_size = 12
 config.cursor_thickness = 0.20
 
 -- Scroll history
@@ -37,7 +37,6 @@ else
 	config.window_decorations = "RESIZE"
 end
 
--- config.window_background_opacity = 0.75
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -59,6 +58,8 @@ if target:find("darwin") then
 			hsb = { brightness = 0.08 },
 		},
 	}
+else
+	config.window_background_opacity = 0.75
 end
 
 -- Visual bell
