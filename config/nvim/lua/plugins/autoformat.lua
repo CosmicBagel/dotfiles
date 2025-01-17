@@ -60,6 +60,7 @@ return {
 			["markdown.mdx"] = { "prettier" },
 			["graphql"] = { "prettier" },
 			["handlebars"] = { "prettier" },
+			["go"] = { "gofmt" },
 		},
 	},
 	config = function(_, opts)
