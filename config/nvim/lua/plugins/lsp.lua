@@ -271,6 +271,7 @@ return {
 			"stylua", -- Used to format Lua code
 			"prettier", -- JS and web shit
 			"gopls",
+			"gofumpt",
 			"zls",
 			"typescript-language-server",
 			"tailwindcss",
