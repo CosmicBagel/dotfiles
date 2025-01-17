@@ -52,7 +52,7 @@ if target:find("darwin") then
 	config.background = {
 		{
 			source = {
-				File = home_path .. "/OneDrive/Pictures/Nine Princes In Amber by Tim White, 1985.png",
+				File = home_path .. "/dotfiles/config/wezterm/Nine Princes In Amber by Tim White, 1985.png",
 			},
 			-- opacity = 0.25, -- Adjust the opacity (0.0 to 1.0)
 			hsb = { brightness = 0.08 },
