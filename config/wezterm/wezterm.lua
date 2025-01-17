@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local act = require("wezterm").action
 local config = wezterm.config_builder()
 local target = wezterm.target_triple
 
@@ -81,6 +82,12 @@ config.enable_kitty_keyboard = true -- needed for neovim keybindings
 config.disable_default_key_bindings = true
 config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 1500 }
 config.keys = require("keys")
+
+if target:find("windows") then
+	-- wsl new tab specific to windows only
+	table.insert(config.keys, { key = "g", mods = "CTRL|SHIFT", action = act.SpawnTab({ DomainName = "WSL:Arch" }) })
+	wsl_domains = wezterm.default_wsl_domains()
+end
 
 config.ssh_domains = {
 	{
