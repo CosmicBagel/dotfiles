@@ -3,6 +3,11 @@ vim.opt.shortmess:append({ I = true }) -- disable the startup message
 vim.opt.title = true
 vim.opt.clipboard = "unnamedplus" -- use system clipboard for default yank
 
+vim.opt.mousescroll = "ver:1,hor:2"
+-- may want to limit scroll adjustment to macbook
+-- if vim.fn.has("macunix") == 1 then
+-- end
+
 -- force OSC 52 when ssh'd in (this lets copy paste to work in nvim over ssh)
 if os.getenv("SSH_TTY") ~= nil then
 	local function regular_paste(_)

@@ -58,9 +58,27 @@ return {
 
 			-- ColorMyPencils("monokai-pro")
 			vim.cmd.colorscheme("monokai-pro")
+
 			-- brighten comments a bit, easier to read
-			vim.api.nvim_set_hl(0, "Comment", { fg = "#a09da0" })
-			vim.api.nvim_set_hl(0, "TSComment", { fg = "#a09da0" })
+			vim.api.nvim_set_hl(0, "Comment", { fg = "#c1c0c0" })
+			vim.api.nvim_set_hl(0, "TSComment", { fg = "#c1c0c0" })
+			vim.api.nvim_set_hl(0, "@string.documentation", { fg = "#c1c0c0" })
+
+			-- monokai pro pallet
+			--   dark = p.dark2,        -- "#19181a"
+			--   black = p.dark1,       -- "#221f22"
+			--   red = p.accent1,       -- "#ff6188"
+			--   green = p.accent4,     -- "#a9dc76"
+			--   yellow = p.accent3,    -- "#ffd866"
+			--   blue = p.accent2,      -- "#fc9867"
+			--   magenta = p.accent6,   -- "#ab9df2"
+			--   cyan = p.accent5,      -- "#78dce8"
+			--   white = p.text,        -- "#fcfcfa"
+			--   dimmed1 = p.dimmed1,   -- "#c1c0c0"
+			--   dimmed2 = p.dimmed2,   -- "#939293"
+			--   dimmed3 = p.dimmed3,   -- "#727072"
+			--   dimmed4 = p.dimmed4,   -- "#5b595c"
+			--   dimmed5 = p.dimmed5,   -- "#403e41"
 		end,
 	},
 	{
