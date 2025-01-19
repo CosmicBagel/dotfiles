@@ -17,7 +17,7 @@ local function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "WhichKeyBorder", { bg = "none" })
 
 	-- dark cursor line
-	vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1e1e1e" })
+	vim.api.nvim_set_hl(0, "CursorLine", { bg = "#19181a" })
 
 	-- red color column
 	vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#1e1e1e" })
@@ -63,6 +63,7 @@ return {
 			vim.api.nvim_set_hl(0, "Comment", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "TSComment", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "@string.documentation", { fg = "#c1c0c0" })
+			vim.api.nvim_set_hl(0, "CursorLine", { bg = "#221f22" })
 
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
