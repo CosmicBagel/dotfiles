@@ -29,11 +29,8 @@ battery_icons["Discharging2"] = "\u{f007b}"
 battery_icons["Discharging1"] = "\u{f007a}"
 battery_icons["Discharging0"] = "\u{f008e}"
 battery_icons["Empty"] = "\u{f008e}"
-battery_icons["Full"] = "\u{f06a5}"
-
--- "Unknown" usually happens when battery isn't charging (on AC power), but
--- also isn't full. This occurs when battery is near full, but not quite full.
-battery_icons["Unknown"] = "\u{f06a5}"
+battery_icons["Full"] = "\u{f06a5}" -- plugged in icon
+battery_icons["Unknown"] = "\u{f0091}"
 
 M.apply_tab_bar_config = function(config)
 	-- Enable retro bar
