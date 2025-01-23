@@ -39,6 +39,22 @@ M.apply_tab_bar_config = function(config)
 	-- TODO don't forget to show zoom state!!!
 	-- TODO make tabs look nicer
 
+	config.hide_tab_bar_if_only_one_tab = false
+
+	wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+		local title = tab.tab_title
+		if #title == 0 then
+			title = tab.active_pane.title
+		end
+		local cwd = tab.active_pane.current_working_dir
+		print(cwd)
+		if cwd ~= nil then
+			local folder_name = cwd.path:match("([^/\\]+[/\\]?$)")
+			title = title or folder_name
+		end
+		return title
+	end)
+
 	-- Show if LEADER key is active in status bar
 	wezterm.on("update-status", function(window, pane)
 		local leader = window:leader_is_active()
@@ -98,8 +114,6 @@ M.apply_tab_bar_config = function(config)
 			}))
 		end
 	end)
-
-	config.hide_tab_bar_if_only_one_tab = false
 
 	-- disable in fullscreen if only one bar
 	-- wezterm.on('window-resized', function(window, _)
