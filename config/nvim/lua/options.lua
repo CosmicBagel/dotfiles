@@ -1,6 +1,7 @@
 -- -- -- basic vim options -- -- --
 vim.opt.shortmess:append({ I = true }) -- disable the startup message
 vim.opt.title = true
+vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 vim.opt.clipboard = "unnamedplus" -- use system clipboard for default yank
 
 vim.opt.mousescroll = "ver:1,hor:2"
