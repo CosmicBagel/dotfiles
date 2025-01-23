@@ -86,7 +86,13 @@ config.keys = require("keys")
 if target:find("windows") then
 	-- wsl new tab specific to windows only
 	table.insert(config.keys, { key = "g", mods = "CTRL|SHIFT", action = act.SpawnTab({ DomainName = "WSL:Arch" }) })
-	wsl_domains = wezterm.default_wsl_domains()
+	config.wsl_domains = wezterm.default_wsl_domains()
+	for index, domain in ipairs(config.wsl_domains) do
+		if string.find(domain.name, "WSL") == 1 then
+			domain.default_cwd = "/home/sam"
+			domain.username = "sam"
+		end
+	end
 end
 
 config.ssh_domains = {
