@@ -41,19 +41,20 @@ M.apply_tab_bar_config = function(config)
 
 	config.hide_tab_bar_if_only_one_tab = false
 
-	wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-		local title = tab.tab_title
-		if #title == 0 then
-			title = tab.active_pane.title
-		end
-		local cwd = tab.active_pane.current_working_dir
-		print(cwd)
-		if cwd ~= nil then
-			local folder_name = cwd.path:match("([^/\\]+[/\\]?$)")
-			title = title or folder_name
-		end
-		return title
-	end)
+	config.tab_max_width = 64
+	-- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+	-- 	local title = tab.tab_title
+	-- 	if #title == 0 then
+	-- 		title = tab.active_pane.title
+	-- 	end
+	-- 	local cwd = tab.active_pane.current_working_dir
+	-- 	print(cwd)
+	-- 	if cwd ~= nil then
+	-- 		local folder_name = cwd.path:match("([^/\\]+[/\\]?$)")
+	-- 		title = title or folder_name
+	-- 	end
+	-- 	return title
+	-- end)
 
 	-- Show if LEADER key is active in status bar
 	wezterm.on("update-status", function(window, pane)
