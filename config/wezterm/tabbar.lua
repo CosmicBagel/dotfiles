@@ -71,10 +71,23 @@ M.apply_tab_bar_config = function(config)
 		local tardy = meta.is_tardy and "TTY Tardy" or ""
 
 		local pane_cwd = pane:get_current_working_dir()
+
 		if pane_cwd ~= nil then
 			local cwd = pane_cwd.path
 			if cwd == nil then
 				cwd = "???"
+			else
+				local home_dir = os.getenv("USERPROFILE") or os.getenv("HOME")
+				if string.find(pane:get_domain_name(), "WSL") == 1 then
+					home_dir = "/home/sam" -- override for WSL tabs
+				end
+				-- using url parse to normalize windows paths (which have the
+				-- wrong slashes)
+				home_dir = wezterm.url.parse("file://" .. home_dir .. "/").path
+				local pos_start, pos_end = string.find(cwd, home_dir, 1, true)
+				if pos_start ~= nil and pos_start == 1 then
+					cwd = "~/" .. string.sub(cwd, pos_end + 1)
+				end
 			end
 			window:set_right_status(wezterm.format({
 				{ Text = tardy .. " " .. cwd .. "  " .. bat .. " " .. date .. " " },
