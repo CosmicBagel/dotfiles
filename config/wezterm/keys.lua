@@ -2,6 +2,8 @@ local act = require("wezterm").action
 
 local M = {
 	{ key = "q", mods = "CMD", action = act.QuitApplication },
+	{ key = "q", mods = "LEADER|CTRL", action = act.SendKey({ key = "q", mods = "CTRL" }) },
+
 	{ key = "F11", mods = "", action = act.ToggleFullScreen },
 
 	{ key = "r", mods = "LEADER|SHIFT", action = act.ReloadConfiguration },
