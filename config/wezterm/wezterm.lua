@@ -87,6 +87,9 @@ if target:find("windows") then
 	-- wsl new tab specific to windows only
 	table.insert(config.keys, { key = "g", mods = "CTRL|SHIFT", action = act.SpawnTab({ DomainName = "WSL:Arch" }) })
 	config.wsl_domains = wezterm.default_wsl_domains()
+	-- just kinda makes things weird, many nvim keys don't work properly
+	-- can interfere with bash input in WSL as well, so disabling it
+	config.allow_win32_input_mode = false
 	for index, domain in ipairs(config.wsl_domains) do
 		if string.find(domain.name, "WSL") == 1 then
 			domain.default_cwd = "/home/sam"
