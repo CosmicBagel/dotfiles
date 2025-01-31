@@ -44,6 +44,18 @@ return {
 					i = { ["<c-enter>"] = "to_fuzzy_refine" },
 				},
 				path_display = { "truncate" },
+				vimgrep_arguments = {
+					"rg",
+					"--color=never",
+					"--no-heading",
+					"--with-filename",
+					"--line-number",
+					"--column",
+					"--smart-case",
+					"--hidden",
+					"--glob",
+					"!**/.git/*",
+				},
 			},
 		})
 
