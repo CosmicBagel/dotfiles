@@ -19,3 +19,4 @@ alias av="clamdscan -i -m"
 # Force xterm-color on ssh sessions, also works around machines not recognizing
 # wezterm
 alias ssh='TERM=xterm-256color ssh'
+alias glog='git log -p $(fzf --preview "bat --style=full --color=always{}")'

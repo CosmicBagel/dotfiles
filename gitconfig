@@ -4,6 +4,7 @@
 [core]
 	autocrlf = input
 	editor = nvim
+	pager = bat
 [color]
 	ui = auto
 [pull]
