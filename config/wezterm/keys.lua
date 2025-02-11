@@ -1,7 +1,13 @@
 local act = require("wezterm").action
 
 local M = {
+	-- macos stuff
 	{ key = "q", mods = "CMD", action = act.QuitApplication },
+	{ key = "c", mods = "CMD", action = act.CopyTo("Clipboard") },
+	{ key = "v", mods = "CMD", action = act.PasteFrom("Clipboard") },
+	{ key = "t", mods = "CMD", action = act.SpawnTab("CurrentPaneDomain") },
+	{ key = "w", mods = "CMD", action = act.CloseCurrentTab({ confirm = true }) },
+
 	{ key = "q", mods = "LEADER|CTRL", action = act.SendKey({ key = "q", mods = "CTRL" }) },
 
 	{ key = "F11", mods = "", action = act.ToggleFullScreen },
