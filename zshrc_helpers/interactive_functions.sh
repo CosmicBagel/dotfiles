@@ -1,15 +1,25 @@
 function UpdateAllTheThings {
-    echo "===Checking for arch news==="
-    yay -Pw
-    read -p "Press enter to continue (or ctrl+c to bail)"
-
-    if [[ $? -eq 0 ]]; then
-	echo -e "\n\n===Running yay==="
-	yay -Syu
+    if [[ "$(uname -s)" == "Darwin" ]]; then
+	echo "===Updating Brew==="
+	brew update && brew upgrade && brew cleanup
+	return $?
     fi
 
-    echo -e "\n\n===Flatpak upgrade==="
-    flatpak upgrade
+    if grep -q "Arch Linux" /etc/os-release; then
+	echo "===Checking for arch news==="
+	yay -Pw
+	read -p "Press enter to continue (or ctrl+c to bail)"
+
+	if [[ $? -eq 0 ]]; then
+	    echo -e "\n\n===Running yay==="
+	    yay -Syu
+	fi
+
+	echo -e "\n\n===Flatpak upgrade==="
+	flatpak upgrade
+
+	return $?
+    fi
 }
 alias uatt='UpdateAllTheThings'
 
