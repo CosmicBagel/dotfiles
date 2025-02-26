@@ -22,7 +22,7 @@ config.term = "xterm-256color"
 
 -- Font
 config.font = wezterm.font({ family = "JetBrains Mono" })
-config.font_size = 12
+config.font_size = 14
 config.cursor_thickness = 0.20
 
 -- Scroll history
@@ -83,6 +83,22 @@ config.disable_default_key_bindings = true
 config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 1500 }
 config.keys = require("keys")
 
+-- Right click pastes, right click if text is selected copies
+config.mouse_bindings = {
+	{
+		event = { Down = { streak = 1, button = "Right" } },
+		mods = "NONE",
+		action = wezterm.action_callback(function(window, pane)
+			local has_selection = window:get_selection_text_for_pane(pane) ~= ""
+			if has_selection then
+				window:perform_action(act.CopyTo("ClipboardAndPrimarySelection"), pane)
+				window:perform_action(act.ClearSelection, pane)
+			else
+				window:perform_action(act({ PasteFrom = "Clipboard" }), pane)
+			end
+		end),
+	},
+}
 if target:find("windows") then
 	-- wsl new tab specific to windows only
 	table.insert(config.keys, { key = "g", mods = "CTRL|SHIFT", action = act.SpawnTab({ DomainName = "WSL:Arch" }) })
