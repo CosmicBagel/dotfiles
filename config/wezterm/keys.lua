@@ -10,6 +10,8 @@ local M = {
 	{ key = "=", mods = "CMD", action = act.IncreaseFontSize },
 	{ key = "-", mods = "CMD", action = act.DecreaseFontSize },
 	{ key = "0", mods = "CMD", action = act.ResetFontSize },
+	{ key = "h", mods = "CMD", action = act.HideApplication },
+	{ key = "m", mods = "CMD", action = act.Hide },
 
 	{ key = "q", mods = "LEADER|CTRL", action = act.SendKey({ key = "q", mods = "CTRL" }) },
 
