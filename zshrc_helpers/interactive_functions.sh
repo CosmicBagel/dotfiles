@@ -1,7 +1,7 @@
 function UpdateAllTheThings {
     if [[ "$(uname -s)" == "Darwin" ]]; then
 	echo "===Updating Brew==="
-	brew update && brew upgrade && brew cleanup
+	brew update && brew upgrade -g && brew cleanup
 	return $?
     fi
 
