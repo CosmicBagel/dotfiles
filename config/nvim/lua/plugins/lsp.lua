@@ -254,14 +254,19 @@ return {
 			filetypes = { "css", "less", "postcss", "sass", "scss", "stylus", "sugarss" },
 		}
 
-		servers["yaml-language-server"] = {
+		servers.yamlls = {
+			filetypes = { "yaml", "yml" },
 			settings = {
 				yaml = {
 					format = true,
 					schemaStore = true,
 					schemas = {
-						["kubernetes"] = "*.yaml",
-						-- ["github-action"] = "*.yaml",
+						["kubernetes"] = {
+							"/**.k8s.yaml",
+							"/**.k8s.yml",
+						},
+						["github-action"] = { "/.github/workflows/*", "/.github/workflows/*" },
+						["docker-compose"] = { "/**compose.yml", "/**compose.yml" },
 					},
 				},
 			},
@@ -303,7 +308,7 @@ return {
 					-- This handles overriding only values explicitly passed
 					-- by the server configuration above. Useful when disabling
 					-- certain features of an LSP (for example, turning off formatting for tsserver)
-					server.autostart = false
+					server.autostart = true
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 					server.inlay_hints = { enabled = true }
 					server.single_file_support = true
