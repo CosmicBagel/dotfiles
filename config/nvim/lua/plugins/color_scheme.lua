@@ -3,9 +3,9 @@ local function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 
 	-- force allow transparent bg
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
 
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000", blend = 30 })
 
@@ -53,7 +53,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("monokai-pro").setup({
-				transparent_background = true,
+				transparent_background = false,
 			})
 
 			-- ColorMyPencils("monokai-pro")
