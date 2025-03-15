@@ -6,6 +6,9 @@ return {
 			["q"] = "actions.close",
 			["<C-c>"] = false,
 			["<C-l>"] = false,
+			["<C-h>"] = false,
+			["<C-j>"] = false,
+			["<C-k>"] = false,
 		},
 		view_options = {
 			show_hidden = true,
