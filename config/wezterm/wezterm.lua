@@ -48,20 +48,20 @@ config.window_padding = {
 config.hide_mouse_cursor_when_typing = true
 
 -- Background
-if target:find("darwin") then
-	local home_path = os.getenv("HOME")
-	config.background = {
-		{
-			source = {
-				File = home_path .. "/dotfiles/config/wezterm/Nine Princes In Amber by Tim White, 1985.png",
-			},
-			-- opacity = 0.25, -- Adjust the opacity (0.0 to 1.0)
-			hsb = { brightness = 0.08 },
-		},
-	}
-else
-	config.window_background_opacity = 0.75
-end
+-- if target:find("darwin") then
+-- 	local home_path = os.getenv("HOME")
+-- 	config.background = {
+-- 		{
+-- 			source = {
+-- 				File = home_path .. "/dotfiles/config/wezterm/Nine Princes In Amber by Tim White, 1985.png",
+-- 			},
+-- 			-- opacity = 0.25, -- Adjust the opacity (0.0 to 1.0)
+-- 			hsb = { brightness = 0.08 },
+-- 		},
+-- 	}
+-- else
+-- 	config.window_background_opacity = 0.75
+-- end
 
 -- Visual bell
 config.visual_bell = {
