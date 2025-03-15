@@ -17,7 +17,7 @@ return {
 			json = { "jsonlint" },
 			shell = { "shellcheck" },
 			--javascript = { "eslint_d" },
-			yaml = { "yamllint" },
+			-- yaml = { "yamllint" },
 		}
 
 		-- To allow other plugins to add linters to require('lint').linters_by_ft,
