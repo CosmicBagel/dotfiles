@@ -258,15 +258,11 @@ return {
 			filetypes = { "yaml", "yml" },
 			settings = {
 				yaml = {
-					format = true,
-					schemaStore = true,
 					schemas = {
-						["kubernetes"] = {
+						kubernetes = {
 							"/**.k8s.yaml",
 							"/**.k8s.yml",
 						},
-						["github-action"] = { "/.github/workflows/*", "/.github/workflows/*" },
-						["docker-compose"] = { "/**compose.yml", "/**compose.yml" },
 					},
 				},
 			},
