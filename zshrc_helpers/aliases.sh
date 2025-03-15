@@ -1,5 +1,6 @@
-#alias dcu="docker compose up"
-#alias dcd="docker compose down"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias k=kubectl
 #alias sudoedit="sudo nvim"
 alias lg="lazygit"
 alias n="nvim"
@@ -18,8 +19,10 @@ alias av="clamdscan -i -m"
 # Force xterm-color on ssh sessions, also works around machines not recognizing
 # wezterm
 alias ssh='TERM=xterm-256color ssh'
+alias cat=bat
 
 # don't alias xdg-open on MacOS
 if [[ $OSTYPE != "darwin"* ]]; then
     alias open="xdg-open"
 fi
+
