@@ -2,6 +2,10 @@ function UpdateAllTheThings {
     if [[ "$(uname -s)" == "Darwin" ]]; then
 	echo "===Updating Brew==="
 	brew update && brew upgrade -g && brew cleanup
+
+	echo "===Updating go packages==="
+	go install sigs.k8s.io/kubectl-validate@latest
+
 	return $?
     fi
 
