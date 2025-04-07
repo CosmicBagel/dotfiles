@@ -53,7 +53,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("monokai-pro").setup({
-				transparent_background = false,
+				transparent_background = true,
 			})
 
 			-- ColorMyPencils("monokai-pro")
@@ -64,6 +64,7 @@ return {
 			vim.api.nvim_set_hl(0, "TSComment", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "@string.documentation", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "CursorLine", { bg = "#221f22" })
+			-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
