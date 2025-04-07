@@ -1,6 +1,5 @@
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+completions_path="$HOME/dotfiles/zshrc_helpers/completions/"
+fpath=($completions_path $fpath)
 
-    autoload -Uz compinit
-    compinit
-  fi
+autoload -Uz compinit
+compinit
