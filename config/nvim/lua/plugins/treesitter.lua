@@ -33,6 +33,7 @@ return {
 			"gdshader",
 			"godot_resource",
 			"python",
+			"php",
 		},
 
 		-- Automatically install missing parsers when entering buffer
