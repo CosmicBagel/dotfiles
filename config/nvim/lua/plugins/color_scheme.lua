@@ -4,10 +4,10 @@ local function ColorMyPencils(color)
 
 	-- force allow transparent bg
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", fg = "#FFFFFF" })
+	-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "#FFFFFF" })
 
-	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000", blend = 30 })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000", fg = "#FFFFFF", blend = 30 })
 
 	-- custom colors for cmp menu
 	vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = "none" })
@@ -63,8 +63,14 @@ return {
 			vim.api.nvim_set_hl(0, "Comment", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "TSComment", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "@string.documentation", { fg = "#c1c0c0" })
+
 			vim.api.nvim_set_hl(0, "CursorLine", { bg = "#221f22" })
+			vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ff6188" })
 			-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+
+			-- borders
+			vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "#c1c0c0" })
+			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", fg = "#c1c0c0" })
 
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
