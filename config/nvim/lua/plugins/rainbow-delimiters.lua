@@ -1,4 +1,4 @@
 return {
     -- disabled due to heavy performance impact
-    -- "HiPhish/rainbow-delimiters.nvim", -- rainbow brackets
+    "HiPhish/rainbow-delimiters.nvim", -- rainbow brackets
 }
