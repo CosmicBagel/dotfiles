@@ -17,6 +17,8 @@ local me_colors = { -- The default text color foreground = '#ffffff', The defaul
 	cursor_fg = "#2d2a2e",
 	cursor_border = "#ffffff",
 
+	split = "#c1c0c0",
+
 	-- changes cursor color when LEADER key is active
 	compose_cursor = "orange",
 
@@ -64,6 +66,7 @@ M.apply_colors = function(config)
 	scheme.background = me_colors.background
 	scheme.visual_bell = me_colors.visual_bell
 	scheme.compose_cursor = me_colors.compose_cursor
+	scheme.split = me_colors.split
 	config.force_reverse_video_cursor = true
 
 	config.color_schemes = {

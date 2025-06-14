@@ -71,6 +71,7 @@ return {
 			-- borders
 			vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", fg = "#c1c0c0" })
+			vim.api.nvim_set_hl(0, "WinSeparator", { bg = "none", fg = "#c1c0c0" })
 
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
