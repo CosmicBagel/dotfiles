@@ -239,14 +239,20 @@ return {
 			-- cmd = {...},
 			-- filetypes = { ...},
 			-- capabilities = {},
-			settings = {
-				Lua = {
-					filetypes = { "lua" },
-					completion = {
-						callSnippet = "Replace",
-					},
-					-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-					-- diagnostics = { disable = { 'missing-fields' } },
+			filetypes = { "lua" },
+			completion = {
+				callSnippet = "Replace",
+			},
+			-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+			-- diagnostics = { disable = { 'missing-fields' } },
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = {
+					"vim",
+					"require",
 				},
 			},
 		}
@@ -288,23 +294,19 @@ return {
 			"typescript-language-server",
 			"tailwindcss",
 			"black",
+			"lua_ls",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-		require("mason-lspconfig").setup({
-			handlers = {
-				function(server_name)
-					local server = servers[server_name] or {}
-					-- This handles overriding only values explicitly passed
-					-- by the server configuration above. Useful when disabling
-					-- certain features of an LSP (for example, turning off formatting for tsserver)
-					server.autostart = false
-					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-					server.inlay_hints = { enabled = true }
-					server.single_file_support = true
-					require("lspconfig")[server_name].setup(server)
-				end,
-			},
-		})
+		for server_name, server_config in pairs(servers) do
+			-- This handles overriding only values explicitly passed
+			-- by the server configuration above. Useful when disabling
+			-- certain features of an LSP (for example, turning off formatting for tsserver)
+			server_config.autostart = true
+			server_config.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server_config.capabilities or {})
+			server_config.inlay_hints = { enabled = true }
+			server_config.single_file_support = true
+			require("lspconfig")[server_name].setup(server_config)
+		end
 	end,
 }
