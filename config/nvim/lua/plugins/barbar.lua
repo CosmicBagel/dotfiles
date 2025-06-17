@@ -31,6 +31,8 @@ return {
 		map("<S-Tab>", "<Cmd>BufferPrevious<CR>", "Previous Buffer")
 		map("<A-h>", "<Cmd>BufferPrevious<CR>", "Previous Buffer")
 		map("<Tab>", "<Cmd>BufferNext<CR>", "Next Buffer")
+		map("<C-i>", "<C-i>", "Jumplist Forward") -- needed, otherwise tab mapping overrides ctrl-i
+		map("<C-o>", "<C-o>", "Jumplist Backward") -- including this for uniformity
 		map("<A-l>", "<Cmd>BufferNext<CR>", "Next Buffer")
 		-- Re-order to previous/next
 		map("<A-H>", "<Cmd>BufferMovePrevious<CR>", "Move Buffer Left")
