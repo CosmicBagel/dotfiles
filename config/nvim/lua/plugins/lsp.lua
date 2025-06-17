@@ -28,9 +28,17 @@ return {
 		win.default_options.border = "rounded"
 
 		-- keymaps for diagnostics (not dependent on LSP, but fits here)
-		vim.keymap.set("n", "<leader>k", vim.diagnostic.open_float, { desc = "Hover Diagnostic" })
 		vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
 		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev Diagnostic" })
+		vim.keymap.set("n", "<leader>k", function()
+			local dap = require("dap")
+			if dap ~= nil and dap.session() ~= nil then
+				require("dap.ui.widgets").hover()
+				return
+			end
+			-- default to open_float when no active dap session
+			vim.diagnostic.open_float()
+		end, { desc = "Hover Diagnostic" })
 		vim.keymap.set("n", "<leader>xh", vim.diagnostic.hide, { desc = "Hide Diagnostics" })
 		vim.keymap.set("n", "<leader>xs", vim.diagnostic.show, { desc = "Show Diagnostics" })
 

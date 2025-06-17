@@ -185,35 +185,6 @@ return {
 			dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
 		end, { desc = "Set Conditional [B]reakpoint" })
 
-		-- K for hover when DAP is active (then restore previous keymap)
-		-- from https://github.com/mfussenegger/nvim-dap/wiki/Cookbook
-		local api = vim.api
-		local keymap_restore = {}
-		dap.listeners.after["event_initialized"]["me"] = function()
-			for _, buf in pairs(api.nvim_list_bufs()) do
-				local keymaps = api.nvim_buf_get_keymap(buf, "n")
-				for _, keymap in pairs(keymaps) do
-					if keymap.lhs == "K" then
-						table.insert(keymap_restore, keymap)
-						api.nvim_buf_del_keymap(buf, "n", "K")
-					end
-				end
-			end
-			api.nvim_set_keymap("n", "K", '<Cmd>lua require("dap.ui.widgets").hover()<CR>', { silent = true })
-		end
-
-		dap.listeners.after["event_terminated"]["me"] = function()
-			for _, keymap in pairs(keymap_restore) do
-				vim.print(keymap)
-				vim.keymap.set(
-					keymap.mode,
-					keymap.lhs,
-					keymap.rhs or keymap.callback,
-					{ silent = keymap.silent == 1, buffer = keymap.buffer }
-				)
-			end
-			keymap_restore = {}
-		end
 
 		-- Dap UI setup
 		-- For more information, see |:help nvim-dap-ui|
@@ -247,15 +218,15 @@ return {
 		-- dap.listeners.before.disconnect['dapui_config'] = dapui.close
 
 		-- normally these functions take session and body arguments
-		dap.listeners.after.event_initialized["daprepl_config"] = function(_, _)
-			dap.repl.open()
-		end
-		dap.listeners.before.event_terminated["daprepl_config"] = function(_, _)
-			dap.repl.close()
-		end
-		dap.listeners.before.event_exited["daprepl_config"] = function(_, _)
-			dap.repl.close()
-		end
+		-- dap.listeners.after.event_initialized["daprepl_config"] = function(_, _)
+		-- 	dap.repl.open()
+		-- end
+		-- dap.listeners.before.event_terminated["daprepl_config"] = function(_, _)
+		-- 	dap.repl.close()
+		-- end
+		-- dap.listeners.before.event_exited["daprepl_config"] = function(_, _)
+		-- 	dap.repl.close()
+		-- end
 
 		-- Install golang specific config
 		require("dap-go").setup()
