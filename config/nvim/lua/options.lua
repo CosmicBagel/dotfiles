@@ -31,6 +31,8 @@ if os.getenv("SSH_TTY") ~= nil then
 	}
 end
 
+vim.opt.jumpoptions = "stack,view"
+
 vim.opt.termguicolors = true -- enable proper colors
 vim.opt.autowriteall = false -- kind of like auto-save, but I only want it in certain situations
 
