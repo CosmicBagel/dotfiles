@@ -2,7 +2,7 @@
 vim.opt.shortmess:append({ I = true }) -- disable the startup message
 vim.opt.title = true
 vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
-vim.opt.clipboard = "unnamedplus" -- use system clipboard for default yank
+vim.opt.clipboard = "" -- do NOT use system clipboard for default yank & put
 
 vim.opt.mousescroll = "ver:1,hor:2"
 -- may want to limit scroll adjustment to macbook
@@ -30,6 +30,8 @@ if os.getenv("SSH_TTY") ~= nil then
 		},
 	}
 end
+
+vim.opt.jumpoptions = "stack,view"
 
 vim.opt.termguicolors = true -- enable proper colors
 vim.opt.autowriteall = false -- kind of like auto-save, but I only want it in certain situations

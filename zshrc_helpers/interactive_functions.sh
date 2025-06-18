@@ -1,10 +1,23 @@
 function UpdateAllTheThings {
     if [[ "$(uname -s)" == "Darwin" ]]; then
+	echo "===Updating MacOS==="
+	softwareupdate --install --all
+
 	echo "===Updating Brew==="
 	brew update && brew upgrade -g && brew cleanup
 
 	echo "===Updating go packages==="
 	go install sigs.k8s.io/kubectl-validate@latest
+
+	echo "===OhMyBash Update==="
+	omz update
+
+	echo "===Updating nvim Lazy==="
+	nvim --headless "+Lazy! update" +qa
+
+	echo "===Updating nvim Lazy==="
+	nvim --headless "+MasonUpdate" +qa
+	nvim --headless "+MasonToolsUpdateSync" +qa
 
 	return $?
     fi
