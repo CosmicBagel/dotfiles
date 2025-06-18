@@ -87,9 +87,8 @@ return { -- Autocompletion
 				expandable_indicator = true,
 			},
 			view = {
-				-- entries always appear nearest cursor as opposed to top of
-				-- the list
-				entries = { name = "custom", selection_order = "near_cursor" },
+				-- selection_order can be "top_down" or "near cursor"
+				entries = { selection_order = "top_down", follow_cursor = false },
 			},
 			snippet = {
 				expand = function(args)
