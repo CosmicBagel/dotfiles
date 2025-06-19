@@ -1,5 +1,6 @@
 alias dcu="docker compose up"
 alias dcd="docker compose down"
+alias dcb="docker compose build"
 alias k=kubectl
 #alias sudoedit="sudo nvim"
 alias lg="lazygit"
