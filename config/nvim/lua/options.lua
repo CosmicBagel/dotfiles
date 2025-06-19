@@ -31,6 +31,10 @@ if os.getenv("SSH_TTY") ~= nil then
 	}
 end
 
+-- disable netrw (for nvim-tree compatability)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.opt.jumpoptions = "stack,view"
 
 vim.opt.termguicolors = true -- enable proper colors
