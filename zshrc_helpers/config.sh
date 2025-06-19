@@ -32,3 +32,5 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
+# when homebrew is updating programs, don't require me to allow every single app
+export HOMEBREW_CASK_OPTS=--no-quarantine
