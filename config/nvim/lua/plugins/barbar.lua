@@ -13,7 +13,7 @@ return {
 			animation = false,
 			-- insert_at_start = true,
 			-- …etc.
-			auto_hide = 0,
+			auto_hide = 1,
 			icons = {
 				buffer_index = true,
 				buffer_number = false,
