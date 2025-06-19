@@ -33,7 +33,8 @@ config.initial_rows = 37
 config.initial_cols = 130
 
 if target:find("darwin") then
-	config.window_decorations = "TITLE | RESIZE"
+	-- config.window_decorations = "TITLE | RESIZE"
+	config.window_decorations = "RESIZE"
 else
 	config.window_decorations = "RESIZE"
 end
@@ -62,6 +63,8 @@ config.hide_mouse_cursor_when_typing = true
 -- else
 -- 	config.window_background_opacity = 0.75
 -- end
+
+config.window_background_opacity = 0.84
 
 -- Visual bell
 config.visual_bell = {

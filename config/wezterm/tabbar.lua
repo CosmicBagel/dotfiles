@@ -39,7 +39,7 @@ M.apply_tab_bar_config = function(config)
 	-- TODO don't forget to show zoom state!!!
 	-- TODO make tabs look nicer
 
-	config.hide_tab_bar_if_only_one_tab = false
+	config.hide_tab_bar_if_only_one_tab = true
 
 	config.tab_max_width = 64
 	-- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)

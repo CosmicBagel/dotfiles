@@ -12,6 +12,7 @@ local M = {
 	{ key = "0", mods = "CMD", action = act.ResetFontSize },
 	{ key = "h", mods = "CMD", action = act.HideApplication },
 	{ key = "m", mods = "CMD", action = act.Hide },
+	{ key = "n", mods = "CMD", action = act.SpawnWindow },
 
 	{ key = "q", mods = "LEADER|CTRL", action = act.SendKey({ key = "q", mods = "CTRL" }) },
 
@@ -79,6 +80,7 @@ local M = {
 	{ key = "Tab", mods = "CTRL", action = act.ActivateTabRelative(1) },
 	{ key = "Tab", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
 
+	{ key = "n", mods = "CTRL|SHIFT", action = act.SpawnWindow },
 	{ key = "t", mods = "CTRL|SHIFT", action = act.SpawnTab("CurrentPaneDomain") },
 	{ key = "w", mods = "CTRL|SHIFT", action = act.CloseCurrentTab({ confirm = true }) },
 	{ key = "Space", mods = "CTRL|SHIFT", action = act.ActivateCopyMode },
