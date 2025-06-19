@@ -9,15 +9,15 @@ function UpdateAllTheThings {
 	echo "===Updating go packages==="
 	go install sigs.k8s.io/kubectl-validate@latest
 
-	echo "===OhMyBash Update==="
-	omz update
-
 	echo "===Updating nvim Lazy==="
 	nvim --headless "+Lazy! update" +qa
 
 	echo "===Updating nvim Lazy==="
 	nvim --headless "+MasonUpdate" +qa
 	nvim --headless "+MasonToolsUpdateSync" +qa
+
+	echo "===OhMyBash Update==="
+	omz update
 
 	return $?
     fi
