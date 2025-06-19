@@ -32,22 +32,22 @@ return {
 		map("<Tab>", "<Cmd>BufferNext<CR>", "Next Buffer")
 		map("<C-i>", "<C-i>", "Jumplist Forward") -- needed, otherwise tab mapping overrides ctrl-i
 		map("<C-o>", "<C-o>", "Jumplist Backward") -- including this for uniformity
-		-- map("<A-h>", "<Cmd>BufferPrevious<CR>", "Previous Buffer")
-		-- map("<A-l>", "<Cmd>BufferNext<CR>", "Next Buffer")
+		map("<D-,>", "<Cmd>BufferPrevious<CR>", "Previous Buffer")
+		map("<D-.>", "<Cmd>BufferNext<CR>", "Next Buffer")
 		-- Re-order to previous/next
-		-- map("<A-H>", "<Cmd>BufferMovePrevious<CR>", "Move Buffer Left")
-		-- map("<A-L>", "<Cmd>BufferMoveNext<CR>", "Move Buffer Right")
+		map("<DC-,>", "<Cmd>BufferMovePrevious<CR>", "Move Buffer Left")
+		map("<DC-.>", "<Cmd>BufferMoveNext<CR>", "Move Buffer Right")
 		-- Goto buffer in position...
-		map("<C-1>", "<Cmd>BufferGoto 1<CR>", "Goto Buffer 1")
-		map("<C-2>", "<Cmd>BufferGoto 2<CR>", "Goto Buffer 2")
-		map("<C-3>", "<Cmd>BufferGoto 3<CR>", "Goto Buffer 3")
-		map("<C-4>", "<Cmd>BufferGoto 4<CR>", "Goto Buffer 5")
-		map("<C-5>", "<Cmd>BufferGoto 5<CR>", "Goto Buffer 5")
-		map("<C-6>", "<Cmd>BufferGoto 6<CR>", "Goto Buffer 6")
-		map("<C-7>", "<Cmd>BufferGoto 7<CR>", "Goto Buffer 7")
-		map("<C-8>", "<Cmd>BufferGoto 8<CR>", "Goto Buffer 8")
-		map("<C-9>", "<Cmd>BufferGoto 9<CR>", "Goto Buffer 9")
-		map("<C-0>", "<Cmd>BufferLast<CR>", "Goto Last Buffer")
+		map("<D-1>", "<Cmd>BufferGoto 1<CR>", "Goto Buffer 1")
+		map("<D-2>", "<Cmd>BufferGoto 2<CR>", "Goto Buffer 2")
+		map("<D-3>", "<Cmd>BufferGoto 3<CR>", "Goto Buffer 3")
+		map("<D-4>", "<Cmd>BufferGoto 4<CR>", "Goto Buffer 5")
+		map("<D-5>", "<Cmd>BufferGoto 5<CR>", "Goto Buffer 5")
+		map("<D-6>", "<Cmd>BufferGoto 6<CR>", "Goto Buffer 6")
+		map("<D-7>", "<Cmd>BufferGoto 7<CR>", "Goto Buffer 7")
+		map("<D-8>", "<Cmd>BufferGoto 8<CR>", "Goto Buffer 8")
+		map("<D-9>", "<Cmd>BufferGoto 9<CR>", "Goto Buffer 9")
+		map("<D-0>", "<Cmd>BufferLast<CR>", "Goto Last Buffer")
 
 		-- Buffer keys behind leader key
 		map("<Leader>pp", "<Cmd>BufferPin<CR>", "Pin/Unpin Buffer")
