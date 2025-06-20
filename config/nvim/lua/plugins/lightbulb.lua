@@ -6,7 +6,6 @@ return {
 				events = { "CursorHold", },
 			},
 			sign = {enabled = true },
-			number = {enabled = true },
 		})
 	end,
 }
