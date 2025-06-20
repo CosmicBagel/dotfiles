@@ -4,7 +4,7 @@ vim.opt.title = true
 vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 vim.opt.clipboard = "" -- do NOT use system clipboard for default yank & put
 
-vim.opt.mousescroll = "ver:1,hor:2"
+vim.opt.mousescroll = "ver:1,hor:0"
 -- may want to limit scroll adjustment to macbook
 -- if vim.fn.has("macunix") == 1 then
 -- end
