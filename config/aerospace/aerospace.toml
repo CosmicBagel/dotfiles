@@ -121,8 +121,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
 
-    alt-left = 'workspace prev'
-    alt-right = 'workspace next'
+    alt-comma = 'workspace prev'
+    alt-period = 'workspace next'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
@@ -203,7 +203,7 @@ automatically-unhide-macos-hidden-apps = true
     # alt-b = 'split horizontal'
     # alt-v = 'split vertical'
 
-    alt-f = 'fullscreen'
+    alt-backslash = 'fullscreen'
 
     alt-s = 'layout v_accordion' # 'layout stacking' in i3
     alt-w = 'layout h_accordion' # 'layout tabbed' in i3
