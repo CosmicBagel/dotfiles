@@ -12,7 +12,8 @@ vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
 vim.keymap.set("i", "<c-bs>", "<c-w>", { noremap = true, silent = true })
 
 -- escape clears highlights and current message (in normal mode)
-vim.keymap.set("n", "<esc>", ":nohl<cr>:echo<cr>", { noremap = true, silent = true })
+-- passes <esc> input on, so that flash.nvim can pick it up
+vim.keymap.set("n", "<esc>", ":nohl<cr>:echo<cr><esc>", { noremap = true, silent = true })
 
 -- single character delete goes to void register
 vim.keymap.set("n", "x", [["_x]], { noremap = true, silent = true, desc = "Delete character" })
