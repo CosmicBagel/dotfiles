@@ -80,6 +80,7 @@ return {
 
 			vim.api.nvim_set_hl(0, "FlashBackdrop", { bg = "none", fg = "#ab9df2" })
 			vim.api.nvim_set_hl(0, "FlashLabel", { bg = "none", fg = "#ff6188" })
+			vim.api.nvim_set_hl(0, "LightBulbNumber", { bg = "#ffd866", fg = "#221f22" })
 
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
