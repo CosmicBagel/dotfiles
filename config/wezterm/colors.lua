@@ -67,7 +67,7 @@ M.apply_colors = function(config)
 	scheme.visual_bell = me_colors.visual_bell
 	scheme.compose_cursor = me_colors.compose_cursor
 	scheme.split = me_colors.split
-	config.force_reverse_video_cursor = true
+	-- config.force_reverse_video_cursor = true
 
 	config.color_schemes = {
 		[schemename] = scheme,
