@@ -73,6 +73,10 @@ return {
 			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "WinSeparator", { bg = "none", fg = "#c1c0c0" })
 
+			-- nvim-scrollbar
+			vim.api.nvim_set_hl(0, "ScrollbarHandle", { bg = "#5b595c" })
+			vim.api.nvim_set_hl(0, "ScrollbarCursorHandle", { bg = "#fcfcfa", fg = "#221f22" })
+
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
 			--   black = p.dark1,       -- "#221f22"
