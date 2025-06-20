@@ -75,7 +75,7 @@ return {
 
 			-- nvim-scrollbar
 			vim.api.nvim_set_hl(0, "ScrollbarHandle", { bg = "#5b595c" })
-			vim.api.nvim_set_hl(0, "ScrollbarCursorHandle", { bg = "#fcfcfa", fg = "#221f22" })
+			vim.api.nvim_set_hl(0, "ScrollbarCursorHandle", { bg = "#fcfcfa", fg = "#fcfcfa" })
 
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"

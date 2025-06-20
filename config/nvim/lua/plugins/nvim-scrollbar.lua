@@ -5,5 +5,6 @@ return {
 		require("scrollbar").setup({
 			set_highlights = false,
 		})
+		require("scrollbar.handlers.gitsigns").setup()
 	end,
 }
