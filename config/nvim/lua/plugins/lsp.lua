@@ -298,13 +298,11 @@ return {
 
 		servers.helm_ls = {}
 
-		servers.pyright = {}
+		servers.basedpyright = {}
 
 		servers.phpactor = {}
 
 		servers.zls = {}
-
-		servers.pyright = {}
 
 		-- You can add other tools here that you want Mason to install
 		-- for you, so that they are available from within Neovim.
@@ -319,6 +317,7 @@ return {
 			"tailwindcss",
 			"black",
 			"lua_ls",
+			"basedpyright"
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
