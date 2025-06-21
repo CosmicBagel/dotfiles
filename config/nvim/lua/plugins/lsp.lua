@@ -23,6 +23,12 @@ return {
 			float = { border = "rounded" },
 		})
 
+		-- nice icons for gutter elements
+		vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+		vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+		vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+		vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
+
 		-- give LspInfo window nicer border
 		local win = require("lspconfig.ui.windows")
 		win.default_options.border = "rounded"
