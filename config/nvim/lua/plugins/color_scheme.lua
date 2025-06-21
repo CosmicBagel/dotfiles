@@ -64,10 +64,16 @@ return {
 			vim.api.nvim_set_hl(0, "TSComment", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "@string.documentation", { fg = "#c1c0c0" })
 
+			-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+
+			vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ff6188" })
+
 			vim.api.nvim_set_hl(0, "CursorLineNR", { bg = "#939293", fg = "#221f22" })
 			vim.api.nvim_set_hl(0, "CursorLine", { underline = true, sp = "#c1c0c0" })
-			vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ff6188" })
-			-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+			vim.api.nvim_set_hl(0, "lCursor", { bg = "#fcfcfa", fg = "#19181a" })
+			vim.api.nvim_set_hl(0, "Cursor", { bg = "#fcfcfa", fg = "#19181a" })
+			vim.api.nvim_set_hl(0, "CursorME", { bg = "#fcfcfa", fg = "#19181a" })
+			vim.api.nvim_set_hl(0, "TermCursor", { bg = "#fcfcfa", fg = "#19181a" })
 
 			-- borders
 			vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "#c1c0c0" })
@@ -82,6 +88,10 @@ return {
 			vim.api.nvim_set_hl(0, "FlashCurrent", { bg = "#ab9df2", fg = "#221f22" })
 			vim.api.nvim_set_hl(0, "FlashLabel", { bg = "none", fg = "#ff6188" })
 			vim.api.nvim_set_hl(0, "LightBulbNumber", { bg = "#ffd866", fg = "#221f22" })
+
+			vim.api.nvim_set_hl(0, "IblIndent", { bg = "none", fg = "#939293" })
+			vim.api.nvim_set_hl(0, "IblWhitespace", { bg = "none", fg = "#939293" })
+			vim.api.nvim_set_hl(0, "IblScope", { bg = "none", fg = "#ab9df2" })
 
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
