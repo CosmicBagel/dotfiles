@@ -84,7 +84,7 @@ vim.opt.inccommand = "split"
 -- spaces, and weird non-breaking spaces)
 vim.opt.list = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-vim.opt.listchars = { tab = "-->", trail = "·", nbsp = "␣", extends = ">", precedes = "<" }
+vim.opt.listchars = { tab = "-->", lead = "·", trail = "·", nbsp = "␣", extends = "󰧂", precedes = "󰧀", eol = "" }
 
 -- highlight line cursor is currently on
 vim.opt.cursorline = true

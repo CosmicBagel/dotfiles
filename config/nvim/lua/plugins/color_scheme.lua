@@ -88,10 +88,10 @@ return {
 			vim.api.nvim_set_hl(0, "FlashLabel", { bg = "none", fg = "#ff6188" })
 			vim.api.nvim_set_hl(0, "LightBulbNumber", { bg = "#ffd866", fg = "#221f22" })
 
-			vim.api.nvim_set_hl(0, "Whitespace", { fg = "#403e41" })
-			vim.api.nvim_set_hl(0, "NonText", { bg = "#403e41", fg = "#fc9867" })
+			vim.api.nvim_set_hl(0, "Whitespace", { fg = "#5b595c" })
+			vim.api.nvim_set_hl(0, "NonText", { bg = "none", fg = "#5b595c" })
 			vim.api.nvim_set_hl(0, "IblIndent", { bg = "none", fg = "#939293" })
-			vim.api.nvim_set_hl(0, "IblWhitespace", { bg = "none", fg = "#939293" })
+			vim.api.nvim_set_hl(0, "IblWhitespace", { bg = "none", fg = "#5b595c" })
 			vim.api.nvim_set_hl(0, "IblScope", { bg = "none", fg = "#ab9df2" })
 
 			-- monokai pro pallet
