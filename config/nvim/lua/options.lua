@@ -11,24 +11,24 @@ vim.opt.mousescroll = "ver:1,hor:0"
 
 -- force OSC 52 when ssh'd in (this lets copy paste to work in nvim over ssh)
 if os.getenv("SSH_TTY") ~= nil then
-	local function regular_paste(_)
-		return function(_)
-			local content = vim.fn.getreg('"')
-			return vim.split(content, "\n")
-		end
-	end
-	vim.g.clipboard = {
-		name = "OSC 52",
-		copy = {
-			["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-			["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-		},
-		-- paste doesn't work with wezterm :`(
-		paste = {
-			["+"] = regular_paste("+"),
-			["*"] = regular_paste("*"),
-		},
-	}
+    local function regular_paste(_)
+        return function(_)
+            local content = vim.fn.getreg('"')
+            return vim.split(content, "\n")
+        end
+    end
+    vim.g.clipboard = {
+        name = "OSC 52",
+        copy = {
+            ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+            ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+        },
+        -- paste doesn't work with wezterm :`(
+        paste = {
+            ["+"] = regular_paste("+"),
+            ["*"] = regular_paste("*"),
+        },
+    }
 end
 
 -- disable netrw (for nvim-tree compatability)
@@ -61,7 +61,7 @@ vim.opt.wrap = false
 -- when backspacing, delete indents, end of lines, and starts(?)
 -- vim.opt.backspace = "indent,eol,start" -- this is default
 
--- keep 10 lines on screen above and below cursor
+-- keep 0 lines on screen above and below cursor
 vim.opt.scrolloff = 0
 
 -- sensible tab behaviour
@@ -84,7 +84,7 @@ vim.opt.inccommand = "split"
 -- spaces, and weird non-breaking spaces)
 vim.opt.list = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-vim.opt.listchars = { tab = "▏ ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "-->", trail = "·", nbsp = "␣", extends = ">", precedes = "<" }
 
 -- highlight line cursor is currently on
 vim.opt.cursorline = true
@@ -94,8 +94,7 @@ vim.opt.cursorline = true
 vim.opt.showmode = false
 
 -- sensible search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.opt.ignorecase = true vim.opt.smartcase = true
 
 -- sensible spelling
 -- vim.opt.spell = false <- set by autocommand for specific file types (eg terminal)
@@ -111,12 +110,12 @@ vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpo
 
 -- use pwsh and powershell as fallback on windows
 if vim.fn.has("win32") == 1 then
-	if vim.fn.executable("pwsh.exe") == 1 then
-		vim.o.shell = "pwsh.exe -NoLogo"
-	else
-		vim.o.shell = "powershell.exe -NoLogo"
-	end
-	vim.o.shellcmdflag = "-command"
-	vim.o.shellquote = '"' -- Adjust quoting if necessary
-	vim.o.shellxquote = "" -- Adjust for command execution
+    if vim.fn.executable("pwsh.exe") == 1 then
+        vim.o.shell = "pwsh.exe -NoLogo"
+    else
+        vim.o.shell = "powershell.exe -NoLogo"
+    end
+    vim.o.shellcmdflag = "-command"
+    vim.o.shellquote = '"' -- Adjust quoting if necessary
+    vim.o.shellxquote = "" -- Adjust for command execution
 end

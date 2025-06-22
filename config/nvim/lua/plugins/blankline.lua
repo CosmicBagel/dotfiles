@@ -1,12 +1,12 @@
 return {
-    "lukas-reineke/indent-blankline.nvim",
-    -- main = "ibl",
-    -- opts = {
-    --     indent = {
-    --         char = "▏"
-    --     }
-    -- }
-    config = function()
-        require("ibl").setup()
-    end,
+	"lukas-reineke/indent-blankline.nvim",
+	config = function()
+		require("ibl").setup({
+			indent = {
+				char = "▎",
+				tab_char="▎",
+				-- priority = 1,
+			},
+		})
+	end,
 }

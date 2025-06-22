@@ -81,14 +81,15 @@ return {
 			vim.api.nvim_set_hl(0, "WinSeparator", { bg = "none", fg = "#c1c0c0" })
 
 			-- nvim-scrollbar
-			vim.api.nvim_set_hl(0, "ScrollbarHandle", { bg = "#5b595c" })
+			vim.api.nvim_set_hl(0, "ScrollbarHandle", { bg = "#939293", fg = "none", blend = 60 })
 			vim.api.nvim_set_hl(0, "ScrollbarCursorHandle", { bg = "#fcfcfa", fg = "#fcfcfa" })
-
 			vim.api.nvim_set_hl(0, "FlashBackdrop", { bg = "none", fg = "#ab9df2" })
 			vim.api.nvim_set_hl(0, "FlashCurrent", { bg = "#ab9df2", fg = "#221f22" })
 			vim.api.nvim_set_hl(0, "FlashLabel", { bg = "none", fg = "#ff6188" })
 			vim.api.nvim_set_hl(0, "LightBulbNumber", { bg = "#ffd866", fg = "#221f22" })
 
+			vim.api.nvim_set_hl(0, "Whitespace", { fg = "#403e41" })
+			vim.api.nvim_set_hl(0, "NonText", { bg = "#403e41", fg = "#fc9867" })
 			vim.api.nvim_set_hl(0, "IblIndent", { bg = "none", fg = "#939293" })
 			vim.api.nvim_set_hl(0, "IblWhitespace", { bg = "none", fg = "#939293" })
 			vim.api.nvim_set_hl(0, "IblScope", { bg = "none", fg = "#ab9df2" })
