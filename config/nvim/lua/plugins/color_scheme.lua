@@ -64,6 +64,9 @@ return {
 			vim.api.nvim_set_hl(0, "TSComment", { fg = "#c1c0c0" })
 			vim.api.nvim_set_hl(0, "@string.documentation", { fg = "#c1c0c0" })
 
+			-- Delimiters were too dark, looked like NonText
+			vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = "#c1c0c0" })
+
 			-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 
 			vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ff6188" })
