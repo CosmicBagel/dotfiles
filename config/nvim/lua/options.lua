@@ -120,3 +120,6 @@ if vim.fn.has("win32") == 1 then
     vim.o.shellquote = '"' -- Adjust quoting if necessary
     vim.o.shellxquote = "" -- Adjust for command execution
 end
+
+-- Hide the 'how to disable mouse' menu item in right click menu
+vim.cmd.aunmenu([[PopUp.How-to\ disable\ mouse]])
