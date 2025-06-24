@@ -97,6 +97,12 @@ return {
 			vim.api.nvim_set_hl(0, "IblWhitespace", { bg = "none", fg = "#5b595c" })
 			vim.api.nvim_set_hl(0, "IblScope", { bg = "none", fg = "#ab9df2" })
 
+			-- debug adapter protocol
+			vim.api.nvim_set_hl(0, "DapBreakpoint", { bg = "none", fg = "#ff6188" })
+			vim.api.nvim_set_hl(0, "DapBreakpointCondition", { bg = "none", fg = "#ff6188" })
+			vim.api.nvim_set_hl(0, "DapLogPoint", { bg = "none", fg = "#ffd866" })
+			vim.api.nvim_set_hl(0, "DapBreakpointRejected", { bg = "none", fg = "#ff6188" })
+
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
 			--   black = p.dark1,       -- "#221f22"
