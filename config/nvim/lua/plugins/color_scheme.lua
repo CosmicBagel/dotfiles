@@ -103,6 +103,12 @@ return {
 			vim.api.nvim_set_hl(0, "DapLogPoint", { bg = "none", fg = "#ffd866" })
 			vim.api.nvim_set_hl(0, "DapBreakpointRejected", { bg = "none", fg = "#ff6188" })
 
+			vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ff6188" })
+			vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#ffd866" })
+			vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#78dce8" })
+			vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#a9dc76" })
+			vim.api.nvim_set_hl(0, "DiagnosticTest", { fg = "#ab9df2" })
+
 			-- monokai pro pallet
 			--   dark = p.dark2,        -- "#19181a"
 			--   black = p.dark1,       -- "#221f22"
