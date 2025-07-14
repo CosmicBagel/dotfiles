@@ -17,7 +17,7 @@ augroup END
 
 vim.api.nvim_create_user_command("CenterCursorDisable", function()
 	vim.api.nvim_clear_autocmds({ group = "VCenterCursor" })
-	vim.opt.scrolloff = 0
+	vim.opt.scrolloff = 2
 end, {})
 
 vim.api.nvim_create_user_command("SpellfileRegen", function()

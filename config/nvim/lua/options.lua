@@ -62,7 +62,7 @@ vim.opt.wrap = false
 -- vim.opt.backspace = "indent,eol,start" -- this is default
 
 -- keep 0 lines on screen above and below cursor
-vim.opt.scrolloff = 0
+vim.opt.scrolloff = 2
 
 -- sensible tab behaviour
 vim.opt.expandtab = true -- replace tabs with spaces
