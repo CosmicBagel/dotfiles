@@ -39,6 +39,8 @@ symlinks_dic[$HOME/dotfiles/config/nvim]="$HOME/.config/nvim"
 symlinks_dic[$HOME/dotfiles/config/tmux]="$HOME/.config/tmux"
 symlinks_dic[$HOME/dotfiles/config/yazi]="$HOME/.config/yazi"
 symlinks_dic[$HOME/dotfiles/config/aerospace]="$HOME/.config/aerospace"
+symlinks_dic[$HOME/dotfiles/config/karabiner/]="$HOME/.config/karabiner"
+symlinks_dic[$HOME/dotfiles/config/linearmouse/]="$HOME/.config/linearmouse"
 symlinks_dic[$HOME/dotfiles/config/kdiff3rc]="$HOME/Library/Preferences/kdiff3rc"
 
 symlinks_dic[$HOME/dotfiles/config/omnisharp]="$HOME/.omnisharp"
