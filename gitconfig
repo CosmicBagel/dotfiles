@@ -10,7 +10,8 @@
 [pull]
 	rebase = false
 [merge]
-  tool = nvimdiff
+  ; tool = nvimdiff
+  tool = kdiff3
 [mergetool]
   prompt = false
   keepBackup = false
