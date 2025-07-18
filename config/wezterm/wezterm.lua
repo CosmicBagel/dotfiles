@@ -31,6 +31,12 @@ config.scrollback_lines = 1000000
 -- Window
 config.initial_rows = 37
 config.initial_cols = 130
+config.window_padding = {
+  left = "5pt",
+  right = "5pt",
+  top = "5pt",
+  bottom = "5pt",
+}
 
 if target:find("darwin") then
 	-- config.window_decorations = "TITLE | RESIZE"
@@ -38,13 +44,6 @@ if target:find("darwin") then
 else
 	config.window_decorations = "RESIZE"
 end
-
-config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
-}
 
 config.hide_mouse_cursor_when_typing = true
 
