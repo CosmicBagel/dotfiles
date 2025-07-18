@@ -4,6 +4,7 @@ alias dcb="docker compose build"
 alias k=kubectl
 #alias sudoedit="sudo nvim"
 alias lg="lazygit"
+alias lzd="lazydocker"
 alias n="nvim"
 alias nl="nvr -s" # neovim listen (will open socket at /tmp/nvimsocket)
 alias vim="nvim"
