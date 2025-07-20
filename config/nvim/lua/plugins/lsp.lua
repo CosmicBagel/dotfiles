@@ -11,10 +11,6 @@ return {
 		-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
 		{ "j-hui/fidget.nvim", opts = {} },
 
-		-- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
-		-- used for completion, annotations and signatures of Neovim apis
-		{ "folke/neodev.nvim", opts = {} },
-
 		"Hoffs/omnisharp-extended-lsp.nvim",
 	},
 	config = function()
@@ -198,9 +194,12 @@ return {
 
 		-- had this set when I was using master versions of zig and zls
 		-- vim.g.zig_fmt_autosave = 0
-		-- servers.zls = {
-		-- 	cmd = { "/usr/bin/zls" },
-		-- }
+		local home_dir = os.getenv("HOME") or os.getenv("USERPROFILE")
+		servers.zls = {
+			cmd = { home_dir .. "/bin/zls" },
+			filetypes = { "zig", "zir" },
+			root_markers = { "zls.json", "build.zig", ".git" },
+		}
 
 		-- pyright = {}
 		-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -306,24 +305,21 @@ return {
 
 		servers.phpactor = {}
 
-		servers.zls = {}
+		require("mason-lspconfig").setup({
+			autonatic_enable = false,
+			ensure_installed = vim.tbl_keys(servers or {})
+		})
 
 		-- You can add other tools here that you want Mason to install
 		-- for you, so that they are available from within Neovim.
-		local ensure_installed = vim.tbl_keys(servers or {})
-		vim.list_extend(ensure_installed, {
+		local non_lsp_ensure_installed = {
 			"stylua", -- Used to format Lua code
 			"prettier", -- JS and web shit
-			"gopls",
 			"gofumpt",
-			"zls",
-			"typescript-language-server",
-			"tailwindcss",
 			"black",
-			"lua_ls",
-			"basedpyright",
-		})
-		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+		}
+		require("mason-tool-installer").setup({ ensure_installed = non_lsp_ensure_installed })
+
 
 		for server_name, server_config in pairs(servers) do
 			-- This handles overriding only values explicitly passed
@@ -334,7 +330,9 @@ return {
 				vim.tbl_deep_extend("force", {}, capabilities, server_config.capabilities or {})
 			server_config.inlay_hints = { enabled = true }
 			server_config.single_file_support = true
-			require("lspconfig")[server_name].setup(server_config)
+
+			vim.lsp.config[server_name] = server_config
+			vim.lsp.enable(server_name)
 		end
 	end,
 }
