@@ -73,9 +73,14 @@ return {
 
 			vim.api.nvim_set_hl(0, "CursorLineNR", { bg = "#939293", fg = "#221f22" })
 			vim.api.nvim_set_hl(0, "CursorLine", { bg = "#19181a", underline = true, sp = "#5b595c" })
-			vim.api.nvim_set_hl(0, "lCursor", { bg = "#fcfcfa", fg = "#19181a" })
-			vim.api.nvim_set_hl(0, "Cursor", { bg = "#fcfcfa", fg = "#19181a" })
-			vim.api.nvim_set_hl(0, "CursorME", { bg = "#fcfcfa", fg = "#19181a" })
+
+			-- see guicursor in options.lua to configure mode specific behaviour and shape
+			vim.api.nvim_set_hl(0, "lCursor", { bg = "#fcfcfa", fg = "#19181a"})
+			vim.api.nvim_set_hl(0, "Cursor", { bg = "#fcfcfa", fg = "#19181a"})
+			vim.api.nvim_set_hl(0, "InsertCursor", { bg = "#a9dc76", fg = "#19181a"})
+			vim.api.nvim_set_hl(0, "VisualCursor", { bg = "#ab9df2", fg = "#19181a"})
+			vim.api.nvim_set_hl(0, "ReplaceCursor", { bg = "#ff6188", fg = "#19181a"})
+			vim.api.nvim_set_hl(0, "OperatorPendingCursor", { bg = "#ffd866", fg = "#19181a"})
 			vim.api.nvim_set_hl(0, "TermCursor", { bg = "#fcfcfa", fg = "#19181a" })
 
 			-- borders

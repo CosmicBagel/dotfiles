@@ -93,6 +93,10 @@ vim.opt.listchars = { tab = "-->", trail = "·", nbsp = "␣", extends = "󰧂",
 -- highlight line cursor is currently on
 vim.opt.cursorline = true
 
+-- vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor"
+-- highlight groups are specified here, but colors for the highlight groups are set in color_scheme.lua
+vim.opt.guicursor = "n-c-sm:Cursor,v:VisualCursor,i-ci-ve:InsertCursor,r-cr:ReplaceCursor,o:OperatorPendingCursor,t:TermCursor"
+
 -- Once a proper status line is installed, might want to remove this
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
