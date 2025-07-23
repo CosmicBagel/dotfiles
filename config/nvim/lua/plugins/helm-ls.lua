@@ -4,7 +4,7 @@ return {
 	opts = {
 		conceal_templates = {
 			-- enable the replacement of templates with virtual text of their current values
-			enabled = true, -- this might change to false in the future
+			enabled = false,
 		},
 		indent_hints = {
 			-- enable hints for indent and nindent functions
