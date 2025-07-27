@@ -17,7 +17,7 @@
   "restore_on_startup": "last_workspace",
   "autosave": "on_focus_change",
   "format_on_save": "on",
-  "theme": "One Dark",
+  "theme": "Zedokai",
   "telemetry": {
     "diagnostics": true,
     "metrics": true
