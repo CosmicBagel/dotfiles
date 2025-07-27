@@ -68,8 +68,8 @@
     }
   },
   "languages": {
-    "PowerShell": {
-      "language_servers": ["!powershell-es", "..."]
+    "Zig": {
+      "language_servers": ["zls", "..."]
     }
   }
 }
