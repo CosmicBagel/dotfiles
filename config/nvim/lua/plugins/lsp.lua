@@ -263,23 +263,15 @@ return {
 		}
 
 		servers.lua_ls = {
-			-- cmd = {...},
-			-- filetypes = { ...},
-			-- capabilities = {},
-			filetypes = { "lua" },
-			completion = {
-				callSnippet = "Replace",
-			},
-			-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-			-- diagnostics = { disable = { 'missing-fields' } },
-			workspace = {
-				library = vim.api.nvim_get_runtime_file("", true),
-			},
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = {
-					"vim",
-					"require",
+			settings = {
+				Lua = {
+					filetypes = { "lua" },
+					runtime = {
+						version = "LuaJIT",
+					},
+					workspace = {
+						library = vim.api.nvim_get_runtime_file("", true),
+					},
 				},
 			},
 		}
@@ -313,7 +305,7 @@ return {
 
 		require("mason-lspconfig").setup({
 			autonatic_enable = false,
-			ensure_installed = vim.tbl_keys(servers or {})
+			ensure_installed = vim.tbl_keys(servers or {}),
 		})
 
 		-- You can add other tools here that you want Mason to install
@@ -325,7 +317,6 @@ return {
 			"black",
 		}
 		require("mason-tool-installer").setup({ ensure_installed = non_lsp_ensure_installed })
-
 
 		for server_name, server_config in pairs(servers) do
 			-- This handles overriding only values explicitly passed
