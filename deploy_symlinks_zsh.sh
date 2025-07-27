@@ -42,6 +42,7 @@ symlinks_dic[$HOME/dotfiles/config/aerospace]="$HOME/.config/aerospace"
 symlinks_dic[$HOME/dotfiles/config/karabiner/]="$HOME/.config/karabiner"
 symlinks_dic[$HOME/dotfiles/config/linearmouse/]="$HOME/.config/linearmouse"
 symlinks_dic[$HOME/dotfiles/config/yt-dlp/]="$HOME/.config/yt-dlp"
+symlinks_dic[$HOME/dotfiles/config/helix/]="$HOME/.config/helix"
 symlinks_dic[$HOME/dotfiles/config/kdiff3rc]="$HOME/Library/Preferences/kdiff3rc"
 
 symlinks_dic[$HOME/dotfiles/config/omnisharp]="$HOME/.omnisharp"
