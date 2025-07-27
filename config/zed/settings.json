@@ -62,8 +62,8 @@
   "terminal": {
     "shell": {
       "with_arguments": {
-        "program": "pwsh.exe",
-        "args": ["-NoLogo"]
+        "program": "/bin/zsh",
+        "args": ["--login"]
       }
     }
   },
