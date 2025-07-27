@@ -56,7 +56,6 @@
   },
   "vim": {
     "use_system_clipboard": "always",
-    "use_multiline_find": false,
     "use_smartcase_find": true,
     "toggle_relative_line_numbers": true
   },
