@@ -42,10 +42,10 @@ return {
 		}
 
 		-- signs
-		vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpoint" })
-		vim.fn.sign_define("DapBreakpointCondition", { text = "",texthl = "DapBreakpointCondition"  })
-		vim.fn.sign_define("DapLogPoint", { text = "",texthl = "DapLogPoint" })
-		vim.fn.sign_define("DapBreakpointRejected", { text = "",texthl = "DapBreakpointRejected" })
+		vim.fn.sign_define("DapBreakpoint", { text = " ", texthl = "DapBreakpoint" })
+		vim.fn.sign_define("DapBreakpointCondition", { text = " ",texthl = "DapBreakpointCondition"  })
+		vim.fn.sign_define("DapLogPoint", { text = " ",texthl = "DapLogPoint" })
+		vim.fn.sign_define("DapBreakpointRejected", { text = " ",texthl = "DapBreakpointRejected" })
 
 		-- dap.configurations.cs = {
 		--     {
