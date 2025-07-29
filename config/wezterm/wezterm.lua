@@ -82,7 +82,7 @@ require("colors").apply_colors(config)
 -- Key bindings
 config.enable_kitty_keyboard = true -- needed for neovim keybindings
 config.disable_default_key_bindings = true
-config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 1500 }
+config.leader = { key = "b", mods = "WIN", timeout_milliseconds = 1500 }
 config.keys = require("keys")
 
 -- Right click pastes, right click if text is selected copies
