@@ -30,8 +30,8 @@ local M = {
 	{ key = "&", mods = "LEADER|SHIFT", action = act.CloseCurrentTab({ confirm = true }) },
 	{ key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 
-	{ key = "h", mods = "LEADER|ALT", action = act.MoveTabRelative(-1) },
-	{ key = "l", mods = "LEADER|ALT", action = act.MoveTabRelative(1) },
+	{ key = "h", mods = "LEADER|CTRL|SHIFT", action = act.MoveTabRelative(-1) },
+	{ key = "l", mods = "LEADER|CTRL|SHIFT", action = act.MoveTabRelative(1) },
 
 	{ key = "z", mods = "LEADER", action = "TogglePaneZoomState" },
 	{ key = '"', mods = "LEADER|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
