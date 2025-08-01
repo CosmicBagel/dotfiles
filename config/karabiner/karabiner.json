@@ -5,7 +5,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Open a wezterm window with Ctrl-Cmd-T",
+                        "description": "Open a ghostty with Ctrl-Cmd-T",
                         "manipulators": [
                             {
                                 "from": {
@@ -15,7 +15,7 @@
                                         "optional": ["caps_lock"]
                                     }
                                 },
-                                "to": [{ "shell_command": "open -a /opt/homebrew/bin/wezterm" }],
+                                "to": [{ "shell_command": "open -a /opt/homebrew/bin/ghostty" }],
                                 "type": "basic"
                             }
                         ]
