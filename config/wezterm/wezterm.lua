@@ -22,7 +22,7 @@ config.term = "xterm-256color"
 
 -- Font
 config.font = wezterm.font({ family = "JetBrains Mono" })
-config.font_size = 12
+config.font_size = 14
 config.cursor_thickness = 0.20
 
 -- Scroll history
