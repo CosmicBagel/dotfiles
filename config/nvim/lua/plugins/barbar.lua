@@ -32,22 +32,20 @@ return {
 		map("<Tab>", "<Cmd>BufferNext<CR>", "Next Buffer")
 		map("<C-i>", "<C-i>", "Jumplist Forward") -- needed, otherwise tab mapping overrides ctrl-i
 		map("<C-o>", "<C-o>", "Jumplist Backward") -- including this for uniformity
-		map("<D-,>", "<Cmd>BufferPrevious<CR>", "Previous Buffer")
-		map("<D-.>", "<Cmd>BufferNext<CR>", "Next Buffer")
 		-- Re-order to previous/next
-		map("<DC-,>", "<Cmd>BufferMovePrevious<CR>", "Move Buffer Left")
-		map("<DC-.>", "<Cmd>BufferMoveNext<CR>", "Move Buffer Right")
+		map("<M-S-Left>", "<Cmd>BufferMovePrevious<CR>", "Move Buffer Left")
+		map("<M-S-Right>", "<Cmd>BufferMoveNext<CR>", "Move Buffer Right")
 		-- Goto buffer in position...
-		map("<D-1>", "<Cmd>BufferGoto 1<CR>", "Goto Buffer 1")
-		map("<D-2>", "<Cmd>BufferGoto 2<CR>", "Goto Buffer 2")
-		map("<D-3>", "<Cmd>BufferGoto 3<CR>", "Goto Buffer 3")
-		map("<D-4>", "<Cmd>BufferGoto 4<CR>", "Goto Buffer 5")
-		map("<D-5>", "<Cmd>BufferGoto 5<CR>", "Goto Buffer 5")
-		map("<D-6>", "<Cmd>BufferGoto 6<CR>", "Goto Buffer 6")
-		map("<D-7>", "<Cmd>BufferGoto 7<CR>", "Goto Buffer 7")
-		map("<D-8>", "<Cmd>BufferGoto 8<CR>", "Goto Buffer 8")
-		map("<D-9>", "<Cmd>BufferGoto 9<CR>", "Goto Buffer 9")
-		map("<D-0>", "<Cmd>BufferLast<CR>", "Goto Last Buffer")
+		map("<M-1>", "<Cmd>BufferGoto 1<CR>", "Goto Buffer 1")
+		map("<M-2>", "<Cmd>BufferGoto 2<CR>", "Goto Buffer 2")
+		map("<M-3>", "<Cmd>BufferGoto 3<CR>", "Goto Buffer 3")
+		map("<M-4>", "<Cmd>BufferGoto 4<CR>", "Goto Buffer 5")
+		map("<M-5>", "<Cmd>BufferGoto 5<CR>", "Goto Buffer 5")
+		map("<M-6>", "<Cmd>BufferGoto 6<CR>", "Goto Buffer 6")
+		map("<M-7>", "<Cmd>BufferGoto 7<CR>", "Goto Buffer 7")
+		map("<M-8>", "<Cmd>BufferGoto 8<CR>", "Goto Buffer 8")
+		map("<M-9>", "<Cmd>BufferGoto 9<CR>", "Goto Buffer 9")
+		map("<M-0>", "<Cmd>BufferLast<CR>", "Goto Last Buffer")
 
 		-- Buffer keys behind leader key
 		map("<Leader>pp", "<Cmd>BufferPin<CR>", "Pin/Unpin Buffer")
