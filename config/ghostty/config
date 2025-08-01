@@ -1,0 +1,9 @@
+theme = Monokai Pro
+font-size = 14
+
+background = #000000
+background-opacity = 0.80
+
+macos-titlebar-style = tabs
+
+macos-option-as-alt = true
