@@ -1,6 +1,11 @@
 theme = Monokai Pro
 font-size = 14
 
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-invert-fg-bg = false
+cursor-text = #19181a
+
 background = #000000
 background-opacity = 0.80
 
