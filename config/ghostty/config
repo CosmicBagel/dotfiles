@@ -12,3 +12,5 @@ background-opacity = 0.80
 macos-titlebar-style = tabs
 
 macos-option-as-alt = true
+
+quit-after-last-window-closed = true
