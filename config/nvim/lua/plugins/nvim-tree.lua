@@ -14,7 +14,11 @@ return {
 			},
 			view = {
 				width = '20%',
-			}
+			},
+			filters = {
+				git_ignored = false,
+				dotfiles = false,
+			},
 		})
 	end,
 }
