@@ -70,7 +70,7 @@ return { -- Autocompletion
 				completion = {
 					border = nil,
 					scrollbar = true,
-					winhighlight = "Normal:CmpNormal",
+					winhighlight = "Normal:CmpNormal,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
 					winblend = 10,
 				},
 			},
