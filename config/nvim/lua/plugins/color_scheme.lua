@@ -68,6 +68,8 @@ return {
 			vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = "#c1c0c0" })
 
 			-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+			-- visual mode select
+			vim.api.nvim_set_hl(0, "Visual", { bg = "#727072" })
 
 			vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ff6188" })
 
