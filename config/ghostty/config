@@ -14,3 +14,5 @@ macos-titlebar-style = tabs
 macos-option-as-alt = true
 
 quit-after-last-window-closed = true
+
+mouse-hide-while-typing = true
