@@ -1,6 +1,6 @@
 [user]
-    email = <>
-    name = "CosmicBagel"
+	email = <>
+	name = "CosmicBagel"
 [core]
 	autocrlf = input
 	editor = nvim
@@ -14,8 +14,8 @@
 	tool = kdiff3
 	conflictstyle = diff3
 [mergetool]
-  prompt = false
-  keepBackup = false
+	prompt = false
+	keepBackup = false
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
