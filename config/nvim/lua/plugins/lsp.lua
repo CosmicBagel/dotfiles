@@ -177,11 +177,8 @@ return {
 		--  - settings (table): Override the default settings passed when initializing the server.
 		--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 
-		-- godot script / shaders aren't provided by mason
-		require("lspconfig").gdscript.setup({})
-		require("lspconfig").gdshader_lsp.setup({})
-
 		local servers = {}
+
 		servers.clangd = {
 			filetypes = { "c", "h", "hpp", "cpp", "objc", "objcpp", "cuda", "proto" },
 			root_dir = require("lspconfig").util.root_pattern(
@@ -317,6 +314,10 @@ return {
 			"black",
 		}
 		require("mason-tool-installer").setup({ ensure_installed = non_lsp_ensure_installed })
+
+		-- servers that are not supplied by mason-tool-installer or mason-lspconfig
+		servers.gdscript = {}
+		servers.gdshader_lsp = {}
 
 		for server_name, server_config in pairs(servers) do
 			-- This handles overriding only values explicitly passed
