@@ -1,5 +1,5 @@
 theme = Monokai Pro
-font-size = 14
+font-size = 16
 
 shell-integration-features = no-cursor
 cursor-style = block
