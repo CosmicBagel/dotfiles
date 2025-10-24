@@ -8,6 +8,11 @@ return {
 			-- theme = "catppuccin-latte",
 			section_separators = { left = "", right = "" },
 			component_separators = { left = "", right = "" },
+			-- disabled_filetypes = {
+			-- 	statusline = {},
+			-- 	winbar = {},
+			-- },
+			disabled_filetypes = { "NvimTree" },
 		},
 		extensions = {
 			"lazy",
