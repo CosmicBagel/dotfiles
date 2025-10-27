@@ -9,6 +9,9 @@ cursor-text = #19181a
 #background = #000000
 #background-opacity = 0.80
 
+window-height = 42
+window-width = 110
+
 macos-titlebar-style = tabs
 
 macos-option-as-alt = true
