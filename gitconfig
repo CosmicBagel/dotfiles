@@ -4,7 +4,7 @@
 [core]
 	autocrlf = input
 	editor = nvim
-	pager = bat
+	pager = delta
 [color]
 	ui = auto
 [pull]
