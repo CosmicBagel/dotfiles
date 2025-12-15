@@ -1,21 +1,7 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
   "schemes" : [
     {
-      "scrolling" : {
-        "reverse" : {
-          "vertical" : true
-        },
-        "distance" : {
-          "vertical" : 3
-        },
-        "acceleration" : {
-          "vertical" : 1
-        },
-        "speed" : {
-          "vertical" : 0
-        }
-      },
       "buttons" : {
         "mappings" : [
           {
@@ -36,12 +22,59 @@
           "serialNumber" : "883666D3",
           "vendorID" : "0x46d"
         }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "36px"
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
+        }
       }
     },
     {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl.spaceLeft",
+            "button" : 3,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "repeat" : false,
+            "shift" : false
+          },
+          {
+            "action" : "missionControl.spaceRight",
+            "button" : 4,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "repeat" : false,
+            "shift" : false
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc53f",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : true
+      },
       "scrolling" : {
-        "speed" : {
-          "vertical" : 0
+        "acceleration" : {
+          "vertical" : 1
         },
         "distance" : {
           "vertical" : 3
@@ -49,58 +82,23 @@
         "reverse" : {
           "vertical" : true
         },
-        "acceleration" : {
-          "vertical" : 1
-        }
-      },
-      "pointer" : {
-        "disableAcceleration" : true
-      },
-      "buttons" : {
-        "mappings" : [
-          {
-            "shift" : false,
-            "option" : false,
-            "button" : 3,
-            "action" : {
-              "run" : "\/opt\/homebrew\/bin\/aerospace workspace prev"
-            },
-            "control" : false,
-            "command" : false
-          },
-          {
-            "shift" : false,
-            "option" : false,
-            "button" : 4,
-            "action" : {
-              "run" : "\/opt\/homebrew\/bin\/aerospace workspace next"
-            },
-            "control" : false,
-            "command" : false
-          }
-        ]
-      },
-      "if" : {
-        "device" : {
-          "productName" : "USB Receiver",
-          "category" : "mouse",
-          "vendorID" : "0x46d",
-          "productID" : "0xc53f"
+        "speed" : {
+          "vertical" : 0
         }
       }
     },
     {
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x0"
+        }
+      },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
-        }
-      },
-      "if" : {
-        "device" : {
-          "vendorID" : "0x0",
-          "category" : "trackpad",
-          "productID" : "0x0",
-          "productName" : "Apple Internal Keyboard \/ Trackpad"
         }
       }
     }
