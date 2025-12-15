@@ -12,7 +12,7 @@ cursor-text = #19181a
 window-height = 42
 window-width = 110
 
-macos-titlebar-style = tabs
+macos-titlebar-style = native
 
 macos-option-as-alt = true
 
