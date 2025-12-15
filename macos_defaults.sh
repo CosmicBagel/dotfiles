@@ -5,9 +5,9 @@ defaults write com.apple.finder AppleShowAllFiles true
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # repeat key delay until repeat (240ms)
-defaults write -g InitialKeyRepeat -int 12
+# defaults write -g InitialKeyRepeat -int 12
 # repeat key rate (15ms)
-defaults write -g KeyRepeat -int 1
+# defaults write -g KeyRepeat -int 1
 
 # disable window opening animations
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
