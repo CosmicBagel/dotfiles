@@ -19,15 +19,11 @@
       "buttons" : {
         "mappings" : [
           {
-            "action" : {
-              "run" : "\/opt\/homebrew\/bin\/aerospace workspace prev"
-            },
+            "action" : "missionControl.spaceLeft",
             "button" : 3
           },
           {
-            "action" : {
-              "run" : "\/opt\/homebrew\/bin\/aerospace workspace next"
-            },
+            "action" : "missionControl.spaceRight",
             "button" : 4
           }
         ]
