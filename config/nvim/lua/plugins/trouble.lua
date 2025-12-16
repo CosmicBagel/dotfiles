@@ -38,5 +38,8 @@ return {
 			desc = "Quickfix List (Trouble)",
 		},
 	},
-	opts = {}, -- for default options, refer to the configuration section for custom setup.
+	opts = {
+		warn_no_results = false,
+		open_no_results = true,
+	}, -- for default options, refer to the configuration section for custom setup.
 }
