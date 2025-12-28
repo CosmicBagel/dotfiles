@@ -43,6 +43,7 @@
         "mappings" : [
           {
             "action" : "missionControl.spaceLeft",
+            "command" : false,
             "button" : 3,
             "command" : false,
             "control" : false,
@@ -52,6 +53,7 @@
           },
           {
             "action" : "missionControl.spaceRight",
+            "command" : false,
             "button" : 4,
             "command" : false,
             "control" : false,
