@@ -3,5 +3,4 @@
 --retry-sleep extractor:600
 --sleep-requests 1
 --sleep-interval 1
---cookies-from-browser chromium
--f bestaudio
+--cookies-from-browser firefox
