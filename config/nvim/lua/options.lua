@@ -7,7 +7,7 @@ vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 -- unnamed register (yank/put/delete will go to system clipboard)
 vim.opt.clipboard = "unnamedplus"
 
-vim.opt.mousescroll = "ver:1,hor:0"
+vim.opt.mousescroll = "ver:1,hor:1"
 -- may want to limit scroll adjustment to macbook
 -- if vim.fn.has("macunix") == 1 then
 -- end
