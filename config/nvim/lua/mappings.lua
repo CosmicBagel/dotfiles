@@ -65,3 +65,6 @@ vim.keymap.set("n", "<C-Left>", "<C-w><", { desc = "Decrease pane width" })
 vim.keymap.set("n", "<C-Right>", "<C-w>>", { desc = "Increase pane width" })
 vim.keymap.set("n", "<C-Up>", "<C-w>+", { desc = "Increase pane height" })
 vim.keymap.set("n", "<C-Down>", "<C-w>-", { desc = "Decrease pane height" })
+
+-- Space m alias for make
+vim.keymap.set("n", "<leader>m", ":make<CR>", { desc = "Run :make command" })
