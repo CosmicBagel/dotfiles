@@ -95,7 +95,7 @@ autocmd({ "InsertLeave" }, {
 })
 
 -- basic auto-save
-autocmd({ "BufDelete", "BufLeave" }, {
+autocmd({ "BufDelete", "BufLeave", "TextChanged", "InsertLeave" }, {
 	group = CosmicBagelGroup,
 	pattern = "*",
 	callback = function(args)
@@ -111,7 +111,7 @@ autocmd({ "BufDelete", "BufLeave" }, {
 		end
 
 		-- don't auto-save if not modified
-		if not vim.api.nvim_buf_get_option(buf, "modified") then
+		if not vim.api.nvim_get_option_value("modified", { buf = buf }) then
 			return
 		end
 
