@@ -197,9 +197,9 @@ return {
 
 		-- had this set when I was using master versions of zig and zls
 		-- vim.g.zig_fmt_autosave = 0
-		local home_dir = os.getenv("HOME") or os.getenv("USERPROFILE")
+		-- local home_dir = os.getenv("HOME") or os.getenv("USERPROFILE")
 		servers.zls = {
-			cmd = { home_dir .. "/bin/zls" },
+			-- cmd = { home_dir .. "/bin/zls" },
 			filetypes = { "zig", "zir" },
 			root_markers = { "zls.json", "build.zig", ".git" },
 		}
