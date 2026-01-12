@@ -16,6 +16,7 @@ return {
 			{ "<leader>d", group = "[D]ocument" },
 			{ "<leader>g", group = "[G]it" },
 			{ "<leader>j", group = "Split/[j]oin (treesj)" },
+			{ "<leader>N", group = "[N]eotest" },
 			{ "<leader>p", group = "Buffers" },
 			{ "<leader>q", group = "[Q]uack" },
 			{ "<leader>r", group = "[R]ename" },

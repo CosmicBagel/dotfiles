@@ -80,10 +80,10 @@ return {
 				-- 	vim.lsp.with(vim.lsp.buf.signature_help, { border = "rounded" })
 
 				-- Easy inlay-hint enabling
-				map("<leader>n", function()
+				map("<leader>i", function()
 					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 					print("Inlay hints: " .. tostring(vim.lsp.inlay_hint.is_enabled()))
-				end, "Toggle i[n]lay-hints")
+				end, "Toggle [i]nlay-hints")
 
 				-- Jump to the definition of the word under your cursor.
 				--  This is where a variable was first declared, or where a function is defined, etc.
