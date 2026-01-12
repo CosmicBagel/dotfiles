@@ -24,30 +24,30 @@ local function ColorMyPencils(color)
 end
 
 return {
-	{
-		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		config = function()
-			require("gruvbox").setup({
-				transparent_mode = true,
-			})
+	-- {
+	-- 	"ellisonleao/gruvbox.nvim",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("gruvbox").setup({
+	-- 			transparent_mode = true,
+	-- 		})
+	--
+	-- 		-- ColorMyPencils("gruvbox")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"rebelot/kanagawa.nvim",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("kanagawa").setup({
+	-- 			transparent = true,
+	-- 			theme = "dragon",
+	-- 		})
+	--
+	-- 		-- ColorMyPencils("kanagawa")
+	-- 	end,
+	-- },
 
-			-- ColorMyPencils("gruvbox")
-		end,
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		config = function()
-			require("kanagawa").setup({
-				transparent = true,
-				theme = "dragon",
-			})
-
-			-- ColorMyPencils("kanagawa")
-		end,
-	},
-	-- https://github.com/catppuccin/nvim
 	{
 		"loctvl842/monokai-pro.nvim",
 		priority = 1000,
@@ -134,6 +134,7 @@ return {
 		end,
 	},
 	{
+		-- https://github.com/catppuccin/nvim
 		"catppuccin/nvim",
 		priority = 1000,
 		config = function()
