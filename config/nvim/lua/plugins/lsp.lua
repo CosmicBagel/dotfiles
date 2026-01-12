@@ -82,6 +82,7 @@ return {
 				-- Easy inlay-hint enabling
 				map("<leader>n", function()
 					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+					print("Inlay hints: " .. tostring(vim.lsp.inlay_hint.is_enabled()))
 				end, "Toggle i[n]lay-hints")
 
 				-- Jump to the definition of the word under your cursor.
