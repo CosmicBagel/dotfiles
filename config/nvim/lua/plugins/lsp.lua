@@ -198,7 +198,6 @@ return {
 			),
 			single_file_support = true,
 		}
-		servers.gopls = {}
 		servers.rust_analyzer = {}
 
 		-- had this set when I was using master versions of zig and zls
@@ -306,6 +305,23 @@ return {
 
 		servers.phpactor = {}
 
+		servers.gopls = {
+			settings = {
+				gopls = {
+					hints = {
+						ignoredError = true,
+						rangeVariableTypes = true,
+						parameterNames = true,
+						constantValues = true,
+						assignVariableTypes = true,
+						compositeLiteralFields = true,
+						compositeLiteralTypes = true,
+						functionTypeParameters = true,
+					},
+				},
+			},
+		}
+
 		require("mason-lspconfig").setup({
 			autonatic_enable = false,
 			ensure_installed = vim.tbl_keys(servers or {}),
@@ -332,7 +348,7 @@ return {
 			server_config.autostart = true
 			server_config.capabilities =
 				vim.tbl_deep_extend("force", {}, capabilities, server_config.capabilities or {})
-			server_config.inlay_hints = { enabled = true }
+			-- server_config.inlay_hints = { enabled = true }
 			server_config.single_file_support = true
 
 			vim.lsp.config[server_name] = server_config
