@@ -4,17 +4,8 @@
     "bindings": {
       "ctrl-y": "editor::AcceptEditPrediction",
     },
-  },
-  {
-    "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
     "unbind": {
       "tab": "editor::AcceptEditPrediction",
-    },
-  },
-  {
-    "context": "Editor && edit_prediction",
-    "unbind": {
-      "alt-l": "editor::AcceptEditPrediction",
     },
   },
   {
@@ -22,11 +13,9 @@
     "bindings": {
       "ctrl-y": "editor::AcceptEditPrediction",
     },
-  },
-  {
-    "context": "Editor && edit_prediction",
     "unbind": {
       "alt-tab": "editor::AcceptEditPrediction",
+      "alt-l": "editor::AcceptEditPrediction",
     },
   },
   {
@@ -34,9 +23,6 @@
     "bindings": {
       "ctrl-y": "picker::ConfirmCompletion",
     },
-  },
-  {
-    "context": "Picker > Editor",
     "unbind": {
       "tab": "picker::ConfirmCompletion",
     },
@@ -49,10 +35,6 @@
           "secondary": false,
         },
       ],
-    },
-  },
-  {
-    "unbind": {
       "ctrl-alt-enter": [
         "picker::ConfirmInput",
         {
