@@ -9,6 +9,7 @@
 {
   "completion_menu_scrollbar": "always",
   "terminal": {
+    "dock": "bottom",
     "font_size": 14.0
   },
   "cursor_blink": false,
