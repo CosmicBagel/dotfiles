@@ -30,6 +30,7 @@
       "ctrl-/": "editor::ToggleComments",
       "space r n": "editor::Rename",
       "space p a": "pane::CloseOtherItems",
+      "space p p": "pane::TogglePinTab",
       "space p x": "pane::CloseActiveItem",
       "space g b": "editor::BlameHover",
       "space g B": "editor::OpenGitBlameCommit",
