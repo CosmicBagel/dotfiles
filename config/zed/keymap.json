@@ -8,9 +8,14 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
+      "q": null, //macros are lame
+      "s": null, //never hit this on purpose (and it just behaves like insert mode???)
+      "space": null, // stops zed from timing out when using 'leader' key space
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
       "ctrl-/": "editor::ToggleComments",
+      "space g d": "editor::ToggleSelectedDiffHunks",
+      "space g s": "git::ToggleStaged",
     },
   },
   {
@@ -25,6 +30,9 @@
       "ctrl-/": "editor::ToggleComments",
       "space r n": "editor::Rename",
       "space p a": "pane::CloseOtherItems",
+      "space p x": "pane::CloseActiveItem",
+      "space g b": "editor::BlameHover",
+      "space g B": "editor::OpenGitBlameCommit",
     },
   },
   {
@@ -36,7 +44,6 @@
       "space s s": "project_symbols::Toggle",
       "space s g": "pane::DeploySearch",
       "space g g": "git_panel::ToggleFocus",
-      "space g b": "editor::OpenGitBlameCommit",
       "space t": "project_panel::ToggleFocus",
       "space s o": "projects::OpenRecent",
       "space o": "outline_panel::ToggleFocus",
