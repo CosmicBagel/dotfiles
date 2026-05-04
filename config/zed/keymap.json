@@ -11,6 +11,12 @@
     },
   },
   {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-j": "vim::Down",
+    },
+  },
+  {
     "context": "Editor && !VimControl",
     "unbind": {
       "ctrl-l": "workspace::ActivatePaneRight",
