@@ -1,5 +1,57 @@
 [
   {
+    "context": "Editor && (vim_mode == visual)",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds",
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "ctrl-/": "editor::ToggleComments",
+    },
+  },
+  {
+    "context": "Editor && VimControl && vim_mode == normal",
+    "bindings": {
+      "q": null, //macros are lame
+      "s": null, //never hit this on purpose (and it just behaves like insert mode???)
+      "space": null, // stops zed from timing out when using 'leader' key space
+      "j": ["vim::Down", { "display_lines": true }],
+      "k": ["vim::Up", { "display_lines": true }],
+      "space f": "editor::Format",
+      "ctrl-/": "editor::ToggleComments",
+      "space r n": "editor::Rename",
+      "space p a": "pane::CloseOtherItems",
+    },
+  },
+  {
+    "context": "(Workspace && !Editor) || (Editor && vim_mode == normal)",
+    "bindings": {
+      "space": null, // stops zed from timing out when using 'leader' key space
+      "space space": "tab_switcher::OpenInActivePane",
+      "space s f": "file_finder::Toggle",
+      "space s g": "pane::DeploySearch",
+      "space g g": "git_panel::ToggleFocus",
+      "space g b": "editor::OpenGitBlameCommit",
+      "space t": "project_panel::ToggleFocus",
+      "space s o": "projects::OpenRecent",
+      "space o": "outline_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Dock || (VimControl && Editor && vim_mode == normal)",
+    "bindings": {
+      "escape escape": "workspace::CloseActiveDock",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
     "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
     "bindings": {
       "ctrl-y": "editor::AcceptEditPrediction",
@@ -66,22 +118,24 @@
     },
   },
   {
-    "context": "vim_mode == visual",
-    "bindings": {
-      "shift-s": "vim::PushAddSurrounds",
-    },
-  },
-  {
-    "context": "vim_mode == normal || vim_mode == visual",
-    "bindings": {
-      "alt-j": "editor::MoveLineDown",
-      "alt-k": "editor::MoveLineUp",
-    },
-  },
-  {
     "context": "Terminal",
     "bindings": {
       "escape escape": "terminal::ToggleViMode",
+    },
+    "unbind": {
+      "ctrl-alt-left": "pane::SplitLeft",
+      "ctrl-alt-right": "pane::SplitRight",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-h": "editor::Backspace",
+      "ctrl-j": "editor::JoinLines",
+      "ctrl-k": "editor::KillRingCut",
+      "ctrl-l": "editor::ScrollCursorCenter",
+      "ctrl-alt-left": "editor::MoveToPreviousSubwordStart",
+      "ctrl-alt-right": "editor::MoveToNextSubwordEnd",
     },
   },
 ]
