@@ -56,6 +56,10 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-L": "workspace::MovePaneRight",
+      "ctrl-H": "workspace::MovePaneLeft",
+      "ctrl-J": "workspace::MovePaneDown",
+      "ctrl-K": "workspace::MovePaneUp",
     },
   },
   {
