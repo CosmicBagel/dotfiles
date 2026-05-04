@@ -42,13 +42,18 @@
     },
   },
   {
-    "context": "Dock || (VimControl && Editor && vim_mode == normal)",
+    "context": "(Dock && !Terminal) || (VimControl && Editor && vim_mode == normal)",
     "bindings": {
-      "escape escape": "workspace::CloseActiveDock",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "Dock && !Terminal && !Editor",
+    "bindings": {
+      "escape escape": "workspace::CloseActiveDock",
     },
   },
   {
@@ -120,7 +125,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "escape escape": "terminal::ToggleViMode",
+      "escape escape": "terminal_panel::ToggleFocus",
     },
     "unbind": {
       "ctrl-alt-left": "pane::SplitLeft",
