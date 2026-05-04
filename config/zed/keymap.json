@@ -33,6 +33,7 @@
       "space": null, // stops zed from timing out when using 'leader' key space
       "space space": "tab_switcher::OpenInActivePane",
       "space s f": "file_finder::Toggle",
+      "space s s": "project_symbols::Toggle",
       "space s g": "pane::DeploySearch",
       "space g g": "git_panel::ToggleFocus",
       "space g b": "editor::OpenGitBlameCommit",
@@ -113,7 +114,7 @@
     "context": "Editor && showing_completions",
     "bindings": {
       "ctrl-shift-y": "editor::ConfirmCompletionReplace",
-      // "ctrl-y": "editor::ComposeCompletion",
+      "ctrl-l": "editor::ComposeCompletion",
       "ctrl-y": "editor::ConfirmCompletion",
     },
     "unbind": {
