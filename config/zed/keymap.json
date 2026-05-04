@@ -1,12 +1,32 @@
 [
   {
-    "context": "Editor && (vim_mode == visual)",
+    "context": "Editor",
+    "unbind": {
+      "ctrl-h": "editor::Backspace",
+      "ctrl-j": "editor::JoinLines",
+      "ctrl-k": "editor::KillRingCut",
+      "ctrl-l": "editor::ScrollCursorCenter",
+      "ctrl-alt-left": "editor::MoveToPreviousSubwordStart",
+      "ctrl-alt-right": "editor::MoveToNextSubwordEnd",
+    },
+  },
+  {
+    "context": "Editor && !VimControl",
+    "unbind": {
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual",
     "bindings": {
       "shift-s": "vim::PushAddSurrounds",
     },
   },
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "context": "VimControl",
     "bindings": {
       "q": null, //macros are lame
       "s": null, //never hit this on purpose (and it just behaves like insert mode???)
@@ -16,28 +36,24 @@
       "ctrl-/": "editor::ToggleComments",
       "space g d": "editor::ToggleSelectedDiffHunks",
       "space g s": "git::ToggleStaged",
-    },
-  },
-  {
-    "context": "Editor && VimControl && vim_mode == normal",
-    "bindings": {
-      "q": null, //macros are lame
-      "s": null, //never hit this on purpose (and it just behaves like insert mode???)
-      "space": null, // stops zed from timing out when using 'leader' key space
       "j": ["vim::Down", { "display_lines": true }],
       "k": ["vim::Up", { "display_lines": true }],
       "space f": "editor::Format",
-      "ctrl-/": "editor::ToggleComments",
       "space r n": "editor::Rename",
-      "space p a": "pane::CloseOtherItems",
-      "space p p": "pane::TogglePinTab",
-      "space p x": "pane::CloseActiveItem",
       "space g b": "editor::BlameHover",
       "space g B": "editor::OpenGitBlameCommit",
     },
   },
   {
-    "context": "(Workspace && !Editor) || (Editor && vim_mode == normal)",
+    "context": "(Pane && !Editor) || VimControl",
+    "bindings": {
+      "space p a": "pane::CloseOtherItems",
+      "space p p": "pane::TogglePinTab",
+      "space p x": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "(Workspace && !Terminal && !Editor) || VimControl",
     "bindings": {
       "space": null, // stops zed from timing out when using 'leader' key space
       "space space": "tab_switcher::OpenInActivePane",
@@ -51,16 +67,33 @@
     },
   },
   {
-    "context": "(Dock && !Terminal) || (VimControl && Editor && vim_mode == normal)",
+    "context": "Workspace && !Terminal",
     "bindings": {
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
       "ctrl-L": "workspace::MovePaneRight",
       "ctrl-H": "workspace::MovePaneLeft",
       "ctrl-J": "workspace::MovePaneDown",
       "ctrl-K": "workspace::MovePaneUp",
+    },
+  },
+  {
+    "context": "GitPanel && ChangesList",
+    "bindings": {
+      "ctrl-j": "git_panel::FocusEditor",
+    },
+  },
+  {
+    "context": "GitPanel && CommitEditor",
+    "bindings": {
+      "ctrl-k": "git_panel::FocusChanges",
     },
   },
   {
@@ -143,17 +176,6 @@
     "unbind": {
       "ctrl-alt-left": "pane::SplitLeft",
       "ctrl-alt-right": "pane::SplitRight",
-    },
-  },
-  {
-    "context": "Editor",
-    "unbind": {
-      "ctrl-h": "editor::Backspace",
-      "ctrl-j": "editor::JoinLines",
-      "ctrl-k": "editor::KillRingCut",
-      "ctrl-l": "editor::ScrollCursorCenter",
-      "ctrl-alt-left": "editor::MoveToPreviousSubwordStart",
-      "ctrl-alt-right": "editor::MoveToNextSubwordEnd",
     },
   },
 ]
