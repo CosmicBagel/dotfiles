@@ -11,9 +11,10 @@ return {
 		require("barbar").setup({
 			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
 			animation = false,
+
 			-- insert_at_start = true,
 			-- …etc.
-			auto_hide = 1,
+			auto_hide = -1,
 			icons = {
 				buffer_index = true,
 				buffer_number = false,
