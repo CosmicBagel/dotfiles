@@ -102,7 +102,8 @@ vim.opt.guicursor = "n-c-sm:Cursor,v:VisualCursor,i-ci-ve:InsertCursor,r-cr:Repl
 vim.opt.showmode = false
 
 -- sensible search
-vim.opt.ignorecase = true vim.opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- sensible spelling
 -- vim.opt.spell = false <- set by autocommand for specific file types (eg terminal)
