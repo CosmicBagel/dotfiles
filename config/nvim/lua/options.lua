@@ -1,7 +1,7 @@
 -- -- -- basic vim options -- -- --
 vim.opt.shortmess:append({ I = true }) -- disable the startup message
 vim.opt.title = true
-vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
+vim.opt.titlestring = "%{fnamemodify(getcwd(), '%:p')}"
 
 -- The + register (system clipboard register) behaves the same as
 -- unnamed register (yank/put/delete will go to system clipboard)
