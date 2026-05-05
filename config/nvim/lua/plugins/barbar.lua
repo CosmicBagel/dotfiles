@@ -15,6 +15,7 @@ return {
 			-- insert_at_start = true,
 			-- …etc.
 			auto_hide = -1,
+			focus_on_close = "previous",
 			icons = {
 				buffer_index = true,
 				buffer_number = false,
@@ -58,5 +59,6 @@ return {
 		map("<Leader>pd", "<Cmd>BufferCloseAllButPinned<CR>", "Close all but pinned buffers")
 		map("<Leader>pa", "<Cmd>BufferCloseAllButCurrent<CR>", "Close all but current buffer")
 		map("<Leader>px", "<Cmd>BufferClose<CR>", "Close current buffer (leave window open)")
+		map("<Leader>pr", "<Cmd>BufferRestore<CR>", "Restore last closed buffer")
 	end,
 }
