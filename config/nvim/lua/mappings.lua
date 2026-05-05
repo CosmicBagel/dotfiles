@@ -70,5 +70,5 @@ vim.keymap.set("n", "<C-Down>", "<C-w>-", { desc = "Decrease pane height" })
 vim.keymap.set("n", "<leader>m", ":wa<CR>:make<CR>", { desc = "Run :make command" })
 
 -- Indent / unindent lines in visual mode easily
-vim.keymap.set("v", "<Tab>", ">gv", { remap = false, silent = true, desc = "Indent line" })
-vim.keymap.set("v", "<S-Tab>", "<gv", { remap = false, silent = true, desc = "Unindent line" })
+vim.keymap.set("v", "<Tab>", ">gv", { remap = true, silent = true, desc = "Indent line" })
+vim.keymap.set("v", "<S-Tab>", "<gv", { remap = true, silent = true, desc = "Unindent line" })
