@@ -114,7 +114,7 @@ vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 -- vim.opt.cmdheight = 0
 
 -- recommended for autosessions
-vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions,globals"
 
 -- use pwsh and powershell as fallback on windows
 if vim.fn.has("win32") == 1 then

@@ -10,19 +10,19 @@
 -- :Autosession search
 -- :Autosession delete
 -- note: SessionDelete is useful is a session becomes broken, and fails to load
+--
 
 return {
-    "rmagatti/auto-session",
-    config = function()
-        vim.opt.sessionoptions:append 'globals'
-        require("auto-session").setup {
-            log_level = "error",
-            auto_session_suppress_dirs = { "~/", "~/proj", "~/Downloads", "/" },
-            pre_save_cmds = {
-                function()
-                    vim.api.nvim_exec_autocmds('User', { pattern = 'SessionSavePre' })
-                end,
-            }
-        }
-    end,
+	"rmagatti/auto-session",
+	config = function()
+		require("auto-session").setup({
+			log_level = "error",
+			auto_session_suppress_dirs = { "~/", "~/proj", "~/Downloads", "/" },
+			pre_save_cmds = {
+				function()
+					vim.api.nvim_exec_autocmds("User", { pattern = "SessionSavePre" })
+				end,
+			},
+		})
+	end,
 }
