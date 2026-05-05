@@ -56,6 +56,10 @@
       "space p a": "pane::CloseOtherItems",
       "space p p": "pane::TogglePinTab",
       "space p x": "pane::CloseActiveItem",
+      "ctrl-right": "vim::ResizePaneRight",
+      "ctrl-left": "vim::ResizePaneLeft",
+      "ctrl-down": "vim::ResizePaneDown",
+      "ctrl-up": "vim::ResizePaneUp",
     },
   },
   {
