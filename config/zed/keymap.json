@@ -188,4 +188,28 @@
       "ctrl-alt-right": "pane::SplitRight",
     },
   },
+  {
+    "context": "Editor && in_snippet && has_next_tabstop && !showing_completions",
+    "bindings": {
+      "ctrl-l": "editor::NextSnippetTabstop"
+    }
+  },
+  {
+    "context": "Editor && in_snippet && has_next_tabstop && !showing_completions",
+    "unbind": {
+      "tab": "editor::NextSnippetTabstop"
+    }
+  },
+  {
+    "context": "Editor && in_snippet && has_previous_tabstop && !showing_completions",
+    "bindings": {
+      "ctrl-h": "editor::PreviousSnippetTabstop"
+    }
+  },
+  {
+    "context": "Editor && in_snippet && has_previous_tabstop && !showing_completions",
+    "unbind": {
+      "shift-tab": "editor::PreviousSnippetTabstop"
+    }
+  }
 ]
