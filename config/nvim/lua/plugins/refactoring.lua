@@ -1,29 +1,16 @@
 return {
-    "ThePrimeagen/refactoring.nvim",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-treesitter/nvim-treesitter",
-        "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-        require("refactoring").setup()
-
-        require("telescope").load_extension("refactoring")
-        -- vim.keymap.set("x", "<leader>rr", ":Refactor extract ")
-        -- vim.keymap.set("x", "<leader>rf", ":Refactor extract_to_file ")
-
-        -- vim.keymap.set("x", "<leader>rv", ":Refactor extract_var ")
-
-        -- vim.keymap.set({ "n", "x" }, "<leader>ri", ":Refactor inline_var")
-        --
-        -- vim.keymap.set( "n", "<leader>rI", ":Refactor inline_func")
-        --
-        -- vim.keymap.set("n", "<leader>rb", ":Refactor extract_block")
-        -- vim.keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
-
-        -- Refactoring helper
-        vim.keymap.set({"n", "x"}, "<leader>rr",
-            function() require("telescope").extensions.refactoring.refactors()
-        end, { desc = "[R]efacto[r]" })
-    end,
+	-- "ThePrimeagen/refactoring.nvim",
+	-- dependencies = {
+	-- 	"lewis6991/async.nvim",
+	-- },
+	-- lazy = false,
+	-- config = function()
+	-- 	require("refactoring").setup()
+	--
+	-- 	-- Refactoring helper
+	-- 	vim.keymap.set({ "n", "x" }, "<leader>rr", function()
+	-- 		-- this keymap doesn't select any textobject by default, so you may need to provide one each time you use it.
+	-- 		require("refactoring").select_refactor()
+	-- 	end, { desc = "[R]efacto[r]" })
+	-- end,
 }

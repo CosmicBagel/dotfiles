@@ -39,7 +39,7 @@ return {
 		-- Automatically install missing parsers when entering buffer
 		-- Recommendation: set to false if you don"t have `tree-sitter` CLI
 		-- installed locally
-		auto_install = false,
+		auto_install = true,
 
 		indent = {
 			enable = true,
@@ -64,7 +64,7 @@ return {
 		-- Prefer git instead of curl in order to improve connectivity in some environments
 		require("nvim-treesitter.install").prefer_git = true
 		---@diagnostic disable-next-line: missing-fields
-		require("nvim-treesitter.configs").setup(opts)
+		require("nvim-treesitter.config").setup(opts)
 
 		-- There are additional nvim-treesitter modules that you can use to interact
 		-- with nvim-treesitter. You should go explore a few and see what interests you:
