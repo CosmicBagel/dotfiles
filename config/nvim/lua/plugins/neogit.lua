@@ -3,8 +3,10 @@ return {
 	lazy = true,
 	dependencies = {
 		"sindrets/diffview.nvim", -- optional
+
 		-- For a custom log pager
-		-- "m00qek/baleia.nvim", -- optional
+		"m00qek/baleia.nvim", -- optional
+
 		"nvim-telescope/telescope.nvim", -- optional
 	},
 	cmd = "Neogit",
