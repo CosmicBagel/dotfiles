@@ -22,6 +22,11 @@ return {
 				modified = { button = "●" },
 				pinned = { button = "", filename = true },
 			},
+			sidebar_filetypes = {
+				NvimTree = { event = "BufWinLeave", text = "NvimTree", align = "left" },
+				undotree = { event = "BufWinLeave", text = "undotree", align = "left" },
+				Outline = { event = "BufWinLeave", text = "symbols-outline", align = "right" },
+			},
 		})
 
 		local map = function(keys, func, desc)
