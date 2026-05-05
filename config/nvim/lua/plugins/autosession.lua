@@ -23,6 +23,10 @@ return {
 					vim.api.nvim_exec_autocmds("User", { pattern = "SessionSavePre" })
 				end,
 			},
+			vim.keymap.set("n", "<leader>ao", "<cmd>AutoSession search<cr>", { desc = "AutoSessions search" }),
+			vim.keymap.set("n", "<leader>ad", "<cmd>AutoSession delete<cr>", { desc = "[A]utoSessions [d]elete" }),
+			vim.keymap.set("n", "<leader>as", "<cmd>AutoSession save<cr>", { desc = "[A]utoSessions [s]ave" }),
+			vim.keymap.set("n", "<leader>aP", "<cmd>AutoSession purgeOrphaned<cr>", { desc = "[A]utoSessions [P]urge orphaned" }),
 		})
 	end,
 }
