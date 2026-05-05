@@ -32,6 +32,7 @@
     "provider": "copilot",
   },
   "project_panel": {
+    "git_status_indicator": true,
     "dock": "left",
   },
   "outline_panel": {
