@@ -52,8 +52,8 @@ return {
             map('n', '<leader>gp', gitsigns.preview_hunk, { desc = '[P]review Hunk' })
             map('n', '<leader>gb', function() gitsigns.blame_line { full = true } end, { desc = '[B]lame Line' })
             map('n', '<leader>gB', gitsigns.toggle_current_line_blame, { desc = 'Toggle [B]lame Line' })
-            map('n', '<leader>gd', gitsigns.diffthis, { desc = '[D]iff This' })
-            map('n', '<leader>gD', function() gitsigns.diffthis('~') end, { desc = '[D]iff This ~' })
+            -- map('n', '<leader>gd', gitsigns.diffthis, { desc = '[D]iff This' })
+            -- map('n', '<leader>gD', function() gitsigns.diffthis('~') end, { desc = '[D]iff This ~' })
             map('n', '<leader>gx', gitsigns.toggle_deleted, { desc = 'Toggle Deleted' })
 
             -- Text object
