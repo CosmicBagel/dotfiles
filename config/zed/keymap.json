@@ -51,7 +51,7 @@
     },
   },
   {
-    "context": "(Pane && !Editor) || VimControl",
+    "context": "(Pane && !Editor && !Terminal) || VimControl",
     "bindings": {
       "space p a": "pane::CloseOtherItems",
       "space p p": "pane::TogglePinTab",
