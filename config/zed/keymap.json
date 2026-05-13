@@ -72,7 +72,7 @@
       "space s g": "pane::DeploySearch",
       "space g g": "git_panel::ToggleFocus",
       "space t": "project_panel::ToggleFocus",
-      "space s o": "projects::OpenRecent",
+      "space a o": "projects::OpenRecent",
       "space o": "outline_panel::ToggleFocus",
     },
   },
