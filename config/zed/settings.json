@@ -7,6 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "tab_bar": {
+    "show": true
+  },
+  "use_system_window_tabs": false,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
   "format_on_save": "off",
   "show_whitespaces": "all",
   "completion_menu_scrollbar": "always",
@@ -25,6 +33,8 @@
     "enabled": true
   },
   "title_bar": {
+    "show_menus": false,
+    "show_branch_name": true,
     "show_sign_in": false
   },
   "disable_ai": true,
