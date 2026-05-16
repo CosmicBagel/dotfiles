@@ -221,25 +221,145 @@
   {
     "context": "Editor",
     "unbind": {
-      "ctrl-l": "editor::SelectLine"
-    }
+      "ctrl-l": "editor::SelectLine",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "ctrl-shift-j": "editor::JoinLines"
-    }
+      "ctrl-shift-j": "editor::JoinLines",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "ctrl-shift-k": "editor::DeleteLine"
-    }
+      "ctrl-shift-k": "editor::DeleteLine",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "ctrl-shift-l": "editor::SelectAllMatches"
-    }
-  }
+      "ctrl-shift-l": "editor::SelectAllMatches",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1],
+      "ctrl-3": ["workspace::ActivatePane", 2],
+      "ctrl-4": ["workspace::ActivatePane", 3],
+      "ctrl-5": ["workspace::ActivatePane", 4],
+      "ctrl-6": ["workspace::ActivatePane", 5],
+      "ctrl-7": ["workspace::ActivatePane", 6],
+      "ctrl-8": ["workspace::ActivatePane", 7],
+      "ctrl-9": ["workspace::ActivatePane", 8],
+      "ctrl-0": ["workspace::ActivatePane", 9],
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "alt-1": ["workspace::ActivatePane", 0],
+      "alt-2": ["workspace::ActivatePane", 1],
+      "alt-3": ["workspace::ActivatePane", 2],
+      "alt-4": ["workspace::ActivatePane", 3],
+      "alt-5": ["workspace::ActivatePane", 4],
+      "alt-6": ["workspace::ActivatePane", 5],
+      "alt-7": ["workspace::ActivatePane", 6],
+      "alt-8": ["workspace::ActivatePane", 7],
+      "alt-9": ["workspace::ActivatePane", 8],
+      "alt-0": ["workspace::ActivatePane", 9],
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-1": ["pane::ActivateItem", 0],
+      "ctrl-2": ["pane::ActivateItem", 1],
+      "ctrl-3": ["pane::ActivateItem", 2],
+      "ctrl-4": ["pane::ActivateItem", 3],
+      "ctrl-5": ["pane::ActivateItem", 4],
+      "ctrl-6": ["pane::ActivateItem", 5],
+      "ctrl-7": ["pane::ActivateItem", 6],
+      "ctrl-8": ["pane::ActivateItem", 7],
+      "ctrl-9": ["pane::ActivateItem", 8],
+      "ctrl-0": ["pane::ActivateItem", 9],
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "alt-1": ["pane::ActivateItem", 0],
+      "alt-2": ["pane::ActivateItem", 1],
+      "alt-3": ["pane::ActivateItem", 2],
+      "alt-4": ["pane::ActivateItem", 3],
+      "alt-5": ["pane::ActivateItem", 4],
+      "alt-6": ["pane::ActivateItem", 5],
+      "alt-7": ["pane::ActivateItem", 6],
+      "alt-8": ["pane::ActivateItem", 7],
+      "alt-9": ["pane::ActivateItem", 8],
+      "alt-0": ["pane::ActivateItem", 9],
+    },
+  },
+  {
+    "context": "RunModal",
+    "bindings": {
+      "ctrl-1": "new_process_modal::ActivateTaskTab",
+      "ctrl-2": "new_process_modal::ActivateTaskTab",
+      "ctrl-3": "new_process_modal::ActivateTaskTab",
+      "ctrl-4": "new_process_modal::ActivateTaskTab",
+      "ctrl-5": "new_process_modal::ActivateTaskTab",
+      "ctrl-6": "new_process_modal::ActivateTaskTab",
+      "ctrl-7": "new_process_modal::ActivateTaskTab",
+      "ctrl-8": "new_process_modal::ActivateTaskTab",
+      "ctrl-9": "new_process_modal::ActivateTaskTab",
+      "ctrl-0": "new_process_modal::ActivateTaskTab",
+    },
+  },
+  {
+    "context": "RunModal",
+    "unbind": {
+      "alt-1": "new_process_modal::ActivateTaskTab",
+      "alt-2": "new_process_modal::ActivateTaskTab",
+      "alt-3": "new_process_modal::ActivateTaskTab",
+      "alt-4": "new_process_modal::ActivateTaskTab",
+      "alt-5": "new_process_modal::ActivateTaskTab",
+      "alt-6": "new_process_modal::ActivateTaskTab",
+      "alt-7": "new_process_modal::ActivateTaskTab",
+      "alt-8": "new_process_modal::ActivateTaskTab",
+      "alt-9": "new_process_modal::ActivateTaskTab",
+      "alt-0": "new_process_modal::ActivateTaskTab",
+    },
+  },
+  {
+    "context": "GitPicker",
+    "bindings": {
+      "ctrl-1": "git_picker::ActivateBranchesTab",
+      "ctrl-2": "git_picker::ActivateBranchesTab",
+      "ctrl-3": "git_picker::ActivateBranchesTab",
+      "ctrl-4": "git_picker::ActivateBranchesTab",
+      "ctrl-5": "git_picker::ActivateBranchesTab",
+      "ctrl-6": "git_picker::ActivateBranchesTab",
+      "ctrl-7": "git_picker::ActivateBranchesTab",
+      "ctrl-8": "git_picker::ActivateBranchesTab",
+      "ctrl-9": "git_picker::ActivateBranchesTab",
+      "ctrl-0": "git_picker::ActivateBranchesTab",
+    },
+  },
+  {
+    "context": "GitPicker",
+    "unbind": {
+      "alt-1": "git_picker::ActivateBranchesTab",
+      "alt-2": "git_picker::ActivateBranchesTab",
+      "alt-3": "git_picker::ActivateBranchesTab",
+      "alt-4": "git_picker::ActivateBranchesTab",
+      "alt-5": "git_picker::ActivateBranchesTab",
+      "alt-6": "git_picker::ActivateBranchesTab",
+      "alt-7": "git_picker::ActivateBranchesTab",
+      "alt-8": "git_picker::ActivateBranchesTab",
+      "alt-9": "git_picker::ActivateBranchesTab",
+      "alt-0": "git_picker::ActivateBranchesTab",
+    },
+  },
 ]
