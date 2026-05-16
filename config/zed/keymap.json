@@ -362,4 +362,16 @@
       "alt-0": "git_picker::ActivateBranchesTab",
     },
   },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "ctrl-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "ctrl-n": "workspace::NewFile"
+    }
+  }
 ]
