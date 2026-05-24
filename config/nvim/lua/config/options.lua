@@ -9,9 +9,6 @@ vim.opt.clipboard = "unnamedplus"
 -- don't format on save
 vim.g.autoformat = false
 
--- the autopairs plugin is annoying
-vim.g.minipairs_disable = true
-
 -- more intuitive jumping with ctrl-i, ctrl-o
 vim.opt.jumpoptions = "stack,view"
 
