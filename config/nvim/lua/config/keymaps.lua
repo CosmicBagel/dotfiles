@@ -3,14 +3,21 @@
 -- Add any additional keymaps here
 --
 
--- Easier way to exit terminal mode
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+-- open floating terminal
+vim.keymap.set({ "n", "t" }, "<c-`>", function()
+	Snacks.terminal.focus(nil, { cwd = LazyVim.root() })
+end, { desc = "Terminal (Root Dir)" })
+-- disable existing terminal keymaps
+vim.keymap.del("n", "<leader>ft", { desc = "Terminal (Root Dir)" })
+vim.keymap.del({ "n", "t" }, "<c-/>", { desc = "Terminal (Root Dir)" })
+vim.keymap.del({ "n", "t" }, "<c-_>", { desc = "which_key_ignore" })
 
 -- toggle comments
 -- (remap = true because gcc isn't built in, but comes from vim/_defaults.lua)
 vim.keymap.set("i", "<c-/>", "<esc>mzgcc`za", { remap = true, silent = true, desc = "Toggle comment" })
 vim.keymap.set("n", "<c-/>", "gcc", { remap = true, silent = true, desc = "Toggle comment line" })
 vim.keymap.set("v", "<c-/>", "gc", { remap = true, silent = true, desc = "Toggle comment" })
+
 
 -- make ctrl+backspace work normally
 vim.keymap.set("i", "<c-bs>", "<c-w>", { noremap = true, silent = true })

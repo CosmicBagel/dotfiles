@@ -24,6 +24,8 @@ return {
 						CursorLineNR = { bg = "#939293", fg = "#221f22" },
 						CursorLine = { bg = "#19181a", sp = "#5b595c" },
 
+						-- better contrast with floating elemenents
+
 						-- see guicursor in options.lua to configure mode specific behaviour and shape
 						lCursor = { bg = "#fcfcfa", fg = "#19181a" },
 						Cursor = { bg = "#fcfcfa", fg = "#19181a" },
@@ -35,8 +37,11 @@ return {
 
 						-- borders
 						FloatBorder = { bg = "none", fg = "#c1c0c0" },
-						NormalFloat = { bg = "none", fg = "#c1c0c0" },
 						WinSeparator = { bg = "none", fg = "#c1c0c0" },
+
+						-- floating main content (makes floating terminal more readable)
+            -- also just kinda looks nice
+						NormalFloat = { bg = "#221f22", fg = "#fcfcfa" },
 
 						Whitespace = { fg = "#5b595c" },
 						NonText = { bg = "none", fg = "#5b595c" },
@@ -56,8 +61,8 @@ return {
 						DiagnosticHint = { fg = "#a9dc76" },
 						DiagnosticTest = { fg = "#ab9df2" },
 
-						-- TreesitterContext = { bg = "#403e41" },
-						TreesitterContextLineNumber = { fg = scheme.editor.background },
+						TreesitterContext = { bg = scheme.editor.background },
+						TreesitterContextLineNumber = { bg = scheme.editor.background, fg = scheme.editor.background },
 						TreesitterContextBottom = { underline = true, sp = "#5b595c" },
 						TreesitterContextLineNumberBottom = { underline = true, sp = "#5b595c" },
 					}
