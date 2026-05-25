@@ -2,6 +2,10 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 --
+
+vim.opt.title = true
+vim.opt.titlestring = "%{getcwd()}"
+
 -- The + register (system clipboard register) behaves the same as
 -- unnamed register (yank/put/delete will go to system clipboard)
 vim.opt.clipboard = "unnamedplus"
