@@ -9,6 +9,9 @@ vim.opt.clipboard = "unnamedplus"
 -- don't format on save
 vim.g.autoformat = false
 
+-- don't automatically use ai
+vim.g.ai_cmp = false
+
 -- more intuitive jumping with ctrl-i, ctrl-o
 vim.opt.jumpoptions = "stack,view"
 
