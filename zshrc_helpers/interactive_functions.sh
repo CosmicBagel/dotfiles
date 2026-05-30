@@ -3,18 +3,19 @@ function UpdateAllTheThings {
 	echo "===Updating MacOS==="
 	softwareupdate --install --all
 
+	sudo port selfupdate && sudo port upgrade outdated
+
 	echo "===Updating Brew==="
 	brew update && brew upgrade -g && brew cleanup
 
-	echo "===Updating go packages==="
-	go install sigs.k8s.io/kubectl-validate@latest
+	# echo "===Updating go packages==="
+	# go install sigs.k8s.io/kubectl-validate@latest
 
-	echo "===Updating nvim Lazy==="
-	nvim --headless "+Lazy! update" +qa
+	# echo "===Updating nvim Lazy==="
+	# nvim --headless "+Lazy! update" +qa!
 
-	echo "===Updating nvim Lazy==="
-	nvim --headless "+MasonUpdate" +qa
-	nvim --headless "+MasonToolsUpdateSync" +qa
+	# echo "===Updating nvim Lazy==="
+	# nvim --headless "+MasonToolsUpdateSync" +qa!
 
 	echo "===OhMyBash Update==="
 	omz update
