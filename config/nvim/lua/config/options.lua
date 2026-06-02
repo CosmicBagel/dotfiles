@@ -4,7 +4,7 @@
 --
 
 vim.opt.title = true
-vim.opt.titlestring = "%{getcwd()}"
+vim.opt.titlestring = "nvim %{substitute(getcwd(), '^' .. getenv('HOME'), '~', '')}"
 
 -- The + register (system clipboard register) behaves the same as
 -- unnamed register (yank/put/delete will go to system clipboard)
