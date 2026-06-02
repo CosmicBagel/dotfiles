@@ -32,3 +32,9 @@ vim.keymap.set("v", "<S-Tab>", "<gv", { remap = true, silent = true, desc = "Uni
 
 -- the macro recording key is annoying
 vim.keymap.set("n", "q", "<nop>")
+
+-- VSCode style Ctrl+Enter: Insert new line below
+vim.keymap.set("i", "<C-CR>", "<Esc>]<Space>gi", { remap = true })
+
+-- VSCode style Ctrl+Shift+Enter: Insert new line above
+vim.keymap.set("i", "<C-S-CR>", "<Esc>[<Space>gi", { remap = true })
