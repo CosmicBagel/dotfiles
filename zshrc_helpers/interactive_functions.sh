@@ -3,8 +3,6 @@ function UpdateAllTheThings {
 	echo "===Updating MacOS==="
 	softwareupdate --install --all
 
-	sudo port selfupdate && sudo port upgrade outdated
-
 	echo "===Updating Brew==="
 	brew update && brew upgrade -g && brew cleanup
 
