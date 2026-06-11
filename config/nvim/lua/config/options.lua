@@ -39,6 +39,9 @@ vim.opt.spell = false
 vim.opt.spelllang = { "en_ca" }
 vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 
+-- keep cursor centered
+vim.opt.scrolloff = 1000
+
 --
 -- user commands
 -- 
