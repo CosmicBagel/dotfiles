@@ -10,10 +10,11 @@ function UpdateAllTheThings {
 	# go install sigs.k8s.io/kubectl-validate@latest
 
 	# echo "===Updating nvim Lazy==="
-	# nvim --headless "+Lazy! update" +qa!
+	# nvim --headless "+Lazy! update" +qa
 
 	# echo "===Updating nvim Lazy==="
-	# nvim --headless "+MasonToolsUpdateSync" +qa!
+	# nvim --headless "+MasonUpdate" +qa
+	# nvim --headless "+MasonToolsUpdateSync" +qa
 
 	echo "===OhMyBash Update==="
 	omz update
