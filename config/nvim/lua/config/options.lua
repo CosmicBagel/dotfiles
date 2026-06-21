@@ -24,8 +24,6 @@ vim.opt.termguicolors = true -- enable proper colors
 -- highlight groups are specified here, but colors for the highlight groups are set in color_scheme.lua
 vim.opt.guicursor = "n-c-sm:Cursor,v:VisualCursor,i-ci-ve:InsertCursor,r-cr:ReplaceCursor,o:OperatorPendingCursor,t:TermCursor"
 
-vim.opt.scrolloff = 2
-
 -- Hide the 'how to disable mouse' menu item in right click menu
 vim.cmd.aunmenu([[PopUp.How-to\ disable\ mouse]])
 
@@ -41,6 +39,9 @@ vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 
 -- keep cursor centered
 vim.opt.scrolloff = 1000
+
+-- no horizontal mouse scrolling, and nicer mouse scrolling with trackpad
+vim.opt.mousescroll = 'ver:1,hor:0';
 
 --
 -- user commands
