@@ -50,3 +50,6 @@ vim.opt.mousescroll = 'ver:1,hor:0';
 -- common typo when quitting and writing
 vim.api.nvim_create_user_command("Q", "q", {})
 vim.api.nvim_create_user_command("W", "w", {})
+
+-- enable undofiles
+vim.opt.undofile = true
