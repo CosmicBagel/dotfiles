@@ -19,7 +19,7 @@ return {
 						-- visual mode select
 						Visual = { bg = "#727072" },
 
-						ColorColumn = { bg = "#ff6188" },
+						ColorColumn = { bg = "#19181a" },
 
 						CursorLineNR = { bg = "#939293", fg = "#221f22" },
 						CursorLine = { bg = "#19181a", sp = "#5b595c" },
@@ -83,7 +83,7 @@ return {
 			-- visual mode select
 			vim.api.nvim_set_hl(0, "Visual", { bg = "#727072" })
 
-			vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#ff6188" })
+			vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#19181a" })
 
 			vim.api.nvim_set_hl(0, "CursorLineNR", { bg = "#939293", fg = "#221f22" })
 			vim.api.nvim_set_hl(0, "CursorLine", { bg = "#19181a", sp = "#5b595c" })

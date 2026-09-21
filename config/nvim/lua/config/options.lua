@@ -43,6 +43,9 @@ vim.opt.scrolloff = 1000
 -- no horizontal mouse scrolling, and nicer mouse scrolling with trackpad
 vim.opt.mousescroll = 'ver:1,hor:0';
 
+-- guideline to discourage long lines of code
+vim.opt.colorcolumn = "101"
+
 --
 -- user commands
 -- 
