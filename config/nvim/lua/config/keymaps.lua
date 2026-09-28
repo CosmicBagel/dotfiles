@@ -31,7 +31,7 @@ vim.keymap.set("v", "<Tab>", ">gv", { remap = true, silent = true, desc = "Inden
 vim.keymap.set("v", "<S-Tab>", "<gv", { remap = true, silent = true, desc = "Unindent line" })
 
 -- the macro recording key is annoying
-vim.keymap.set("n", "q", "<nop>")
+-- vim.keymap.set("n", "q", "<nop>")
 
 -- VSCode style Ctrl+Enter: Insert new line below
 vim.keymap.set("i", "<C-CR>", "<Esc>]<Space>gi", { remap = true })
