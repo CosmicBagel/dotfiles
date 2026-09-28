@@ -38,3 +38,9 @@ vim.keymap.set("i", "<C-CR>", "<Esc>]<Space>gi", { remap = true })
 
 -- VSCode style Ctrl+Shift+Enter: Insert new line above
 vim.keymap.set("i", "<C-S-CR>", "<Esc>[<Space>gi", { remap = true })
+
+-- leader leader open buffer list, not find all files
+vim.keymap.del("n", "<leader><space>")
+vim.keymap.set("n", "<leader><space>", function()
+  Snacks.picker.buffers()
+end, { desc = "Buffers" })
