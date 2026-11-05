@@ -9,7 +9,15 @@ return {
 	},
 	opts = {
 		interactions = {
-			chat = { adapter = adapter },
+			chat = {
+				adapter = adapter,
+				sessions = {
+					enabled = true,
+					autosave = true,
+					continuous_save = true,
+					save_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "codecompanion", "sessions"),
+				},
+			},
 			inline = { adapter = adapter },
 		},
 	},
@@ -41,7 +49,7 @@ return {
 		{
 			"<leader>aa",
 			"<cmd>CodeCompanionActions<cr>",
-			mode = {"n", "v"},
+			mode = { "n", "v" },
 			desc = "CodeCompanion - Open actions picker",
 		},
 	},
