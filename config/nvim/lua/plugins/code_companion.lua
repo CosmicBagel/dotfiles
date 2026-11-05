@@ -38,5 +38,11 @@ return {
 			mode = "v",
 			desc = "CodeCompanion - Inline (with selection)",
 		},
+		{
+			"<leader>aa",
+			"<cmd>CodeCompanionActions<cr>",
+			mode = {"n", "v"},
+			desc = "CodeCompanion - Open actions picker",
+		},
 	},
 }
