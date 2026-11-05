@@ -20,8 +20,13 @@ return {
 
 			["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
 
-      ["<Tab>"] = {},
-      ["<S-Tab>"] = {},
+			["<Tab>"] = {},
+			["<S-Tab>"] = {},
+		},
+		sources = {
+			per_filetype = {
+				codecompanion = { "codecompanion" },
+			},
 		},
 	},
 }
